@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Controls.PSAT.TG</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Turbine and its governor (the mathematical models are taken from PSAT)&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TG<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Controls.PSAT.TG"></a><a href="OpenIPSL_Electrical_Controls_PSAT.html#OpenIPSL.Electrical.Controls.PSAT"
+>OpenIPSL.Electrical.Controls.PSAT</a>.TG</h2>
+<p>
+<span class="ModelicaDescription">Turbine and its governor (the mathematical models are taken from PSAT)</span><br>
+</p>
+<h3>Information</h3>
+
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrd281b837ed4680e7TypeIS.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeI" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeI"
+>TGTypeI</a>
+</td>
+<td>TG Type I</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrb861446ea8d01cb6ypeIIS.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeII" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeII"
+>TGTypeII</a>
+</td>
+<td>TG Type II</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr59c604931a03965cpeIIIS.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIII" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIII"
+>TGTypeIII</a>
+</td>
+<td>Hydro Turbine (Linear model) and Governor (Standard model)- control scheme Type 3</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr59c604931a03965cpeIIIS.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIV" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIV"
+>TGTypeIV</a>
+</td>
+<td>Hydro Turbine (Linear model) and Governor (Standard model with PI controller)- control scheme Type 4</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrd281b844ed4680f8TypeVS.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeV" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeV"
+>TGTypeV</a>
+</td>
+<td>Hydro Turbine (Nonlinear model) and Governor (PI controller combined with servomotor)- control scheme Type 5</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrb8614b15a8d01f56ypeVIS.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeVI" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeVI"
+>TGTypeVI</a>
+</td>
+<td>Hydro Turbine (Nonlinear model) and Governor (PID controller combined with servomotor)- control scheme Type 6</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGTypeI<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrd281b837ed4680e7TypeII.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeI" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeI"></a><a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG"
+>OpenIPSL.Electrical.Controls.PSAT.TG</a>.TGTypeI</h2>
+<p>
+<span class="ModelicaDescription">TG Type I</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>wref</td><td>Speed reference [1]</td></tr>
+<tr><td>pref</td><td>Active power reference [1]</td></tr>
+<tr><td>R</td><td>Droop [1]</td></tr>
+<tr><td>pmax</td><td>Maximum turbine output [1]</td></tr>
+<tr><td>pmin</td><td>Minimum turbine output [1]</td></tr>
+<tr><td>Ts</td><td>Governor time constant [s]</td></tr>
+<tr><td>Tc</td><td>Servo time constant [s]</td></tr>
+<tr><td>T3</td><td>Transient gain time constant [s]</td></tr>
+<tr><td>T4</td><td>Power fraction time constant [s]</td></tr>
+<tr><td>T5</td><td>Reheat time constant [s]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>w</td><td>Rotor speed [pu]</td></tr>
+<tr><td>pm</td><td>Mechanical power [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGTypeII<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrb861446ea8d01cb6ypeIII.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeII" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeII"></a><a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG"
+>OpenIPSL.Electrical.Controls.PSAT.TG</a>.TGTypeII</h2>
+<p>
+<span class="ModelicaDescription">TG Type II</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>wref</td><td>Reference speed [1]</td></tr>
+<tr><td>R</td><td>Droop [1]</td></tr>
+<tr><td>pmax0</td><td>Maximum turbine output [1]</td></tr>
+<tr><td>pmin0</td><td>Minimum turbine output [1]</td></tr>
+<tr><td>Ts</td><td>Governor Time constant [s]</td></tr>
+<tr><td>T3</td><td>Transient gain time constant [s]</td></tr>
+<tr><td>Sn</td><td>Nominal power [V.A]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pm0</td><td>Initial mechanical power [pu]</td></tr>
+<tr><td>pm</td><td>Mechanical power [pu]</td></tr>
+<tr><td>w</td><td>Rotor speed [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGTypeIII<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr59c604931a03965cpeIIII.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIII" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIII"></a><a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG"
+>OpenIPSL.Electrical.Controls.PSAT.TG</a>.TGTypeIII</h2>
+<p>
+<span class="ModelicaDescription">Hydro Turbine (Linear model) and Governor (Standard model)- control scheme Type 3</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>wref</td><td>Reference speed [1]</td></tr>
+<tr><td>Tg</td><td>Pilot valve droop [1]</td></tr>
+<tr><td>gmax</td><td>Maximum gate opening [1]</td></tr>
+<tr><td>gmin</td><td>Minimum gate opening [1]</td></tr>
+<tr><td>vmax</td><td>Maximum gate opening rate [1]</td></tr>
+<tr><td>vmin</td><td>Minimum gate opening rate [1]</td></tr>
+<tr><td>Tp</td><td>Pilot valve time constant [s]</td></tr>
+<tr><td>Tr</td><td>Dashpot time constant [s]</td></tr>
+<tr><td>delta</td><td>Transient speed droop [pu/pu]</td></tr>
+<tr><td>sigma</td><td>Permanent speed droop [pu/pu]</td></tr>
+<tr><td>Tw</td><td>Water starting time [s]</td></tr>
+<tr><td>a11</td><td>Deriv. of flow rate vs. turbine head</td></tr>
+<tr><td>a13</td><td>Deriv. of flow rate vs. gate position</td></tr>
+<tr><td>a21</td><td>Deriv. of torque vs. turbine head</td></tr>
+<tr><td>a23</td><td>Deriv. of torque vs. gate position</td></tr>
+<tr><td>int3</td><td>&nbsp;</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>P_0</td><td>Active power [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>w</td><td>Rotor speed [pu]</td></tr>
+<tr><td>pm</td><td>Mechanical power [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGTypeIV<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr59c604931a03965cpeIIII.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIV" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeIV"></a><a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG"
+>OpenIPSL.Electrical.Controls.PSAT.TG</a>.TGTypeIV</h2>
+<p>
+<span class="ModelicaDescription">Hydro Turbine (Linear model) and Governor (Standard model with PI controller)- control scheme Type 4</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>wref</td><td>Reference speed [1]</td></tr>
+<tr><td>Tg</td><td>Pilot valve droop [1]</td></tr>
+<tr><td>gmax</td><td>Maximum gate opening [1]</td></tr>
+<tr><td>gmin</td><td>Minimum gate opening [1]</td></tr>
+<tr><td>vmax</td><td>Maxmimum gate opening rate [1]</td></tr>
+<tr><td>vmin</td><td>Maximum gate opening rate [1]</td></tr>
+<tr><td>Tp</td><td>Pilot valve time constant [s]</td></tr>
+<tr><td>Tr</td><td>Dashpot time constant [s]</td></tr>
+<tr><td>sigma</td><td>Permanent speed droop [pu/pu]</td></tr>
+<tr><td>delta</td><td>Transient speed droop [pu/pu]</td></tr>
+<tr><td>Tw</td><td>Water starting time [s]</td></tr>
+<tr><td>a11</td><td>Deriv. of flow rate vs. turbine head</td></tr>
+<tr><td>a13</td><td>Deriv. of flow rate vs. gate position</td></tr>
+<tr><td>a21</td><td>Deriv. of torque vs. turbine head</td></tr>
+<tr><td>a23</td><td>Deriv. of torque vs. gate position</td></tr>
+<tr><td>Kp</td><td>Proportional droop</td></tr>
+<tr><td>Ki</td><td>Integral droop</td></tr>
+<tr><td>Pref</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>w</td><td>Rotor speed [pu]</td></tr>
+<tr><td>Pm</td><td>Mechanical power [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGTypeV<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrd281b844ed4680f8TypeVI.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeV" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeV"></a><a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG"
+>OpenIPSL.Electrical.Controls.PSAT.TG</a>.TGTypeV</h2>
+<p>
+<span class="ModelicaDescription">Hydro Turbine (Nonlinear model) and Governor (PI controller combined with servomotor)- control scheme Type 5</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Tg</td><td>Servomotor droop [1]</td></tr>
+<tr><td>gmax</td><td>Maximum gate opening [1]</td></tr>
+<tr><td>gmin</td><td>Minimum gate opening [1]</td></tr>
+<tr><td>vmax</td><td>Maximum gate opening rate [1]</td></tr>
+<tr><td>vmin</td><td>Minimum gate opening rate [1]</td></tr>
+<tr><td>Tp</td><td>Pilot valve time constant [s]</td></tr>
+<tr><td>Tw</td><td>Water starting time [s]</td></tr>
+<tr><td>Kp</td><td>Proportional droop [pu/pu]</td></tr>
+<tr><td>Ki</td><td>Integral droop [pu/pu]</td></tr>
+<tr><td>sigma</td><td>Permanent speed droop [pu/pu]</td></tr>
+<tr><td>Pref</td><td>[1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>w</td><td>Rotor speed [pu]</td></tr>
+<tr><td>Pm</td><td>Power Pm [pu]</td></tr>
+<tr><td>pref</td><td>Reference power [pu]</td></tr>
+<tr><td>wref</td><td>Reference rotor speed [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGTypeVI<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrb8614b15a8d01f56ypeVII.png" alt="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeVI" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.TG.TGTypeVI"></a><a href="OpenIPSL_Electrical_Controls_PSAT_TG.html#OpenIPSL.Electrical.Controls.PSAT.TG"
+>OpenIPSL.Electrical.Controls.PSAT.TG</a>.TGTypeVI</h2>
+<p>
+<span class="ModelicaDescription">Hydro Turbine (Nonlinear model) and Governor (PID controller combined with servomotor)- control scheme Type 6</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>gmax</td><td>Maximum gate opening [1]</td></tr>
+<tr><td>gmin</td><td>Minimum gate opening [1]</td></tr>
+<tr><td>vmax</td><td>Maximum gate opening rate [1]</td></tr>
+<tr><td>vmin</td><td>Minimum gate opening rate [1]</td></tr>
+<tr><td>Ta</td><td>Pilot valve time constant [s]</td></tr>
+<tr><td>Tw</td><td>Water starting time [s]</td></tr>
+<tr><td>beta</td><td>Transient speed droop [pu/pu]</td></tr>
+<tr><td>Kp</td><td>Proportional droop [pu/pu]</td></tr>
+<tr><td>Ki</td><td>Integral droop [1/s]</td></tr>
+<tr><td>Kd</td><td>Derivative droop [s]</td></tr>
+<tr><td>Td</td><td>Derivative droop time constant [s]</td></tr>
+<tr><td>Rp</td><td>Permanent droop [pu/pu]</td></tr>
+<tr><td>Ka</td><td>Pilot valve gain [pu/pu]</td></tr>
+<tr><td>dref</td><td>[1]</td></tr>
+<tr><td>po</td><td>[1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Pm</td><td>Mechanical power [pu]</td></tr>
+<tr><td>pe</td><td>Active power [pu]</td></tr>
+<tr><td>pref</td><td>Active power reference [pu]</td></tr>
+<tr><td>wref</td><td>Rotor speed reference [pu]</td></tr>
+<tr><td>we</td><td>Rotor speed [pu]</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:55 2022.
+</address>
+</body>
+</html>

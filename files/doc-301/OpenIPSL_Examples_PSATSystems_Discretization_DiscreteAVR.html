@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Package containing the discrete AVR model&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE DiscreteAVR<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR"></a><a href="OpenIPSL_Examples_PSATSystems_Discretization.html#OpenIPSL.Examples.PSATSystems.Discretization"
+>OpenIPSL.Examples.PSATSystems.Discretization</a>.DiscreteAVR</h2>
+<p>
+<span class="ModelicaDescription">Package containing the discrete AVR model</span><br>
+</p>
+<h3>Information</h3>
+
+<p>The exciter model within this subpackage is used only in the three example systems within <strong>Discretization</strong>.</p>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSys5a409184dcdbfc7dcreteS.png" alt="OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR.AVRTypeII_discrete" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_Discretization_DiscreteAVR.html#OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR.AVRTypeII_discrete"
+>AVRTypeII_discrete</a>
+</td>
+<td>Discretized PSAT Exciter Type 2</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AVRTypeII_discrete<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSys5a409184dcdbfc7dcreteI.png" alt="OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR.AVRTypeII_discrete" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR.AVRTypeII_discrete"></a><a href="OpenIPSL_Examples_PSATSystems_Discretization_DiscreteAVR.html#OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR"
+>OpenIPSL.Examples.PSATSystems.Discretization.DiscreteAVR</a>.AVRTypeII_discrete</h2>
+<p>
+<span class="ModelicaDescription">Discretized PSAT Exciter Type 2</span>
+</p>
+<h3>Information</h3>
+
+<p>This AVR model is supposed to represent the Type 2 from PSAT. However, differently from the model that is found in the main body of the library, this AVR has a discrete implementation.</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>vrmin</td><td>Minimum regulator voltage, p.u</td></tr>
+<tr><td>vrmax</td><td>Maximum regulator voltage, p.u</td></tr>
+<tr><td>Ka</td><td>Amplifier gain, p.u/p.u</td></tr>
+<tr><td>Ta</td><td>Amplifier time constant, s</td></tr>
+<tr><td>Kf</td><td>Stabilizer gain, p.u/p.u</td></tr>
+<tr><td>Tf</td><td>Stabilizer time constant, s</td></tr>
+<tr><td>Ke</td><td>Field circuit integral deviation, p.u/p.u</td></tr>
+<tr><td>Te</td><td>Field circui time constant, s</td></tr>
+<tr><td>Tr</td><td>Measurement time constant, s</td></tr>
+<tr><td>Ae</td><td>1st ceiling coefficient</td></tr>
+<tr><td>Be</td><td>2nd ceiling coefficient</td></tr>
+<tr><td>v0</td><td>Initialization</td></tr>
+<tr><td>vref0</td><td>Initialization</td></tr>
+<tr><td>vf0</td><td>Initialization</td></tr>
+<tr><td>vm0</td><td>Initialization</td></tr>
+<tr><td>vr10</td><td>Initialization</td></tr>
+<tr><td>vr20</td><td>Initialization</td></tr>
+<tr><td>e</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>vref</td><td>Connector of clocked, Real input signal</td></tr>
+<tr><td>v</td><td>Connector of clocked, Real input signal</td></tr>
+<tr><td>vf</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:55 2022.
+</address>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Type 3 wind machine model from PSAT&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PSAT_Type_3<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"></a><a href="OpenIPSL_Electrical_Wind_PSAT.html#OpenIPSL.Electrical.Wind.PSAT"
+>OpenIPSL.Electrical.Wind.PSAT</a>.PSAT_Type_3</h2>
+<p>
+<span class="ModelicaDescription">Type 3 wind machine model from PSAT</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Wind.15d9968b8d68e136AT_WTS.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PSAT_WT" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PSAT_WT"
+>PSAT_WT</a>
+</td>
+<td>Wind Turbine Doubly Fed Induction Generator</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Wind.5c00e4bdb133126cecBlkS.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecBlk" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecBlk"
+>ElecBlk</a>
+</td>
+<td>Electrical block for Type 3 wind machine</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Wind.362499448465dd22ynBlkS.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecDynBlk" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecDynBlk"
+>ElecDynBlk</a>
+</td>
+<td>Dynamical equations for electrical block of a type 3 wind machine</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Wind.43992a0866c3755fhaBlkS.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.MechaBlk" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.MechaBlk"
+>MechaBlk</a>
+</td>
+<td>Mechanical block for Type 3 wind machine model</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Wind.30b08df41d2e42f3ntrolS.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PitchControl" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PitchControl"
+>PitchControl</a>
+</td>
+<td>Pitch control block for Type 3 wind machine model</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Wind.bc20ae1a3b809268ndBlkS.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.WindBlk" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.WindBlk"
+>WindBlk</a>
+</td>
+<td>Wind block for Type 3 wind machine model</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PSAT_WT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Wind.15d9968b8d68e136AT_WTI.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PSAT_WT" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PSAT_WT"></a><a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"
+>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</a>.PSAT_WT</h2>
+<p>
+<span class="ModelicaDescription">Wind Turbine Doubly Fed Induction Generator</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Pnom</td><td>Nominal Power [VA]</td></tr>
+<tr><td>fn</td><td>Frequency rating [Hz]</td></tr>
+<tr><td>rho</td><td>Air Density [kg/m3]</td></tr>
+<tr><td>vw_base</td><td>Nominal wind speed [m/s]</td></tr>
+<tr><td>Rs_machine</td><td>Stator Resistance [1]</td></tr>
+<tr><td>Xs_machine</td><td>Stator Reactance [1]</td></tr>
+<tr><td>Rr_machine</td><td>Rotor Resitance [1]</td></tr>
+<tr><td>Xr_machine</td><td>Rotor Reactance [1]</td></tr>
+<tr><td>Xm_machine</td><td>Magnetisation reactance [1]</td></tr>
+<tr><td>Hm_machine</td><td>Inertia [s]</td></tr>
+<tr><td>Kp</td><td>Pitch control gain</td></tr>
+<tr><td>Tp</td><td>Pitch control time constant [s]</td></tr>
+<tr><td>Kv</td><td>Voltage control gain</td></tr>
+<tr><td>Te</td><td>Power Control time constant [s]</td></tr>
+<tr><td>l</td><td>Blade length [m]</td></tr>
+<tr><td>poles</td><td>Number of poles-pair</td></tr>
+<tr><td>nblades</td><td>Number of blades</td></tr>
+<tr><td>ngb</td><td>Gear box ratio</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>V_0</td><td>Voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Voltage angle [rad]</td></tr>
+<tr><td>P_0</td><td>Active power [1]</td></tr>
+<tr><td>Q_0</td><td>Reactive power [1]</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Voltage rating [V]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Wind_Speed</td><td>&nbsp;</td></tr>
+<tr><td>pin</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ElecBlk<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Wind.5c00e4bdb133126cecBlkI.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecBlk" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecBlk"></a><a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"
+>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</a>.ElecBlk</h2>
+<p>
+<span class="ModelicaDescription">Electrical block for Type 3 wind machine</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sbase</td><td>Power Rating [Normalization Factor] [VA]</td></tr>
+<tr><td>Vbus0</td><td>Voltage from Power Flow [1]</td></tr>
+<tr><td>angle_0</td><td>Angle from Power Flow [rad]</td></tr>
+<tr><td>Pc</td><td>Active Power, PowerFlow [1]</td></tr>
+<tr><td>Qc</td><td>Reactive Power, Power Flow [1]</td></tr>
+<tr><td>omega_m0</td><td>[1]</td></tr>
+<tr><td>Pnom</td><td>Nominal Power [VA]</td></tr>
+<tr><td>Vbase</td><td>Voltage rating [V]</td></tr>
+<tr><td>freq</td><td>frequency rating [Hz]</td></tr>
+<tr><td>Rs</td><td>stator Resistance [1]</td></tr>
+<tr><td>Xs</td><td>stator Reactance [1]</td></tr>
+<tr><td>Rr</td><td>Rotor Resitance [1]</td></tr>
+<tr><td>Xr</td><td>rotor Reactance [1]</td></tr>
+<tr><td>Xm</td><td>magnetisation reactance [1]</td></tr>
+<tr><td>Hm</td><td>inertia [s]</td></tr>
+<tr><td>x1</td><td>stator plus magnetisation impedances [1]</td></tr>
+<tr><td>wbase</td><td>basis for angular speed [rad/s]</td></tr>
+<tr><td>k</td><td>gain for iqr_off computation</td></tr>
+<tr><td>ids0</td><td>[1]</td></tr>
+<tr><td>iqs0</td><td>[1]</td></tr>
+<tr><td>idr0</td><td>[1]</td></tr>
+<tr><td>iqr0</td><td>[1]</td></tr>
+<tr><td>vds0</td><td>[1]</td></tr>
+<tr><td>vqs0</td><td>[1]</td></tr>
+<tr><td>vdr0</td><td>[1]</td></tr>
+<tr><td>vqr0</td><td>[1]</td></tr>
+<tr><td>poles</td><td>Number of poles-pair</td></tr>
+<tr><td>i2Hm</td><td>inverse inertia [1/s]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>omega_m</td><td>Rotor Speed</td></tr>
+<tr><td>idr</td><td>idr</td></tr>
+<tr><td>iqr</td><td>iqr</td></tr>
+<tr><td>Tel</td><td>Electrical Torque</td></tr>
+<tr><td>Vbus</td><td>Bus Voltage Magnitude</td></tr>
+<tr><td>pin</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ElecDynBlk<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Wind.362499448465dd22ynBlkI.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecDynBlk" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.ElecDynBlk"></a><a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"
+>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</a>.ElecDynBlk</h2>
+<p>
+<span class="ModelicaDescription">Dynamical equations for electrical block of a type 3 wind machine</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sbase</td><td>Power Rating [Normalization Factor] [VA]</td></tr>
+<tr><td>Vbus0</td><td>Voltage from Power Flow [1]</td></tr>
+<tr><td>angle_0</td><td>Angle from Power Flow [rad]</td></tr>
+<tr><td>Pc</td><td>Active Power, PowerFlow [1]</td></tr>
+<tr><td>Qc</td><td>Reactive Power, Power Flow [1]</td></tr>
+<tr><td>omega_m0</td><td>[1]</td></tr>
+<tr><td>Pnom</td><td>Nominal Power [VA]</td></tr>
+<tr><td>Vbase</td><td>Voltage rating [V]</td></tr>
+<tr><td>freq</td><td>frequency rating [Hz]</td></tr>
+<tr><td>Rs</td><td>stator Resistance [1]</td></tr>
+<tr><td>Xs</td><td>stator Reactance [1]</td></tr>
+<tr><td>Rr</td><td>Rotor Resitance [1]</td></tr>
+<tr><td>Xr</td><td>rotor Reactance [1]</td></tr>
+<tr><td>Xm</td><td>magnetisation reactance [1]</td></tr>
+<tr><td>Hm</td><td>inertia [s]</td></tr>
+<tr><td>x1</td><td>stator plus magnetisation impedances [1]</td></tr>
+<tr><td>x2</td><td>rotor plus magnetisation impedances [1]</td></tr>
+<tr><td>wbase</td><td>basis for angular speed [rad/s]</td></tr>
+<tr><td>iqr_max</td><td>[1]</td></tr>
+<tr><td>idr_max</td><td>[1]</td></tr>
+<tr><td>iqr_min</td><td>[1]</td></tr>
+<tr><td>idr_min</td><td>[1]</td></tr>
+<tr><td>poles</td><td>Number of poles-pair</td></tr>
+<tr><td>Kv</td><td>Voltage control gain</td></tr>
+<tr><td>Te</td><td>Power Control time constant [s]</td></tr>
+<tr><td>k</td><td>gain for iqr_off computation</td></tr>
+<tr><td>ids0</td><td>[1]</td></tr>
+<tr><td>iqs0</td><td>[1]</td></tr>
+<tr><td>idr0</td><td>[1]</td></tr>
+<tr><td>iqr0</td><td>[1]</td></tr>
+<tr><td>vds0</td><td>[1]</td></tr>
+<tr><td>vqs0</td><td>[1]</td></tr>
+<tr><td>vdr0</td><td>[1]</td></tr>
+<tr><td>vqr0</td><td>[1]</td></tr>
+<tr><td>i2Hm</td><td>inverse inertia [1/s]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>omega_m</td><td>Rotor Speed</td></tr>
+<tr><td>Vbus</td><td>Vbus</td></tr>
+<tr><td>idr</td><td>saturated idr</td></tr>
+<tr><td>iqr</td><td>saturated iqr</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE MechaBlk<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Wind.43992a0866c3755fhaBlkI.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.MechaBlk" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.MechaBlk"></a><a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"
+>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</a>.MechaBlk</h2>
+<p>
+<span class="ModelicaDescription">Mechanical block for Type 3 wind machine model</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sbase</td><td>Power Rating [Normalization Factor] [VA]</td></tr>
+<tr><td>Pnom</td><td>Nominal Power [VA]</td></tr>
+<tr><td>Hm</td><td>inertia [s]</td></tr>
+<tr><td>Pc</td><td>Input Power Flow [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Tm</td><td>engine shaft torque</td></tr>
+<tr><td>Tel</td><td>electromagnetical torque</td></tr>
+<tr><td>omega_m</td><td>engine shaft angular velocity</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PitchControl<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Wind.30b08df41d2e42f3ntrolI.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PitchControl" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.PitchControl"></a><a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"
+>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</a>.PitchControl</h2>
+<p>
+<span class="ModelicaDescription">Pitch control block for Type 3 wind machine model</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Kp</td><td>Pitch control gain</td></tr>
+<tr><td>Tp</td><td>Pitch control time constant [s]</td></tr>
+<tr><td>theta_p0</td><td>[rad]</td></tr>
+<tr><td>theta_p_min</td><td>[rad]</td></tr>
+<tr><td>theta_p_max</td><td>[rad]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>omega_m</td><td>Real voltage</td></tr>
+<tr><td>theta_p</td><td>saturated theta_p</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE WindBlk<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Wind.bc20ae1a3b809268ndBlkI.png" alt="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.WindBlk" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3.WindBlk"></a><a href="OpenIPSL_Electrical_Wind_PSAT_PSAT_Type_3.html#OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3"
+>OpenIPSL.Electrical.Wind.PSAT.PSAT_Type_3</a>.WindBlk</h2>
+<p>
+<span class="ModelicaDescription">Wind block for Type 3 wind machine model</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>vw_base</td><td>Vw Nominal [m/s]</td></tr>
+<tr><td>rho</td><td>Air Density [kg/m3]</td></tr>
+<tr><td>Sbase</td><td>Power Rating [Normalization Factor] [VA]</td></tr>
+<tr><td>l</td><td>Blade length [m]</td></tr>
+<tr><td>ngb</td><td>gear box ratio</td></tr>
+<tr><td>Radapt</td><td>r_{gearbox}*r</td></tr>
+<tr><td>poles</td><td>Number of poles-pair</td></tr>
+<tr><td>freq</td><td>frequency rating [Hz]</td></tr>
+<tr><td>wbase</td><td>[rad/s]</td></tr>
+<tr><td>Ar</td><td>blades area [m2]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>vw</td><td>Real voltage</td></tr>
+<tr><td>theta_p</td><td>Pitch angle</td></tr>
+<tr><td>omega_m</td><td>Mechanical speed</td></tr>
+<tr><td>Tm</td><td>Mechanical torque</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

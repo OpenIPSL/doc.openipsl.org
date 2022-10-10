@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.IEEE14</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;IEEE 14-bus 5-machine test system package&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IEEE14<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.IEEE14"></a><a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>OpenIPSL.Examples</a>.IEEE14</h2>
+<p>
+<span class="ModelicaDescription">IEEE 14-bus 5-machine test system package</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains a 14-bus 5-machine test system, representing a simple equivalent approximation for the American Electric Power System as of February of 1962. </p>
+<p>In general, this system has low base voltages and an overabundance of voltage control capabilities, being ideal for testing such features. </p>
+<p>The user might find a single test system in this package, but they are encouraged to duplicate the model and test fault events in different buses, together with different possible clearing times.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.IEEE14.IEEE_14_BusesS.png" alt="OpenIPSL.Examples.IEEE14.IEEE_14_Buses" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_IEEE14.html#OpenIPSL.Examples.IEEE14.IEEE_14_Buses"
+>IEEE_14_Buses</a>
+</td>
+<td>IEEE 14-bus 5-machine base test system</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.IEEE14.6c411e198e82fa3eroupsS.png" alt="OpenIPSL.Examples.IEEE14.Generation_Groups" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_IEEE14_Generation_Groups.html#OpenIPSL.Examples.IEEE14.Generation_Groups"
+>Generation_Groups</a>
+</td>
+<td>Set of generation unit models used in IEEE 14-bus system</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IEEE_14_Buses<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.IEEE14.IEEE_14_BusesI.png" alt="OpenIPSL.Examples.IEEE14.IEEE_14_Buses" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.IEEE14.IEEE_14_Buses"></a><a href="OpenIPSL_Examples_IEEE14.html#OpenIPSL.Examples.IEEE14"
+>OpenIPSL.Examples.IEEE14</a>.IEEE_14_Buses</h2>
+<p>
+<span class="ModelicaDescription">IEEE 14-bus 5-machine base test system</span>
+</p>
+<h3>Information</h3>
+
+<p>This example is composed by the 14-bus 5-machine system representing an approximation of the American Electric Power system. Note that the network is also composed of 11 loads and that three machines are acting as synchronous condensers.</p>
+<p>The system undergoes a three-phase-to-ground fault on Bus 4 at 1s, lasting for 200ms. Simulate the system for 10 seconds.</p>
+<p>Variables of interest are the voltages in which the synchronous machines are connected:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>B2.v</code></li>
+<li><code>B3.v</code></li>
+<li><code>B6.v</code></li>
+<li><code>B8.v</code></li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:39 2022.
+</address>
+</body>
+</html>

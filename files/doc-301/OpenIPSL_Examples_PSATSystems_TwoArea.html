@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.PSATSystems.TwoArea</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;31-bus 2-machine 2-area test system&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TwoArea<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.PSATSystems.TwoArea"></a><a href="OpenIPSL_Examples_PSATSystems.html#OpenIPSL.Examples.PSATSystems"
+>OpenIPSL.Examples.PSATSystems</a>.TwoArea</h2>
+<p>
+<span class="ModelicaDescription">31-bus 2-machine 2-area test system</span><br>
+</p>
+<h3>Information</h3>
+
+
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRI" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRI"
+>ThirdOrder_AVRI</a>
+</td>
+<td>31-bus system with 3rd-order machine and AVR Type I</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRII" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRII"
+>ThirdOrder_AVRII</a>
+</td>
+<td>31-bus system with 3rd-order machine and AVR Type II</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRI" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRI"
+>FourthOrder_AVRI</a>
+</td>
+<td>31-bus system with 4th-order machine and AVR Type I</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRII" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRII"
+>FourthOrder_AVRII</a>
+</td>
+<td>31-bus system with 4th-order machine and AVR Type II</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRI" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRI"
+>FifthOrder_AVRI</a>
+</td>
+<td>31-bus system with 5th-order machine Type 2 and AVR Type I</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRII" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRII"
+>FifthOrder_AVRII</a>
+</td>
+<td>31-bus system with 5th-order machine Type 2 and AVR Type II</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRI" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRI"
+>SixthOrder_AVRI</a>
+</td>
+<td>31-bus system with 6th-order machine and AVR Type I</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRIS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRII" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRII"
+>SixthOrder_AVRII</a>
+</td>
+<td>31-bus system with 6th-order machine and AVR Type II</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.PSATSysb24097cb097a2bbeassesS.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses"
+>BaseClasses</a>
+</td>
+<td>Base classes used for TwoArea</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ThirdOrder_AVRI<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRI" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRI"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.ThirdOrder_AVRI</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 3rd-order machine and AVR Type I</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the third order machine with a type 1 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order3_1.w</code></li>
+</ul>
+<p>Note that the oscillations, which are not well damped, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder3"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder3</a> (Template for base network and a 3rd order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ThirdOrder_AVRII<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRII" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.ThirdOrder_AVRII"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.ThirdOrder_AVRII</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 3rd-order machine and AVR Type II</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the third order machine with a type 2 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order3_1.w</code></li>
+</ul>
+<p>Note that the oscillations, which are not well damped, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder3"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder3</a> (Template for base network and a 3rd order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FourthOrder_AVRI<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRI" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRI"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.FourthOrder_AVRI</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 4th-order machine and AVR Type I</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the fourth order machine with a type 1 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order4.w</code></li>
+</ul>
+<p>Note that the oscillations, which present some considerable damping, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder4"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder4</a> (Template for base network and a 4th order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FourthOrder_AVRII<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRII" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.FourthOrder_AVRII"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.FourthOrder_AVRII</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 4th-order machine and AVR Type II</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the fourth order machine with a type 2 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order4.w</code></li>
+</ul>
+<p>Note that the oscillations, which present some considerable damping, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder4"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder4</a> (Template for base network and a 4th order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FifthOrder_AVRI<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRI" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRI"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.FifthOrder_AVRI</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 5th-order machine Type 2 and AVR Type I</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the fifth order machine with a type 1 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order5.w</code></li>
+</ul>
+<p>Note that the oscillations, which present some considerable damping, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder5"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder5</a> (Template for base network and a 5th order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FifthOrder_AVRII<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRII" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.FifthOrder_AVRII"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.FifthOrder_AVRII</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 5th-order machine Type 2 and AVR Type II</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the fifth order machine with a type 2 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order5.w</code></li>
+</ul>
+<p>Note that the oscillations, which present some considerable damping, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder5"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder5</a> (Template for base network and a 5th order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SixthOrder_AVRI<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRI" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRI"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.SixthOrder_AVRI</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 6th-order machine and AVR Type I</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the sixth order machine with a type 1 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order6.w</code></li>
+</ul>
+<p>Note that the oscillations, which present some considerable damping, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder6"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder6</a> (Template for base network and a 6th order generator).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SixthOrder_AVRII<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.PSATSyscb7c03babc193b85_AVRII.png" alt="OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRII" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.PSATSystems.TwoArea.SixthOrder_AVRII"></a><a href="OpenIPSL_Examples_PSATSystems_TwoArea.html#OpenIPSL.Examples.PSATSystems.TwoArea"
+>OpenIPSL.Examples.PSATSystems.TwoArea</a>.SixthOrder_AVRII</h2>
+<p>
+<span class="ModelicaDescription">31-bus system with 6th-order machine and AVR Type II</span>
+</p>
+<h3>Information</h3>
+
+<p>This system is tests the sixth order machine with a type 2 AVR, from PSAT. Simulate the system for 20 seconds.</p>
+<p>Variables of interest are related to the (non-)coherency observed between the synchronous machines:</p>
+<ul>
+<li><code>order3.w</code></li>
+<li><code>order6.w</code></li>
+</ul>
+<p>Note that the oscillations, which present some considerable damping, have opposing phases, meaning that one machine is swinging against the other, in a clear example of non-coherent machines. In addition, plot:</p>
+<ul>
+<li><code>B6.v</code></li>
+<li><code>B30.v</code></li>
+</ul>
+<p>Compare these results with the ones from the other example systems within the <strong>TwoArea</strong> subpackage.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_PSATSystems_TwoArea_BaseClasses.html#OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder6"
+>OpenIPSL.Examples.PSATSystems.TwoArea.BaseClasses.BaseOrder6</a> (Template for base network and a 6th order generator).</span></p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:55 2022.
+</address>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.NonElectrical.Logical</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Blocks that are described with boolean and logic statements and operations&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Logical<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.NonElectrical.Logical"></a><a href="OpenIPSL_NonElectrical.html#OpenIPSL.NonElectrical"
+>OpenIPSL.NonElectrical</a>.Logical</h2>
+<p>
+<span class="ModelicaDescription">Blocks that are described with boolean and logic statements and operations</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Lo172ba4f4ce935528LogicS.png" alt="OpenIPSL.NonElectrical.Logical.NegCurLogic" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical.NegCurLogic"
+>NegCurLogic</a>
+</td>
+<td>Negative current logic block</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Logical.HV_GATES.png" alt="OpenIPSL.NonElectrical.Logical.HV_GATE" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical.HV_GATE"
+>HV_GATE</a>
+</td>
+<td>Passes through the higher value of the two inputs</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Logical.HV_GATES.png" alt="OpenIPSL.NonElectrical.Logical.LV_GATE" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical.LV_GATE"
+>LV_GATE</a>
+</td>
+<td>Passes through the lower value of the two inputs</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Logical.RelayS.png" alt="OpenIPSL.NonElectrical.Logical.Relay" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical.Relay"
+>Relay</a>
+</td>
+<td>Relay, y = if u1 &gt; 0 then u2 else u3</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Logical.Relay3S.png" alt="OpenIPSL.NonElectrical.Logical.Relay3" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical.Relay3"
+>Relay3</a>
+</td>
+<td>Relay, y = if u1 &gt; Vov then u3 elseif u1 &lt; -Vov then u4 else u2</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE NegCurLogic<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Lo172ba4f4ce935528LogicI.png" alt="OpenIPSL.NonElectrical.Logical.NegCurLogic" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Logical.NegCurLogic"></a><a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical"
+>OpenIPSL.NonElectrical.Logical</a>.NegCurLogic</h2>
+<p>
+<span class="ModelicaDescription">Negative current logic block</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>RC_rfd</td><td>&nbsp;</td></tr>
+<tr><td>nstartvalue</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Vd</td><td>&nbsp;</td></tr>
+<tr><td>Efd</td><td>&nbsp;</td></tr>
+<tr><td>XadIfd</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE HV_GATE<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Logical.HV_GATEI.png" alt="OpenIPSL.NonElectrical.Logical.HV_GATE" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Logical.HV_GATE"></a><a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical"
+>OpenIPSL.NonElectrical.Logical</a>.HV_GATE</h2>
+<p>
+<span class="ModelicaDescription">Passes through the higher value of the two inputs</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Math.Max (Pass through the largest signal).</span></p>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u1</td><td>Connector of Real input signal 1</td></tr>
+<tr><td>u2</td><td>Connector of Real input signal 2</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LV_GATE<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Logical.HV_GATEI.png" alt="OpenIPSL.NonElectrical.Logical.LV_GATE" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Logical.LV_GATE"></a><a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical"
+>OpenIPSL.NonElectrical.Logical</a>.LV_GATE</h2>
+<p>
+<span class="ModelicaDescription">Passes through the lower value of the two inputs</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Math.Min (Pass through the smallest signal).</span></p>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u1</td><td>Connector of Real input signal 1</td></tr>
+<tr><td>u2</td><td>Connector of Real input signal 2</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Relay<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Logical.RelayI.png" alt="OpenIPSL.NonElectrical.Logical.Relay" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Logical.Relay"></a><a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical"
+>OpenIPSL.NonElectrical.Logical</a>.Relay</h2>
+<p>
+<span class="ModelicaDescription">Relay, y = if u1 &gt; 0 then u2 else u3</span>
+</p>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u1</td><td>&nbsp;</td></tr>
+<tr><td>u2</td><td>&nbsp;</td></tr>
+<tr><td>u3</td><td>&nbsp;</td></tr>
+<tr><td>y</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Relay3<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Logical.Relay3I.png" alt="OpenIPSL.NonElectrical.Logical.Relay3" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Logical.Relay3"></a><a href="OpenIPSL_NonElectrical_Logical.html#OpenIPSL.NonElectrical.Logical"
+>OpenIPSL.NonElectrical.Logical</a>.Relay3</h2>
+<p>
+<span class="ModelicaDescription">Relay, y = if u1 &gt; Vov then u3 elseif u1 &lt; -Vov then u4 else u2</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Vov</td><td>Threshold for relay</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u1</td><td>&nbsp;</td></tr>
+<tr><td>u2</td><td>&nbsp;</td></tr>
+<tr><td>u3</td><td>&nbsp;</td></tr>
+<tr><td>y</td><td>&nbsp;</td></tr>
+<tr><td>u4</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

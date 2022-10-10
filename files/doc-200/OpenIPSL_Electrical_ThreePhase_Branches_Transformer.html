@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.ThreePhase.Branches.Transformer</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Models for three-phase transformers&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Transformer<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.ThreePhase.Branches.Transformer"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches.html#OpenIPSL.Electrical.ThreePhase.Branches"
+>OpenIPSL.Electrical.ThreePhase.Branches</a>.Transformer</h2>
+<p>
+<span class="ModelicaDescription">Models for three-phase transformers</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains a model for three-phase transformers and a set of functions used to calculate three-phase impedance matrices depending on the transformer connection.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Three37ce252585dbe2dar_3PhS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.Transformer.Transformer_3Ph" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_Transformer.html#OpenIPSL.Electrical.ThreePhase.Branches.Transformer.Transformer_3Ph"
+>Transformer_3Ph</a>
+</td>
+<td>Three Phase transformer modeled as a PI-equivalent device</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Three354df76056eaa2c4ctionS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.Transformer.TransfConnection" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_Transformer_TransfConnection.html#OpenIPSL.Electrical.ThreePhase.Branches.Transformer.TransfConnection"
+>TransfConnection</a>
+</td>
+<td>Set of functions used to calculate three-phase impedance matrices for transformers</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Transformer_3Ph<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three37ce252585dbe2dar_3PhI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.Transformer.Transformer_3Ph" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.Transformer.Transformer_3Ph"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_Transformer.html#OpenIPSL.Electrical.ThreePhase.Branches.Transformer"
+>OpenIPSL.Electrical.ThreePhase.Branches.Transformer</a>.Transformer_3Ph</h2>
+<p>
+<span class="ModelicaDescription">Three Phase transformer modeled as a PI-equivalent device</span>
+</p>
+<h3>Information</h3>
+
+<p>This model was design to represent three-phase two-winding transformer.</p>
+<p>The user should input the copper resistance <strong>R</strong> and leakage reactance <strong>X</strong> in per unit values.
+The user should also input the tap value, which is the relation between primary and secondary voltage levels, but in per unit.
+Finally, the user should select the transformer three-phase connection.</p>
+<p>Based on this set of parameters, the pi-equivalent impedance matrices are calculated and the transformer equation is assembled.
+The transformer does not take into account excitation branch, since it is often neglected in transient-stability studies.</p>
+<p>Primary side is represented by pins <strong><em>Ain</em></strong>, <strong><em>Bin</em></strong>, and <strong><em>Cin</em></strong>.
+Secondary side is represented by pins <strong><em>Aout</em></strong>, <strong><em>Bout</em></strong>, and <strong><em>Cout</em></strong></p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_ThreePhase.html#OpenIPSL.Electrical.ThreePhase.ThreePhaseComponent"
+>ThreePhaseComponent</a> (Partial model for inheritance of single-phase base power based on three-phase system base power.).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Connection</td><td>0 Yg-Yg; 1 D-D; 2 Y-Y; 3 D-Yg; 4 Yg-D; 5 D-Y; 6 Y-D; 7 Y-Yg; 8 Yg-Y;</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base [VA]</td></tr>
+<tr><td>S_p</td><td>Phase base [VA]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Transformer parameters</td></tr>
+<tr><td>tap</td><td>Nominal tap ratio (Vs/Vp)</td></tr>
+<tr><td>X</td><td>Leakage reactance [1]</td></tr>
+<tr><td>R</td><td>Windings copper resistance [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Ain</td><td>&nbsp;</td></tr>
+<tr><td>Bin</td><td>&nbsp;</td></tr>
+<tr><td>Cin</td><td>&nbsp;</td></tr>
+<tr><td>Aout</td><td>&nbsp;</td></tr>
+<tr><td>Bout</td><td>&nbsp;</td></tr>
+<tr><td>Cout</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

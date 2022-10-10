@@ -16,10 +16,10 @@ Here, you will find the HTML documentation for the OpenIPSL, automatically gener
 <table>
   <tr>
     <td>OpenIPSL v2.0.0</td>
-    <td><a href="./about">Documentation</a></td>
+    <td><a href="./files/doc-200/OpenIPSL.html">Documentation</a></td>
   </tr>
   <tr>
     <td>OpenIPSL v3.0.1</td>
-    <td><a href="./reports">Documentation</a></td>
+    <td><a href="./files/doc-301/OpenIPSL.html">Documentation</a></td>
   </tr>
 </table>

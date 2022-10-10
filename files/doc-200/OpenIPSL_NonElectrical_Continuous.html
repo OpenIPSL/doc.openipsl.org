@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.NonElectrical.Continuous</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Blocks that are described with continuous equations&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Continuous<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.NonElectrical.Continuous"></a><a href="OpenIPSL_NonElectrical.html#OpenIPSL.NonElectrical"
+>OpenIPSL.NonElectrical</a>.Continuous</h2>
+<p>
+<span class="ModelicaDescription">Blocks that are described with continuous equations</span><br>
+</p>
+<h3>Information</h3>
+
+
+All of the transfer functions found in this package are also available in the Modelica Standard Library (MSL). However, some of the models require the time constants of the functions in this package to be set to zero. This is not supported by MSL and, thus, this is supported by functions in this package.
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co4e76229145d2c51dveLagS.png" alt="OpenIPSL.NonElectrical.Continuous.DerivativeLag" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.DerivativeLag"
+>DerivativeLag</a>
+</td>
+<td>Derivative lag transfer function block</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Cobcdbc8181ec421baimVarS.png" alt="OpenIPSL.NonElectrical.Continuous.IntegratorLimVar" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.IntegratorLimVar"
+>IntegratorLimVar</a>
+</td>
+<td>Integrator with a non windup limiter and variable limits</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co1a83a0c443334d7badLagS.png" alt="OpenIPSL.NonElectrical.Continuous.LeadLag" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.LeadLag"
+>LeadLag</a>
+</td>
+<td>Lead-Lag filter</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Coff296780f6bc9cd4agLimS.png" alt="OpenIPSL.NonElectrical.Continuous.LeadLagLim" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.LeadLagLim"
+>LeadLagLim</a>
+</td>
+<td>Lead-Lag filter with a non-windup limiter</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co6ccddd33c6432bfcilterS.png" alt="OpenIPSL.NonElectrical.Continuous.RampTrackingFilter" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.RampTrackingFilter"
+>RampTrackingFilter</a>
+</td>
+<td>Ramp-tracking filter</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co638fd2aae6375228leLagS.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLag" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.SimpleLag"
+>SimpleLag</a>
+</td>
+<td>First order lag transfer function block</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co8519cbc2a9154f16agLimS.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagLim" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.SimpleLagLim"
+>SimpleLagLim</a>
+</td>
+<td>First order lag transfer function block with a non windup limiter</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co68c26f91a46a00d8imVarS.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagLimVar" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.SimpleLagLimVar"
+>SimpleLagLimVar</a>
+</td>
+<td>First order lag transfer function block with a non windup limiter and variable limits</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co58f29557381e2253BlockS.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimBlock" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimBlock"
+>SimpleLagRateLimBlock</a>
+</td>
+<td>First order lag transfer function block with a non windup limiter, rate limits and blocking input</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Co4c4c8901960e5236imVarS.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimVar" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimVar"
+>SimpleLagRateLimVar</a>
+</td>
+<td>First order lag transfer function block with a non windup limiter, rate limits, variable output limits and blocking input</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.NonElectrical.Cof299d674b6ea55b8eLeadS.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLead" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous.SimpleLead"
+>SimpleLead</a>
+</td>
+<td>First order lead transfer function block</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE DerivativeLag<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co4e76229145d2c51dveLagI.png" alt="OpenIPSL.NonElectrical.Continuous.DerivativeLag" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.DerivativeLag"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.DerivativeLag</h2>
+<p>
+<span class="ModelicaDescription">Derivative lag transfer function block</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T</td><td>Time constant [s]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+<tr><td>x_start</td><td>Start value of state variable</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IntegratorLimVar<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Cobcdbc8181ec421baimVarI.png" alt="OpenIPSL.NonElectrical.Continuous.IntegratorLimVar" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.IntegratorLimVar"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.IntegratorLimVar</h2>
+<p>
+<span class="ModelicaDescription">Integrator with a non windup limiter and variable limits</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+<tr><td>outMax</td><td>&nbsp;</td></tr>
+<tr><td>outMin</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LeadLag<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co1a83a0c443334d7badLagI.png" alt="OpenIPSL.NonElectrical.Continuous.LeadLag" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.LeadLag"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.LeadLag</h2>
+<p>
+<span class="ModelicaDescription">Lead-Lag filter</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T1</td><td>Lead time constant [s]</td></tr>
+<tr><td>T2</td><td>Lag time constant [s]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+<tr><td>x_start</td><td>Start value of state variable</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LeadLagLim<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Coff296780f6bc9cd4agLimI.png" alt="OpenIPSL.NonElectrical.Continuous.LeadLagLim" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.LeadLagLim"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.LeadLagLim</h2>
+<p>
+<span class="ModelicaDescription">Lead-Lag filter with a non-windup limiter</span>
+</p>
+<h3>Information</h3>
+
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T1</td><td>Lead time constant [s]</td></tr>
+<tr><td>T2</td><td>Lag time constant [s]</td></tr>
+<tr><td>outMax</td><td>Maximum output value</td></tr>
+<tr><td>outMin</td><td>Minimum output value</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE RampTrackingFilter<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co6ccddd33c6432bfcilterI.png" alt="OpenIPSL.NonElectrical.Continuous.RampTrackingFilter" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.RampTrackingFilter"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.RampTrackingFilter</h2>
+<p>
+<span class="ModelicaDescription">Ramp-tracking filter</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>T_1</td><td>&nbsp;</td></tr>
+<tr><td>T_2</td><td>&nbsp;</td></tr>
+<tr><td>M</td><td>&gt;=0, M*N&lt;=8</td></tr>
+<tr><td>N</td><td>&gt;=0, M*N&lt;=8</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SimpleLag<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co638fd2aae6375228leLagI.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLag" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.SimpleLag"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.SimpleLag</h2>
+<p>
+<span class="ModelicaDescription">First order lag transfer function block</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T</td><td>Lag time constant [s]</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SimpleLagLim<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co8519cbc2a9154f16agLimI.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagLim" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.SimpleLagLim"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.SimpleLagLim</h2>
+<p>
+<span class="ModelicaDescription">First order lag transfer function block with a non windup limiter</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T</td><td>Lag time constant [s]</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+<tr><td>outMax</td><td>Maximum output value</td></tr>
+<tr><td>outMin</td><td>Minimum output value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SimpleLagLimVar<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co68c26f91a46a00d8imVarI.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagLimVar" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.SimpleLagLimVar"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.SimpleLagLimVar</h2>
+<p>
+<span class="ModelicaDescription">First order lag transfer function block with a non windup limiter and variable limits</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T</td><td>Lag time constant [s]</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+<tr><td>T_mod</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>outMax</td><td>&nbsp;</td></tr>
+<tr><td>outMin</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SimpleLagRateLimBlock<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co58f29557381e2253BlockI.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimBlock" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimBlock"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.SimpleLagRateLimBlock</h2>
+<p>
+<span class="ModelicaDescription">First order lag transfer function block with a non windup limiter, rate limits and blocking input</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T</td><td>Lag time constant [s]</td></tr>
+<tr><td>outMax</td><td>Maximum output value</td></tr>
+<tr><td>outMin</td><td>Minimum output value</td></tr>
+<tr><td>rmin</td><td>Minimum rate limit</td></tr>
+<tr><td>rmax</td><td>Maximum rate limit</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>Block</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SimpleLagRateLimVar<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Co4c4c8901960e5236imVarI.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimVar" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.SimpleLagRateLimVar"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.SimpleLagRateLimVar</h2>
+<p>
+<span class="ModelicaDescription">First order lag transfer function block with a non windup limiter, rate limits, variable output limits and blocking input</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>T</td><td>Lag time constant [s]</td></tr>
+<tr><td>rmin</td><td>Minimum rate limit</td></tr>
+<tr><td>rmax</td><td>Maximum rate limit</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+<tr><td>outMin</td><td>&nbsp;</td></tr>
+<tr><td>outMax</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SimpleLead<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.NonElectrical.Cof299d674b6ea55b8eLeadI.png" alt="OpenIPSL.NonElectrical.Continuous.SimpleLead" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.NonElectrical.Continuous.SimpleLead"></a><a href="OpenIPSL_NonElectrical_Continuous.html#OpenIPSL.NonElectrical.Continuous"
+>OpenIPSL.NonElectrical.Continuous</a>.SimpleLead</h2>
+<p>
+<span class="ModelicaDescription">First order lead transfer function block</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Blocks.Interfaces.SISO (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>K</td><td>Gain</td></tr>
+<tr><td>T</td><td>Lead time constant [s]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>y_start</td><td>Output start value</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

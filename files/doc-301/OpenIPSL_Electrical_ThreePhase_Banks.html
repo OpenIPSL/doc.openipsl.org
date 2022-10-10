@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.ThreePhase.Banks</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Multi-phase capacitor bank models&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Banks<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.ThreePhase.Banks"></a><a href="OpenIPSL_Electrical_ThreePhase.html#OpenIPSL.Electrical.ThreePhase"
+>OpenIPSL.Electrical.ThreePhase</a>.Banks</h2>
+<p>
+<span class="ModelicaDescription">Multi-phase capacitor bank models</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains models for multi-phase capacitor banks.</p>
+<p>It contains single-phase and three-phase banks that produce voltage support for the system.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threeaa842e808d6c84f0k_3PhS.png" alt="OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_3Ph" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Banks.html#OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_3Ph"
+>CapacitorBank_3Ph</a>
+</td>
+<td>Three-phase capacitor bank</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threeaa83a86e8d6c8cf0k_1PhS.png" alt="OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_1Ph" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Banks.html#OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_1Ph"
+>CapacitorBank_1Ph</a>
+</td>
+<td>Single-phase capacitor bank</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE CapacitorBank_3Ph<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Threeaa842e808d6c84f0k_3PhI.png" alt="OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_3Ph" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_3Ph"></a><a href="OpenIPSL_Electrical_ThreePhase_Banks.html#OpenIPSL.Electrical.ThreePhase.Banks"
+>OpenIPSL.Electrical.ThreePhase.Banks</a>.CapacitorBank_3Ph</h2>
+<p>
+<span class="ModelicaDescription">Three-phase capacitor bank</span>
+</p>
+<h3>Information</h3>
+
+<p>This model represents a three-phase capacitor bank.</p>
+<p>This device is used to supply reactive power to the system, increasing the voltage in the three-phase bus the bank is connected to.</p>
+<p>The reactive power supplied by the capacitor bank is constant and it is defined by parameters Q_a, Q_b and Q_c, which correspond to the reactive power supplied in phases A, B and C, respectively.</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_ThreePhase.html#OpenIPSL.Electrical.ThreePhase.ThreePhaseComponent"
+>ThreePhaseComponent</a> (Partial model for inheritance of single-phase base power based on three-phase system base power.).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base [V.A]</td></tr>
+<tr><td>S_p</td><td>Phase base [V.A]</td></tr>
+<tr><td>VA</td><td>Voltage magnitude [1]</td></tr>
+<tr><td>AngA</td><td>Voltage angle for phase A [rad]</td></tr>
+<tr><td>VB</td><td>Voltage magnitude [1]</td></tr>
+<tr><td>AngB</td><td>Voltage angle for phase B [rad]</td></tr>
+<tr><td>VC</td><td>Voltage magnitude [1]</td></tr>
+<tr><td>AngC</td><td>Voltage angle for phase C [rad]</td></tr>
+<tr><td>Q_a</td><td>Initial reactive power [var]</td></tr>
+<tr><td>Q_b</td><td>Initial reactive power [var]</td></tr>
+<tr><td>Q_c</td><td>Initial reactive power [var]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>A</td><td>&nbsp;</td></tr>
+<tr><td>B</td><td>&nbsp;</td></tr>
+<tr><td>C</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE CapacitorBank_1Ph<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Threeaa83a86e8d6c8cf0k_1PhI.png" alt="OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_1Ph" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Banks.CapacitorBank_1Ph"></a><a href="OpenIPSL_Electrical_ThreePhase_Banks.html#OpenIPSL.Electrical.ThreePhase.Banks"
+>OpenIPSL.Electrical.ThreePhase.Banks</a>.CapacitorBank_1Ph</h2>
+<p>
+<span class="ModelicaDescription">Single-phase capacitor bank</span>
+</p>
+<h3>Information</h3>
+
+<p>This model represents a single-phase capacitor bank.</p>
+<p>This device is used to supply reactive power to the system, increasing the voltage in the bus it is connected to.</p>
+<p>The reactive power supplied by the capacitor bank is constant and it is defined by parameter Q_a.</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_ThreePhase.html#OpenIPSL.Electrical.ThreePhase.ThreePhaseComponent"
+>ThreePhaseComponent</a> (Partial model for inheritance of single-phase base power based on three-phase system base power.).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base [V.A]</td></tr>
+<tr><td>S_p</td><td>Phase base [V.A]</td></tr>
+<tr><td>VA</td><td>Voltage magnitude [1]</td></tr>
+<tr><td>AngA</td><td>Voltage angle for phase A [rad]</td></tr>
+<tr><td>Q_a</td><td>Initial reactive power [var]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>A</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:56 2022.
+</address>
+</body>
+</html>

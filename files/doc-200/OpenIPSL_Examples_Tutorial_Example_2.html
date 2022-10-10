@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.Tutorial.Example_2</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Designing a controller and stabilizing the power system&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_2<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_2"></a><a href="OpenIPSL_Examples_Tutorial.html#OpenIPSL.Examples.Tutorial"
+>OpenIPSL.Examples.Tutorial</a>.Example_2</h2>
+<p>
+<span class="ModelicaDescription">Designing a controller and stabilizing the power system</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package brings information on how to use the simulation results from Example 1 in order to perform the control design of a Power System Stabilizer (PSS) for the system in Example 1.</p>
+<p>Note that this package shows, step-by-step, how the generator can be connected to the PSS and it also presents a Modelica function that can be used to tune the controller gain using Root Locus technique.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoria2e3cf169076ad299ple_2S.png" alt="OpenIPSL.Examples.Tutorial.Example_2.Example_2" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_2.html#OpenIPSL.Examples.Tutorial.Example_2.Example_2"
+>Example_2</a>
+</td>
+<td>Fully assembled single-machine-infinite-bus (SMIB) example system with a Power System Stabilizer</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriaf667d737d74c1232ratorS.png" alt="OpenIPSL.Examples.Tutorial.Example_2.Generator" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_2_Generator.html#OpenIPSL.Examples.Tutorial.Example_2.Generator"
+>Generator</a>
+</td>
+<td>Set of steps illustrating how to assemble a generation unit with stabilizer using OpenIPSL</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriaca506c4df35954c5locusS.png" alt="OpenIPSL.Examples.Tutorial.Example_2.root_locus" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_2.html#OpenIPSL.Examples.Tutorial.Example_2.root_locus"
+>root_locus</a>
+</td>
+<td>Function for executing the root locus analysis for tuning the AVR gain in Example 1</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_2<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Tutoria2e3cf169076ad299ple_2I.png" alt="OpenIPSL.Examples.Tutorial.Example_2.Example_2" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_2.Example_2"></a><a href="OpenIPSL_Examples_Tutorial_Example_2.html#OpenIPSL.Examples.Tutorial.Example_2"
+>OpenIPSL.Examples.Tutorial.Example_2</a>.Example_2</h2>
+<p>
+<span class="ModelicaDescription">Fully assembled single-machine-infinite-bus (SMIB) example system with a Power System Stabilizer</span>
+</p>
+<h3>Information</h3>
+
+<p>This example system represents the resulting model after one has followed the steps to assemble the generation unit with the tuned Power System Stabilizer for improving the system's transient stability condition. The system must be simulated during 10 seconds.</p>
+<p>Variables of interest are:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>B2.v</code></li>
+<li><code>G1.machine.delta</code></li>
+</ul>
+<p>Compare these curvess with the ones obtained in Example 1. Note that with a properly tuned stabilizer, the before unstable behavior is now fixed and the growing oscillations have now a proper damping.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE root_locus<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Tutoriaca506c4df35954c5locusI.png" alt="OpenIPSL.Examples.Tutorial.Example_2.root_locus" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_2.root_locus"></a><a href="OpenIPSL_Examples_Tutorial_Example_2.html#OpenIPSL.Examples.Tutorial.Example_2"
+>OpenIPSL.Examples.Tutorial.Example_2</a>.root_locus</h2>
+<p>
+<span class="ModelicaDescription">Function for executing the root locus analysis for tuning the AVR gain in Example 1</span>
+</p>
+<h3>Information</h3>
+
+<p>This function varies the AVR gain and, for each value, it linearizes the equations of the example system and extracts the eigenvalues from the state matrix A. By doing so, it stores all the poles of the system and how their loci change with the parametric variation corresponding to AVR gain.</p>
+<p>The main goal of this function is to identify for what values of the AVR gain, the system is stable and the poles have adequate damping.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pathToPlantModel</td><td>Model in which root locus will be performed</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>ss</td><td>Object with ABCD matrices of linearized model</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>

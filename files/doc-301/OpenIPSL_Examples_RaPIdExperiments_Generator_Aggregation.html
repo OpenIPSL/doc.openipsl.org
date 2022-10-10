@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Example systems used in generator aggregation experiment&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Generator_Aggregation<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation"></a><a href="OpenIPSL_Examples_RaPIdExperiments.html#OpenIPSL.Examples.RaPIdExperiments"
+>OpenIPSL.Examples.RaPIdExperiments</a>.Generator_Aggregation</h2>
+<p>
+<span class="ModelicaDescription">Example systems used in generator aggregation experiment</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This subpackage contains the models used in a generator aggregation experiment. The two models can be simulated and their results can be compared in order to validate the performed aggregation experiment.</p>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.RaPIdEx6f772116997992a2ystemS.png" alt="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Reference_system" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_RaPIdExperiments_Generator_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Reference_system"
+>Reference_system</a>
+</td>
+<td>Original test system for machine aggregation using RaPId</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.RaPIdEx6f772116997992a2ystemS.png" alt="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Aggregated_system" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_RaPIdExperiments_Generator_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Aggregated_system"
+>Aggregated_system</a>
+</td>
+<td>Test system with an aggregated machine, obtained using RaPId</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Reference_system<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.RaPIdEx6f772116997992a2ystemI.png" alt="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Reference_system" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Reference_system"></a><a href="OpenIPSL_Examples_RaPIdExperiments_Generator_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation"
+>OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation</a>.Reference_system</h2>
+<p>
+<span class="ModelicaDescription">Original test system for machine aggregation using RaPId</span>
+</p>
+<h3>Information</h3>
+
+<p>This is a Three-Machine system containing disturbances on the excitation system of the generator connected to bus GEN1.
+These disturbances allow the user to observe dominant dynamics that need to be preserved when the generators conncted at bus GEN2 are aggregated into one machine.</p>
+<p>Simulate the system for 20 seconds. Variables of interest are:</p>
+<ul>
+<li><code>gENROE.SPEED</code></li>
+<li><code>gENROE1.SPEED</code></li>
+<li><code>gENROE2.SPEED</code></li>
+</ul>
+<p>In addition, also plot the following variables:</p>
+<ul>
+<li><code>gENROE.PELEC</code></li>
+<li><code>gENROE1.PELEC</code></li>
+<li><code>gENROE2.PELEC</code></li>
+</ul>
+<p>Compare the results obtained in this simulation with the ones obtained in <strong>Aggregated_system</strong>.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Aggregated_system<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.RaPIdEx6f772116997992a2ystemI.png" alt="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Aggregated_system" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation.Aggregated_system"></a><a href="OpenIPSL_Examples_RaPIdExperiments_Generator_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation"
+>OpenIPSL.Examples.RaPIdExperiments.Generator_Aggregation</a>.Aggregated_system</h2>
+<p>
+<span class="ModelicaDescription">Test system with an aggregated machine, obtained using RaPId</span>
+</p>
+<h3>Information</h3>
+
+<p>This is a Two-Machine system resulting from the aggregation of both generators connected to bus GEN2.</p>
+<p>Simulate the system for 20 seconds. Variables of interest are:</p>
+<ul>
+<li><code>gENROE.SPEED</code></li>
+<li><code>gENROE1.SPEED</code></li>
+</ul>
+<p>In addition, also plot the following variables:</p>
+<ul>
+<li><code>gENROE.PELEC</code></li>
+<li><code>gENROE1.PELEC</code></li>
+</ul>
+<p>Compare the results obtained in this simulation with the ones obtained in <strong>Reference_system</strong>.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:55 2022.
+</address>
+</body>
+</html>

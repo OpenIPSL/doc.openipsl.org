@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Open-Instance Power System Library&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE OpenIPSL<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL"></a>OpenIPSL</h2>
+<p>
+<span class="ModelicaDescription">Open-Instance Power System Library</span><br>
+</p>
+<h3>Information</h3>
+
+<p>
+The <strong><code>OpenIPSL</code></strong> or Open-Instance Power System Library is a
+<a href="https://www.modelica.org">Modelica</a> library, fork of of the
+<a href="https://github.com/itesla/ipsl">iTesla Power System Library</a>
+developed and maintained by the <a href="https://alsetlab.github.io/">ALSETLab</a> research group,
+collaborators and friends (contributions are welcome!).
+The library contains a set of power system component models and test power system
+networks adopting the phasor modeling approach.
+<a href="https://build.openmodelica.org/Documentation/OpenModelica.Scripting.simulate.html">Time domain simulations</a>
+can be carried out using a Modelica-compliant tool,
+which may also allow to do other computations on the model,
+such as <a href="https://build.openmodelica.org/Documentation/OpenModelica.Scripting.linearize.html">linearization</a>
+for eigen-analysis and other purposes.
+</p>
+<p>
+If you are looking for an introduction to the library, have especially a look at:
+</p>
+<ul>
+<li><a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide"
+>User's Guide</a>
+  and all its dependencies for general information about the library.
+<ul>
+<li><a href="modelica://OpenIPSL.Overview">Overview</a></li>
+<li><a href="modelica://OpenIPSL.Conventions">Conventions</a></li>
+<li><a href="modelica://OpenIPSL.GettingStarted">Getting Started</a></li>
+<li><a href="modelica://OpenIPSL.Testing">Testing and Verification</a></li>
+<li><a href="modelica://OpenIPSL.Publications">Publications</a></li>
+<li><a href="modelica://OpenIPSL.References">References</a></li>
+<li><a href="OpenIPSL_UsersGuide_ReleaseNotes.html#OpenIPSL.UsersGuide.ReleaseNotes"
+>Release Notes</a>
+ for a summary of changes in the versions of the <strong><code>OpenIPSL</code></strong>.</li>
+<li> <a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.Contact"
+>Contact</a>
+  for a brief list of contributors and developers of the library.</li>
+</ul>
+</li>
+<li><a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>Examples</a> package for demonstration of power system examples that can be assembled using the library.</li>
+<li>&hellip;</li>
+<li><a href="OpenIPSL_Tests.html#OpenIPSL.Tests"
+>Tests</a> package for small test systems which show basic behavior of some of the many components of this library.</li>
+</ul>
+<p>
+Please check the library's <a href="OpenIPSL.html#OpenIPSL.Copyright"
+>Copyright</a> disclaimer for information on license. See also the <strong><code>OpenIPSL</code></strong> organization website <a href="http://openipsl.org">openipsl.org</a>
+for additional information.
+</p>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.CopyrightS.png" alt="OpenIPSL.Copyright" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL.html#OpenIPSL.Copyright"
+>Copyright</a>
+</td>
+<td>DISCLAIMER
+<p>&nbsp;</p>
+<p><strong>OpenIPSL</strong>: Copyright &copy; 2016 - 2022 Prof. <a href="https://github.com/lvanfretti">Luigi Vanfretti</a>, <a href="https://alsetlab.github.io/">AlsetLab</a>, Troy, NY (Formerly SmarTS Lab, Stockholm, Sweden).</p>
+<p>The authors can be contacted by email: <a href="mailto:luigi.vanfretti@gmail.com">luigi.vanfretti@gmail.com</a>.</p>
+<p>This Source Code Form is subject to the terms of the 3-Clause BSD license.</p>
+<p>A <a href="https://github.com/OpenIPSL/OpenIPSL/blob/master/LICENSE">copy of the license</a> is available in the library repository.</p>
+
+</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuideS.png" alt="OpenIPSL.UsersGuide" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide"
+>UsersGuide</a>
+</td>
+<td>User&#39;s Guide</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.ExamplesS.png" alt="OpenIPSL.Examples" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>Examples</a>
+</td>
+<td>Package with set of application examples</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.ElectricalS.png" alt="OpenIPSL.Electrical" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical.html#OpenIPSL.Electrical"
+>Electrical</a>
+</td>
+<td>Package for electrical models used in this library</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.ElectricalS.png" alt="OpenIPSL.NonElectrical" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_NonElectrical.html#OpenIPSL.NonElectrical"
+>NonElectrical</a>
+</td>
+<td>Package for non-electrical models used in this library</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.InterfacesS.png" alt="OpenIPSL.Interfaces" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Interfaces.html#OpenIPSL.Interfaces"
+>Interfaces</a>
+</td>
+<td>Package for interface models used in this library. </td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.IconsS.png" alt="OpenIPSL.Icons" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Icons.html#OpenIPSL.Icons"
+>Icons</a>
+</td>
+<td>Place for OpenIPSL specific icons</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.TypesS.png" alt="OpenIPSL.Types" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Types.html#OpenIPSL.Types"
+>Types</a>
+</td>
+<td>Library specific type definitions</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.TestsS.png" alt="OpenIPSL.Tests" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Tests.html#OpenIPSL.Tests"
+>Tests</a>
+</td>
+<td>Package with set of basic systems designed for testing the various models from the library</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Copyright<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.CopyrightI.png" alt="OpenIPSL.Copyright" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Copyright"></a><a href="OpenIPSL.html#OpenIPSL"
+>OpenIPSL</a>.Copyright</h2>
+<p>
+<span class="ModelicaDescription">DISCLAIMER
+<p>&nbsp;</p>
+<p><strong>OpenIPSL</strong>: Copyright &copy; 2016 - 2022 Prof. <a href="https://github.com/lvanfretti">Luigi Vanfretti</a>, <a href="https://alsetlab.github.io/">AlsetLab</a>, Troy, NY (Formerly SmarTS Lab, Stockholm, Sweden).</p>
+<p>The authors can be contacted by email: <a href="mailto:luigi.vanfretti@gmail.com">luigi.vanfretti@gmail.com</a>.</p>
+<p>This Source Code Form is subject to the terms of the 3-Clause BSD license.</p>
+<p>A <a href="https://github.com/OpenIPSL/OpenIPSL/blob/master/LICENSE">copy of the license</a> is available in the library repository.</p>
+
+</span>
+</p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:42 2022.
+</address>
+</body>
+</html>

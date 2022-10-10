@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.AKD.Components</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Set of generation unit models&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Components<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.AKD.Components"></a><a href="OpenIPSL_Examples_AKD.html#OpenIPSL.Examples.AKD"
+>OpenIPSL.Examples.AKD</a>.Components</h2>
+<p>
+<span class="ModelicaDescription">Set of generation unit models</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains two generation unit models that are used in the AKD system. These models are:</p>
+<ul>
+<li><strong>Gen_no_contr</strong>: composed of basically the machine model.</li>
+<li><strong>Gen_gov_exc_stab</strong>: composed of machine, exciter, turbine-governor and a stabilizer models.</li>
+</ul>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.Comca96b870264e1e1dcontrS.png" alt="OpenIPSL.Examples.AKD.Components.Gen_no_contr" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Components.html#OpenIPSL.Examples.AKD.Components.Gen_no_contr"
+>Gen_no_contr</a>
+</td>
+<td>Generation unit with only a machine model</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.Comca96b870264e1e1dcontrS.png" alt="OpenIPSL.Examples.AKD.Components.Gen_gov_exc_stab" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Components.html#OpenIPSL.Examples.AKD.Components.Gen_gov_exc_stab"
+>Gen_gov_exc_stab</a>
+</td>
+<td>Generation unit with machine, exciter, turbine-governor, and stabilizer models</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Gen_no_contr<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.AKD.Comca96b870264e1e1dcontrI.png" alt="OpenIPSL.Examples.AKD.Components.Gen_no_contr" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.AKD.Components.Gen_no_contr"></a><a href="OpenIPSL_Examples_AKD_Components.html#OpenIPSL.Examples.AKD.Components"
+>OpenIPSL.Examples.AKD.Components</a>.Gen_no_contr</h2>
+<p>
+<span class="ModelicaDescription">Generation unit with only a machine model</span>
+</p>
+<h3>Information</h3>
+
+<p>This generation unit model allows for instantiantions with different parameter sets. The model is composed by:</p>
+<ul>
+<li><strong>Machine model</strong>: GENSAL, a salient pole synchronous generator model.</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr><td>M_b</td><td>Machine base power [V.A]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Machine parameters</td></tr>
+<tr><td>Tpd0</td><td>d-axis transient open-circuit time constant [s]</td></tr>
+<tr><td>Tppd0</td><td>d-axis sub-transient open-circuit time constant [s]</td></tr>
+<tr><td>Tppq0</td><td>q-axis transient open-circuit time constant [s]</td></tr>
+<tr><td>H</td><td>Inertia constant [s]</td></tr>
+<tr><td>D</td><td>Speed damping</td></tr>
+<tr><td>Xd</td><td>d-axis reactance [1]</td></tr>
+<tr><td>Xq</td><td>q-axis reactance [1]</td></tr>
+<tr><td>Xpd</td><td>d-axis transient reactance [1]</td></tr>
+<tr><td>Xppd</td><td>d-axis sub-transient reactance [1]</td></tr>
+<tr><td>Xl</td><td>leakage reactance [1]</td></tr>
+<tr><td>S10</td><td>Saturation factor at 1.0 pu [1]</td></tr>
+<tr><td>S12</td><td>Saturation factor at 1.2 pu [1]</td></tr>
+<tr><td>R_a</td><td>Armature resistance [1]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pwPin</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Gen_gov_exc_stab<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.AKD.Comca96b870264e1e1dcontrI.png" alt="OpenIPSL.Examples.AKD.Components.Gen_gov_exc_stab" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.AKD.Components.Gen_gov_exc_stab"></a><a href="OpenIPSL_Examples_AKD_Components.html#OpenIPSL.Examples.AKD.Components"
+>OpenIPSL.Examples.AKD.Components</a>.Gen_gov_exc_stab</h2>
+<p>
+<span class="ModelicaDescription">Generation unit with machine, exciter, turbine-governor, and stabilizer models</span>
+</p>
+<h3>Information</h3>
+
+<p>This generation unit model allows for instantiantions with different parameter sets. The model is composed by:</p>
+<ul>
+<li><strong>Machine model</strong>: GENSAL, a salient pole synchronous generator model.</li>
+<li><strong>Exciter model</strong>: IEEET2, an IEEE type-2 excitation model.</li>
+<li><strong>Turbine-governor model</strong>: HYGOV, a hydro turbine governor model.</li>
+<li><strong>Stabilizer model</strong>: IEEEST, an IEEE power system stabilizer model.</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>R</td><td>Permanent droop [1]</td></tr>
+<tr><td>r</td><td>Temporary droop [1]</td></tr>
+<tr><td>T_r</td><td>Governor time constant [s]</td></tr>
+<tr><td>T_f</td><td>Filter time constant [s]</td></tr>
+<tr><td>T_g</td><td>Servo time constant [s]</td></tr>
+<tr><td>VELM</td><td>Gate open/close velocity limit [1/s]</td></tr>
+<tr><td>G_MAX</td><td>Maximum gate limit [1]</td></tr>
+<tr><td>G_MIN</td><td>Minimum gate limit [1]</td></tr>
+<tr><td>T_w</td><td>Water time constant [s]</td></tr>
+<tr><td>A_t</td><td>Turbine gain [1]</td></tr>
+<tr><td>D_turb</td><td>Turbine damping [1]</td></tr>
+<tr><td>q_NL</td><td>Water flow at no load [1]</td></tr>
+<tr><td>T_R</td><td>Voltage input time constant [s]</td></tr>
+<tr><td>K_A</td><td>AVR gain [1]</td></tr>
+<tr><td>T_A</td><td>AVR time constant [s]</td></tr>
+<tr><td>V_RMAX</td><td>Maximum AVR output [1]</td></tr>
+<tr><td>V_RMIN</td><td>Minimum AVR output [1]</td></tr>
+<tr><td>K_E</td><td>Exciter field gain [1]</td></tr>
+<tr><td>T_E</td><td>Exciter time constant [s]</td></tr>
+<tr><td>K_F</td><td>Rate feedback gain [1]</td></tr>
+<tr><td>T_F1</td><td>Rate feedback time constant [s]</td></tr>
+<tr><td>T_F2</td><td>Rate feedback time constant [s]</td></tr>
+<tr><td>E_1</td><td>Exciter saturation point 1 [1]</td></tr>
+<tr><td>S_EE_1</td><td>Saturation at E_1 [1]</td></tr>
+<tr><td>E_2</td><td>Exciter saturation point 2 [1]</td></tr>
+<tr><td>S_EE_2</td><td>Saturation at E_2 [1]</td></tr>
+<tr><td>A_1</td><td>Filter Coefficient [s]</td></tr>
+<tr><td>A_2</td><td>Filter Coefficient</td></tr>
+<tr><td>A_3</td><td>Filter Coefficient [s]</td></tr>
+<tr><td>A_4</td><td>Filter Coefficient</td></tr>
+<tr><td>A_5</td><td>Filter Coefficient [s]</td></tr>
+<tr><td>A_6</td><td>Filter Coefficient</td></tr>
+<tr><td>T_1</td><td>Lead Time Constant [s]</td></tr>
+<tr><td>T_2</td><td>Lag Time Constant [s]</td></tr>
+<tr><td>T_3</td><td>Lead Time Constant [s]</td></tr>
+<tr><td>T_4</td><td>Lag Time Constant [s]</td></tr>
+<tr><td>T_5</td><td>Washout Time Constant [s]</td></tr>
+<tr><td>T_6</td><td>Washout Time Constant [s]</td></tr>
+<tr><td>K_S</td><td>Stabilizer Gain [1]</td></tr>
+<tr><td>L_SMAX</td><td>Output Limits [1]</td></tr>
+<tr><td>L_SMIN</td><td>Output Limits [1]</td></tr>
+<tr><td>V_CU</td><td>Output Limits [1]</td></tr>
+<tr><td>V_CL</td><td>Output Limits [1]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr><td>M_b</td><td>Machine base power [V.A]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Machine parameters</td></tr>
+<tr><td>Tpd0</td><td>d-axis transient open-circuit time constant [s]</td></tr>
+<tr><td>Tppd0</td><td>d-axis sub-transient open-circuit time constant [s]</td></tr>
+<tr><td>Tppq0</td><td>q-axis transient open-circuit time constant [s]</td></tr>
+<tr><td>H</td><td>Inertia constant [s]</td></tr>
+<tr><td>D</td><td>Speed damping</td></tr>
+<tr><td>Xd</td><td>d-axis reactance [1]</td></tr>
+<tr><td>Xq</td><td>q-axis reactance [1]</td></tr>
+<tr><td>Xpd</td><td>d-axis transient reactance [1]</td></tr>
+<tr><td>Xppd</td><td>d-axis sub-transient reactance [1]</td></tr>
+<tr><td>Xl</td><td>leakage reactance [1]</td></tr>
+<tr><td>S10</td><td>Saturation factor at 1.0 pu [1]</td></tr>
+<tr><td>S12</td><td>Saturation factor at 1.2 pu [1]</td></tr>
+<tr><td>R_a</td><td>Armature resistance [1]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pwPin</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:39 2022.
+</address>
+</body>
+</html>

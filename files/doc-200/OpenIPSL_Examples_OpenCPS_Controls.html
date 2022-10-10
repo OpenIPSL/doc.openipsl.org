@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.OpenCPS.Controls</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Models for control systems used for resynchronization&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Controls<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.OpenCPS.Controls"></a><a href="OpenIPSL_Examples_OpenCPS.html#OpenIPSL.Examples.OpenCPS"
+>OpenIPSL.Examples.OpenCPS</a>.Controls</h2>
+<p>
+<span class="ModelicaDescription">Models for control systems used for resynchronization</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains control systems that are developed especially for this example system.
+Since these systems are not standard, they are not present in the main body of the library and their usage outside these examples is not encouraged.</p>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPSb012e958f9629ea1_CTRLS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.VOLT_CTRL" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.VOLT_CTRL"
+>VOLT_CTRL</a>
+</td>
+<td>Voltage magnitude control used in resynchronization</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPSa1c0aa21b3628e4b_CTRLS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.FREQ_CTRL" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.FREQ_CTRL"
+>FREQ_CTRL</a>
+</td>
+<td>Voltage frequency control used in resynchronization</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPS0338ef9c199aaeef_CTRLS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.ANGLE_CTRL" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.ANGLE_CTRL"
+>ANGLE_CTRL</a>
+</td>
+<td>Voltage angle control used in resynchronization</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPS3f9d9c7a75a6b84d_UNITS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.RESYNCH_UNIT" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.RESYNCH_UNIT"
+>RESYNCH_UNIT</a>
+</td>
+<td>Resynchronization control system</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPS3a5dfd223a4e6ab1CheckS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.LimitCheck" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.LimitCheck"
+>LimitCheck</a>
+</td>
+<td>Model of a limit checker</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPSa5bbc2ba5cfe23ea_UNITS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.ACT_UNIT" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.ACT_UNIT"
+>ACT_UNIT</a>
+</td>
+<td>Unit to check limits in voltage magnitude, frequency and angle for resynchronization</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.OpenCPSa1bbad5bb362d984_CALCS.png" alt="OpenIPSL.Examples.OpenCPS.Controls.FREQ_CALC" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls.FREQ_CALC"
+>FREQ_CALC</a>
+</td>
+<td>Frequency calculator</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE VOLT_CTRL<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPSb012e958f9629ea1_CTRLI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.VOLT_CTRL" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.VOLT_CTRL"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.VOLT_CTRL</h2>
+<p>
+<span class="ModelicaDescription">Voltage magnitude control used in resynchronization</span>
+</p>
+<h3>Information</h3>
+
+<p>This voltage controller, which is based on simple PI, is used to reduce the error (ideally to zero) of the voltage magnitude difference between two different nodes in the system.</p>
+<p>After the difference is reduced to zero, and the errors on voltage angle and frequency are also zero, the two nodes can be connected without major issues.</p>
+
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u1</td><td>&nbsp;</td></tr>
+<tr><td>u2</td><td>&nbsp;</td></tr>
+<tr><td>y</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FREQ_CTRL<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPSa1c0aa21b3628e4b_CTRLI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.FREQ_CTRL" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.FREQ_CTRL"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.FREQ_CTRL</h2>
+<p>
+<span class="ModelicaDescription">Voltage frequency control used in resynchronization</span>
+</p>
+<h3>Information</h3>
+
+<p>This frequency controller, which is based on simple PI, is used to reduce the error (ideally to zero) of the voltage frequency difference between two different nodes in the system.</p>
+<p>After the difference is reduced to zero, and the errors on voltage magnitude and angle are also zero, the two nodes can be connected without major issues.</p>
+<p>Note that this system uses the Frequency Calculator system.</p>
+
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>P_REF</td><td>&nbsp;</td></tr>
+<tr><td>TRIGGER</td><td>&nbsp;</td></tr>
+<tr><td>fi_IB</td><td>&nbsp;</td></tr>
+<tr><td>BLOCK</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ANGLE_CTRL<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPS0338ef9c199aaeef_CTRLI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.ANGLE_CTRL" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.ANGLE_CTRL"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.ANGLE_CTRL</h2>
+<p>
+<span class="ModelicaDescription">Voltage angle control used in resynchronization</span>
+</p>
+<h3>Information</h3>
+
+<p>This angle controller, which is based on simple Integrator, is used to reduce the error (ideally to zero) of the voltage angle difference between two different nodes in the system.</p>
+<p>After the difference is reduced to zero, and the errors on voltage magnitude and frequency are also zero, the two nodes can be connected without major issues.</p>
+
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>fi_IB</td><td>&nbsp;</td></tr>
+<tr><td>fi_DN</td><td>&nbsp;</td></tr>
+<tr><td>y</td><td>&nbsp;</td></tr>
+<tr><td>TRIGGER</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE RESYNCH_UNIT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPS3f9d9c7a75a6b84d_UNITI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.RESYNCH_UNIT" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.RESYNCH_UNIT"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.RESYNCH_UNIT</h2>
+<p>
+<span class="ModelicaDescription">Resynchronization control system</span>
+</p>
+<h3>Information</h3>
+
+<p>This resynchronization system uses the voltage magnitude, angle and frequency controls to eliminate the differences between the mentioned variables
+from two different electrical nodes in order to allow the resynchronization of an islanded system.</p>
+
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+<tr><td>P_CTRL</td><td>&nbsp;</td></tr>
+<tr><td>fi_DN</td><td>&nbsp;</td></tr>
+<tr><td>fi_IB</td><td>&nbsp;</td></tr>
+<tr><td>V_IB</td><td>&nbsp;</td></tr>
+<tr><td>V_DN</td><td>&nbsp;</td></tr>
+<tr><td>V_CTRL</td><td>&nbsp;</td></tr>
+<tr><td>TRIGGER</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LimitCheck<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPS3a5dfd223a4e6ab1CheckI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.LimitCheck" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.LimitCheck"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.LimitCheck</h2>
+<p>
+<span class="ModelicaDescription">Model of a limit checker</span>
+</p>
+<h3>Information</h3>
+
+<p>This model checks if a determined variable is within an interval determined by lower and upper limits.</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>upperLim</td><td>Upper limit</td></tr>
+<tr><td>lowerLim</td><td>Lower limit</td></tr>
+<tr><td>dt</td><td>Comparison threshold</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>&nbsp;</td></tr>
+<tr><td>START</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ACT_UNIT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPSa5bbc2ba5cfe23ea_UNITI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.ACT_UNIT" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.ACT_UNIT"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.ACT_UNIT</h2>
+<p>
+<span class="ModelicaDescription">Unit to check limits in voltage magnitude, frequency and angle for resynchronization</span>
+</p>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>START_FREQ</td><td>&nbsp;</td></tr>
+<tr><td>VOLT_DIFF</td><td>&nbsp;</td></tr>
+<tr><td>START_FI</td><td>&nbsp;</td></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>FI_DIFF</td><td>&nbsp;</td></tr>
+<tr><td>TRIGGER</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FREQ_CALC<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.OpenCPSa1bbad5bb362d984_CALCI.png" alt="OpenIPSL.Examples.OpenCPS.Controls.FREQ_CALC" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.OpenCPS.Controls.FREQ_CALC"></a><a href="OpenIPSL_Examples_OpenCPS_Controls.html#OpenIPSL.Examples.OpenCPS.Controls"
+>OpenIPSL.Examples.OpenCPS.Controls</a>.FREQ_CALC</h2>
+<p>
+<span class="ModelicaDescription">Frequency calculator</span>
+</p>
+<h3>Information</h3>
+
+<p>This model of frequency calculator is based on a washout filter followed by a first order filter that is meant to smooth the washout output. The model can have as input the angle value of the phasor, the output will be an estimate of the frequency based on the angle variation.</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>T_w</td><td>Smoothing filter time constant [s]</td></tr>
+<tr><td>T_f</td><td>Derivative filter time constant [s]</td></tr>
+<tr><td>fi_0</td><td>Initial angle [rad]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>ANGLE</td><td>&nbsp;</td></tr>
+<tr><td>d_FREQ</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>

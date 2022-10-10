@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.TwoAreas</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;2 areas test system from Klein, Rogers, and Kundur&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TwoAreas<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.TwoAreas"></a><a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>OpenIPSL.Examples</a>.TwoAreas</h2>
+<p>
+<span class="ModelicaDescription">2 areas test system from Klein, Rogers, and Kundur</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains a 11-bus 4-machine 2-area power grid model implemented in three different ways, generation unit models that are used in the network implementation and data packages for assisting initialization. </p>
+<p>As mentioned previously, the user will find three test systems: </p>
+<ul>
+<li><strong>Two_Areas_PSAT</strong>: test system in which generation units are composed of PSAT machine models.</li>
+<li><strong>Two_Areas_PSSE</strong>: test system in which generation units are composed of PSSE machine models.</li>
+<li><strong>Two_Areas_PSSE</strong>: test system in which generation units are composed of PSSE machine and PSSE exciter models.</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.TwoArea79124385ddf2ae33_PSATS.png" alt="OpenIPSL.Examples.TwoAreas.Two_Areas_PSAT" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_TwoAreas.html#OpenIPSL.Examples.TwoAreas.Two_Areas_PSAT"
+>Two_Areas_PSAT</a>
+</td>
+<td>11-bus 4-machine 2-area test system implemented with PSAT models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.TwoArea79124385ddf2ae33_PSATS.png" alt="OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_TwoAreas.html#OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE"
+>Two_Areas_PSSE</a>
+</td>
+<td>11-bus 4-machine 2-area test system implemented with machine models from PSSE</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.TwoArea79124385ddf2ae33_PSATS.png" alt="OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE_AVR" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_TwoAreas.html#OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE_AVR"
+>Two_Areas_PSSE_AVR</a>
+</td>
+<td>11-bus 4-machine 2-area test system implemented with machine and excitation system models from PSSE</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.TwoAreas.GroupsS.png" alt="OpenIPSL.Examples.TwoAreas.Groups" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_TwoAreas_Groups.html#OpenIPSL.Examples.TwoAreas.Groups"
+>Groups</a>
+</td>
+<td>Set of generation groups models for the different test systems</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.TwoAreas.GroupsS.png" alt="OpenIPSL.Examples.TwoAreas.Data" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_TwoAreas_Data.html#OpenIPSL.Examples.TwoAreas.Data"
+>Data</a>
+</td>
+<td>Power flow data records for network initialization</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.TwoAreas.GroupsS.png" alt="OpenIPSL.Examples.TwoAreas.Support" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_TwoAreas_Support.html#OpenIPSL.Examples.TwoAreas.Support"
+>Support</a>
+</td>
+<td>Package of templates used in this example</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Two_Areas_PSAT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.TwoArea79124385ddf2ae33_PSATI.png" alt="OpenIPSL.Examples.TwoAreas.Two_Areas_PSAT" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.TwoAreas.Two_Areas_PSAT"></a><a href="OpenIPSL_Examples_TwoAreas.html#OpenIPSL.Examples.TwoAreas"
+>OpenIPSL.Examples.TwoAreas</a>.Two_Areas_PSAT</h2>
+<p>
+<span class="ModelicaDescription">11-bus 4-machine 2-area test system implemented with PSAT models</span>
+</p>
+<h3>Information</h3>
+
+<p>This example is composed by the 11-bus 4-machine 2-area system, where these two areas are connected via weak tie lines. This test system is ideal for studying dynamic stability, power interchange, oscillation damping, etc.</p>
+<p>The system undergoes a three-phase-to-ground fault on Bus 8 at 1s, lasting for 50ms. Simulate the system for 10 seconds. Variables of interest are the ones related to inter-area modes. For example:</p>
+<ul>
+<li><code>g1.order6_1.w</code></li>
+<li><code>g2.order6_1.w</code></li>
+<li><code>g3.order6_1.w</code></li>
+<li><code>g4.order6_1.w</code></li>
+</ul>
+<p>which are variables that represent the generator's speed, in per unit. Note that generators 1 and 2 swing together, while swinging against generators 3 and 4. This is due to coherency between the area's group of generators.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>r</td><td>&nbsp;</td></tr>
+<tr><td>x</td><td>&nbsp;</td></tr>
+<tr><td>b</td><td>&nbsp;</td></tr>
+<tr><td>PF_results</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Two_Areas_PSSE<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.TwoArea79124385ddf2ae33_PSATI.png" alt="OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE"></a><a href="OpenIPSL_Examples_TwoAreas.html#OpenIPSL.Examples.TwoAreas"
+>OpenIPSL.Examples.TwoAreas</a>.Two_Areas_PSSE</h2>
+<p>
+<span class="ModelicaDescription">11-bus 4-machine 2-area test system implemented with machine models from PSSE</span>
+</p>
+<h3>Information</h3>
+
+<p>This example is composed by the 11-bus 4-machine 2-area system, where these two areas are connected via weak tie lines. This test system is ideal for studying dynamic stability, power interchange, oscillation damping, etc.</p>
+<p>The four generation units are composed only of machines, differently from the system <strong>Two_Areas_PSSE_AVR</strong>, where excitation systems are also represented.</p>
+<p>The system undergoes a three-phase-to-ground fault on Bus 8 at 3s, lasting for 200ms. Simulate the system for 10 seconds. Variables of interest are the ones related to inter-area modes. For example:</p>
+<ul>
+<li><code>g1.gENSAL.SPEED</code></li>
+<li><code>g2.gENSAL.SPEED</code></li>
+<li><code>g3.gENSAL.SPEED</code></li>
+<li><code>g4.gENSAL.SPEED</code></li>
+</ul>
+<p>which are variables that represent the generator's deviation from nominal speed, in per unit. Note that generators 1 and 2 swing together, while swinging against generators 3 and 4. This is due to coherency between the area's group of generators.</p>
+<p>Compare these results with the ones from <strong>Two_Areas_PSSE_AVR</strong>.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>r</td><td>&nbsp;</td></tr>
+<tr><td>x</td><td>&nbsp;</td></tr>
+<tr><td>b</td><td>&nbsp;</td></tr>
+<tr><td>PF_results</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Two_Areas_PSSE_AVR<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.TwoArea79124385ddf2ae33_PSATI.png" alt="OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE_AVR" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.TwoAreas.Two_Areas_PSSE_AVR"></a><a href="OpenIPSL_Examples_TwoAreas.html#OpenIPSL.Examples.TwoAreas"
+>OpenIPSL.Examples.TwoAreas</a>.Two_Areas_PSSE_AVR</h2>
+<p>
+<span class="ModelicaDescription">11-bus 4-machine 2-area test system implemented with machine and excitation system models from PSSE</span>
+</p>
+<h3>Information</h3>
+
+<p>This example is composed by the 11-bus 4-machine 2-area system, where these two areas are connected via weak tie lines. This test system is ideal for studying dynamic stability, power interchange, oscillation damping, etc.</p>
+<p>The four generation units are composed of machines and exciters, differently from the system <strong>Two_Areas_PSSE</strong>.</p>
+<p>The system undergoes a three-phase-to-ground fault on Bus 8 at 3s, lasting for 200ms. Simulate the system for 10 seconds. Variables of interest are the ones related to inter-area modes. For example:</p>
+<ul>
+<li><code>g1.g1.SPEED</code></li>
+<li><code>g2.g2.SPEED</code></li>
+<li><code>g3.g3.SPEED</code></li>
+<li><code>g4.gENSAL.SPEED</code></li>
+</ul>
+<p>which are variables that represent the generator's deviation from nominal speed, in per unit. Note that generators 1 and 2 swing together, while swinging against generators 3 and 4. This is due to coherency between the area's group of generators.</p>
+<p>Compare these results with the ones from <strong>Two_Areas_PSSE</strong>.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>r</td><td>&nbsp;</td></tr>
+<tr><td>x</td><td>&nbsp;</td></tr>
+<tr><td>b</td><td>&nbsp;</td></tr>
+<tr><td>PF_results</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:55 2022.
+</address>
+</body>
+</html>

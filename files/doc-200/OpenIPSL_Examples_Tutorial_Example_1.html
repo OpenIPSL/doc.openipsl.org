@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.Tutorial.Example_1</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Assembling a power system model and simulating it&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1"></a><a href="OpenIPSL_Examples_Tutorial.html#OpenIPSL.Examples.Tutorial"
+>OpenIPSL.Examples.Tutorial</a>.Example_1</h2>
+<p>
+<span class="ModelicaDescription">Assembling a power system model and simulating it</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package brings information on how to assemble the building blocks of a power system model: the network and the generation unit.</p>
+<p>The modeling process is divided into different steps, showing how network and generation units can be assembled systematically, using the models available in OpenIPSL.</p>
+<p>In addition, this package also presents a Modelica function that allows the user to identify the motives for instability that is observed in the simulation.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriac7685bbf0766d29aple_1S.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Example_1" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1.html#OpenIPSL.Examples.Tutorial.Example_1.Example_1"
+>Example_1</a>
+</td>
+<td>Fully assembled single-machine-infinite-bus (SMIB) example system</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoria8f93418ed7401232ratorS.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Generator" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Generator.html#OpenIPSL.Examples.Tutorial.Example_1.Generator"
+>Generator</a>
+</td>
+<td>Set of steps illustrating how to assemble a generation unit using OpenIPSL</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoria8f93418ed7401232ratorS.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Network" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network"
+>Network</a>
+</td>
+<td>Set of steps illustrating how to assemble a network model using the OpenIPSL</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoria6a5b7bdb20403f85lysisS.png" alt="OpenIPSL.Examples.Tutorial.Example_1.modal_analysis" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1.html#OpenIPSL.Examples.Tutorial.Example_1.modal_analysis"
+>modal_analysis</a>
+</td>
+<td>Function for executing the eigenanalysis of the test system assembled in Example 1</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Tutoriac7685bbf0766d29aple_1I.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Example_1" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_1.Example_1"></a><a href="OpenIPSL_Examples_Tutorial_Example_1.html#OpenIPSL.Examples.Tutorial.Example_1"
+>OpenIPSL.Examples.Tutorial.Example_1</a>.Example_1</h2>
+<p>
+<span class="ModelicaDescription">Fully assembled single-machine-infinite-bus (SMIB) example system</span>
+</p>
+<h3>Information</h3>
+
+<p>This example system represents the resulting model after one has followed the steps to assemble the generation unit and the network. The system must be simulated during 10 seconds.</p>
+<p>Variables of interest are:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>B2.v</code></li>
+<li><code>G1.machine.delta</code></li>
+</ul>
+<p>Note that these curves have oscillations that grow with time, indicating a clear case of instability. This issue is addressed on Example 2.</p>
+<p>Also note that validation against PSAT can be performed by loading the file <code>Tutorial/Additional_Material/PSAT_dyn.csv</code>. The correspondent curves are:</p>
+<ul>
+<li><code>PSAT_dyn.v</code> corresponds to <code>G1.machine.v</code></li>
+<li><code>PSAT_dyn.vf</code> corresponds to <code>G1.avr.vf</code></li>
+<li><code>PSAT_dyn.w</code> corresponds to <code>G1.machine.w</code></li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE modal_analysis<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Tutoria6a5b7bdb20403f85lysisI.png" alt="OpenIPSL.Examples.Tutorial.Example_1.modal_analysis" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_1.modal_analysis"></a><a href="OpenIPSL_Examples_Tutorial_Example_1.html#OpenIPSL.Examples.Tutorial.Example_1"
+>OpenIPSL.Examples.Tutorial.Example_1</a>.modal_analysis</h2>
+<p>
+<span class="ModelicaDescription">Function for executing the eigenanalysis of the test system assembled in Example 1</span>
+</p>
+<h3>Information</h3>
+
+<p>This function linearizes the equations of the example system and extracts the eigenvalues from the state matrix A.</p>
+<p>The main goal of this function is to identify the unstable eigenvalues, or modes, which are going to be the focus of the next text system, in Example 2.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pathToPlantModel</td><td>Model to be linearized</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>ss</td><td>Object with ABCD matrices of linearized model</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>

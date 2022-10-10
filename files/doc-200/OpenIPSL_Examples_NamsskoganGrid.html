@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.NamsskoganGrid</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Package with the Namsskogan power network&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE NamsskoganGrid<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.NamsskoganGrid"></a><a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>OpenIPSL.Examples</a>.NamsskoganGrid</h2>
+<p>
+<span class="ModelicaDescription">Package with the Namsskogan power network</span><br>
+</p>
+<h3>Information</h3>
+
+This package contains the model of the Namsskogan grid, representing a distribution-level grid in Norway.
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Namsskoa180f5f947c5684bModelS.png" alt="OpenIPSL.Examples.NamsskoganGrid.Grid_Model" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_NamsskoganGrid.html#OpenIPSL.Examples.NamsskoganGrid.Grid_Model"
+>Grid_Model</a>
+</td>
+<td>Namsskogan distribution network modeled in positive sequence equivalent</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Namsskoc21f7b02c82fa354enserS.png" alt="OpenIPSL.Examples.NamsskoganGrid.StaticCondenser" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_NamsskoganGrid.html#OpenIPSL.Examples.NamsskoganGrid.StaticCondenser"
+>StaticCondenser</a>
+</td>
+<td>Static condenser model used solely in the Namsskogan test system</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Grid_Model<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Namsskoa180f5f947c5684bModelI.png" alt="OpenIPSL.Examples.NamsskoganGrid.Grid_Model" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.NamsskoganGrid.Grid_Model"></a><a href="OpenIPSL_Examples_NamsskoganGrid.html#OpenIPSL.Examples.NamsskoganGrid"
+>OpenIPSL.Examples.NamsskoganGrid</a>.Grid_Model</h2>
+<p>
+<span class="ModelicaDescription">Namsskogan distribution network modeled in positive sequence equivalent</span>
+</p>
+<h3>Information</h3>
+
+<p>This example is composed by the 33-bus 12-machine system representing a distribution-level subsystem of Norway.</p>
+<p>The system undergoes a three-phase fault on Bus 26 at 1s, lasting for 20ms. Simulate the system for 10 seconds.</p>
+<p>Variables of interest are the voltages in many buses. For example:</p>
+<ul>
+<li><code>B3.v</code></li>
+<li><code>B11.v</code></li>
+<li><code>B26.v</code></li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V1</td><td>&nbsp;</td></tr>
+<tr><td>V2</td><td>&nbsp;</td></tr>
+<tr><td>V3</td><td>&nbsp;</td></tr>
+<tr><td>V4</td><td>&nbsp;</td></tr>
+<tr><td>V5</td><td>&nbsp;</td></tr>
+<tr><td>V6</td><td>&nbsp;</td></tr>
+<tr><td>V7</td><td>&nbsp;</td></tr>
+<tr><td>V8</td><td>&nbsp;</td></tr>
+<tr><td>V9</td><td>&nbsp;</td></tr>
+<tr><td>V10</td><td>&nbsp;</td></tr>
+<tr><td>V11</td><td>&nbsp;</td></tr>
+<tr><td>V12</td><td>&nbsp;</td></tr>
+<tr><td>V13</td><td>&nbsp;</td></tr>
+<tr><td>V14</td><td>&nbsp;</td></tr>
+<tr><td>V15</td><td>&nbsp;</td></tr>
+<tr><td>V16</td><td>&nbsp;</td></tr>
+<tr><td>V17</td><td>&nbsp;</td></tr>
+<tr><td>V18</td><td>&nbsp;</td></tr>
+<tr><td>V19</td><td>&nbsp;</td></tr>
+<tr><td>V20</td><td>&nbsp;</td></tr>
+<tr><td>V21</td><td>&nbsp;</td></tr>
+<tr><td>V22</td><td>&nbsp;</td></tr>
+<tr><td>V23</td><td>&nbsp;</td></tr>
+<tr><td>V24</td><td>&nbsp;</td></tr>
+<tr><td>V25</td><td>&nbsp;</td></tr>
+<tr><td>V26</td><td>&nbsp;</td></tr>
+<tr><td>V27</td><td>&nbsp;</td></tr>
+<tr><td>V28</td><td>&nbsp;</td></tr>
+<tr><td>V29</td><td>&nbsp;</td></tr>
+<tr><td>V30</td><td>&nbsp;</td></tr>
+<tr><td>V31</td><td>&nbsp;</td></tr>
+<tr><td>V32</td><td>&nbsp;</td></tr>
+<tr><td>V33</td><td>&nbsp;</td></tr>
+<tr><td>A1</td><td>&nbsp;</td></tr>
+<tr><td>A2</td><td>&nbsp;</td></tr>
+<tr><td>A3</td><td>&nbsp;</td></tr>
+<tr><td>A4</td><td>&nbsp;</td></tr>
+<tr><td>A5</td><td>&nbsp;</td></tr>
+<tr><td>A6</td><td>&nbsp;</td></tr>
+<tr><td>A7</td><td>&nbsp;</td></tr>
+<tr><td>A8</td><td>&nbsp;</td></tr>
+<tr><td>A9</td><td>&nbsp;</td></tr>
+<tr><td>A10</td><td>&nbsp;</td></tr>
+<tr><td>A11</td><td>&nbsp;</td></tr>
+<tr><td>A12</td><td>&nbsp;</td></tr>
+<tr><td>A13</td><td>&nbsp;</td></tr>
+<tr><td>A14</td><td>&nbsp;</td></tr>
+<tr><td>A15</td><td>&nbsp;</td></tr>
+<tr><td>A16</td><td>&nbsp;</td></tr>
+<tr><td>A17</td><td>&nbsp;</td></tr>
+<tr><td>A18</td><td>&nbsp;</td></tr>
+<tr><td>A19</td><td>&nbsp;</td></tr>
+<tr><td>A20</td><td>&nbsp;</td></tr>
+<tr><td>A21</td><td>&nbsp;</td></tr>
+<tr><td>A22</td><td>&nbsp;</td></tr>
+<tr><td>A23</td><td>&nbsp;</td></tr>
+<tr><td>A24</td><td>&nbsp;</td></tr>
+<tr><td>A25</td><td>&nbsp;</td></tr>
+<tr><td>A26</td><td>&nbsp;</td></tr>
+<tr><td>A27</td><td>&nbsp;</td></tr>
+<tr><td>A28</td><td>&nbsp;</td></tr>
+<tr><td>A29</td><td>&nbsp;</td></tr>
+<tr><td>A30</td><td>&nbsp;</td></tr>
+<tr><td>A31</td><td>&nbsp;</td></tr>
+<tr><td>A32</td><td>&nbsp;</td></tr>
+<tr><td>A33</td><td>&nbsp;</td></tr>
+<tr><td>P1</td><td>&nbsp;</td></tr>
+<tr><td>P2</td><td>&nbsp;</td></tr>
+<tr><td>P3</td><td>&nbsp;</td></tr>
+<tr><td>P4</td><td>&nbsp;</td></tr>
+<tr><td>P5</td><td>&nbsp;</td></tr>
+<tr><td>P6</td><td>&nbsp;</td></tr>
+<tr><td>P7</td><td>&nbsp;</td></tr>
+<tr><td>P8</td><td>&nbsp;</td></tr>
+<tr><td>P9</td><td>&nbsp;</td></tr>
+<tr><td>P10</td><td>&nbsp;</td></tr>
+<tr><td>P11</td><td>&nbsp;</td></tr>
+<tr><td>P12</td><td>&nbsp;</td></tr>
+<tr><td>PinfBus</td><td>&nbsp;</td></tr>
+<tr><td>Q1</td><td>&nbsp;</td></tr>
+<tr><td>Q2</td><td>&nbsp;</td></tr>
+<tr><td>Q3</td><td>&nbsp;</td></tr>
+<tr><td>Q4</td><td>&nbsp;</td></tr>
+<tr><td>Q5</td><td>&nbsp;</td></tr>
+<tr><td>Q6</td><td>&nbsp;</td></tr>
+<tr><td>Q7</td><td>&nbsp;</td></tr>
+<tr><td>Q8</td><td>&nbsp;</td></tr>
+<tr><td>Q9</td><td>&nbsp;</td></tr>
+<tr><td>Q10</td><td>&nbsp;</td></tr>
+<tr><td>Q11</td><td>&nbsp;</td></tr>
+<tr><td>Q12</td><td>&nbsp;</td></tr>
+<tr><td>QinfBus</td><td>&nbsp;</td></tr>
+<tr><td>VF1</td><td>&nbsp;</td></tr>
+<tr><td>VF2</td><td>&nbsp;</td></tr>
+<tr><td>VF3</td><td>&nbsp;</td></tr>
+<tr><td>VF4</td><td>&nbsp;</td></tr>
+<tr><td>VF5</td><td>&nbsp;</td></tr>
+<tr><td>VF6</td><td>&nbsp;</td></tr>
+<tr><td>VF7</td><td>&nbsp;</td></tr>
+<tr><td>VF8</td><td>&nbsp;</td></tr>
+<tr><td>VF9</td><td>&nbsp;</td></tr>
+<tr><td>VF10</td><td>&nbsp;</td></tr>
+<tr><td>VF11</td><td>&nbsp;</td></tr>
+<tr><td>VF12</td><td>&nbsp;</td></tr>
+<tr><td>VR1</td><td>&nbsp;</td></tr>
+<tr><td>VR2</td><td>&nbsp;</td></tr>
+<tr><td>VR3</td><td>&nbsp;</td></tr>
+<tr><td>VR4</td><td>&nbsp;</td></tr>
+<tr><td>VR5</td><td>&nbsp;</td></tr>
+<tr><td>VR6</td><td>&nbsp;</td></tr>
+<tr><td>VR7</td><td>&nbsp;</td></tr>
+<tr><td>VR8</td><td>&nbsp;</td></tr>
+<tr><td>VR9</td><td>&nbsp;</td></tr>
+<tr><td>VR10</td><td>&nbsp;</td></tr>
+<tr><td>VR11</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE StaticCondenser<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Namsskoc21f7b02c82fa354enserI.png" alt="OpenIPSL.Examples.NamsskoganGrid.StaticCondenser" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.NamsskoganGrid.StaticCondenser"></a><a href="OpenIPSL_Examples_NamsskoganGrid.html#OpenIPSL.Examples.NamsskoganGrid"
+>OpenIPSL.Examples.NamsskoganGrid</a>.StaticCondenser</h2>
+<p>
+<span class="ModelicaDescription">Static condenser model used solely in the Namsskogan test system</span>
+</p>
+<h3>Information</h3>
+
+<p>This static condenser is developed especially for this example system.
+Since this component is not a standard model, it is not in the main body of the library and its usage outside this example is not encouraged.</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>B</td><td>Susceptance [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>

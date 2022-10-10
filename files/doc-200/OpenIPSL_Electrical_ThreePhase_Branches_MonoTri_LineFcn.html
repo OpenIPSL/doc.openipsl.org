@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Set of functions used to calculate hybrid positive-sequence/three-phase impedance matrices for lines&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LineFcn<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri</a>.LineFcn</h2>
+<p>
+<span class="ModelicaDescription">Set of functions used to calculate hybrid positive-sequence/three-phase impedance matrices for lines</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains a set of functions used to calculate hybrid positive-sequence/three-phase impedance matrices for lines.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_InfiniteImpedances" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_LineFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_InfiniteImpedances"
+>MT_InfiniteImpedances</a>
+</td>
+<td>Calculation of impedance matrices for hybrid line.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_FiniteImpedance" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_LineFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_FiniteImpedance"
+>MT_FiniteImpedance</a>
+</td>
+<td>Calculation of impedance matrices for hybrid line when finite values of Norton equivalent impedances are taken into account.</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE MT_InfiniteImpedances<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Threef52489efa23d2e19ancesI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_InfiniteImpedances" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_InfiniteImpedances"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_LineFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn</a>.MT_InfiniteImpedances</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for hybrid line.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase power line modeled as a pi-equivalent.</p>
+<p>This function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Yser[1, 18]</td><td>&nbsp;</td></tr>
+<tr><td>Ysht[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE MT_FiniteImpedance<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Threef52489efa23d2e19ancesI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_FiniteImpedance" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn.MT_FiniteImpedance"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_LineFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.LineFcn</a>.MT_FiniteImpedance</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for hybrid line when finite values of Norton equivalent impedances are taken into account.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase power line modeled as a pi-equivalent.</p>
+<p>This function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Yser[1, 18]</td><td>&nbsp;</td></tr>
+<tr><td>Yshtk[1, 18]</td><td>&nbsp;</td></tr>
+<tr><td>Y012[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

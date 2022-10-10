@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.FACTS.PSAT</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;FACTS models from PSAT&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PSAT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.FACTS.PSAT"></a><a href="OpenIPSL_Electrical_FACTS.html#OpenIPSL.Electrical.FACTS"
+>OpenIPSL.Electrical.FACTS</a>.PSAT</h2>
+<p>
+<span class="ModelicaDescription">FACTS models from PSAT</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.FACTS.PSAT.STATCOMS.png" alt="OpenIPSL.Electrical.FACTS.PSAT.STATCOM" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_FACTS_PSAT.html#OpenIPSL.Electrical.FACTS.PSAT.STATCOM"
+>STATCOM</a>
+</td>
+<td>Static Var Compensator</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.FACTS.PSAT.TCSCS.png" alt="OpenIPSL.Electrical.FACTS.PSAT.TCSC" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_FACTS_PSAT.html#OpenIPSL.Electrical.FACTS.PSAT.TCSC"
+>TCSC</a>
+</td>
+<td>Thyristor Controlled Series Compensator</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE STATCOM<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.FACTS.PSAT.STATCOMI.png" alt="OpenIPSL.Electrical.FACTS.PSAT.STATCOM" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.FACTS.PSAT.STATCOM"></a><a href="OpenIPSL_Electrical_FACTS_PSAT.html#OpenIPSL.Electrical.FACTS.PSAT"
+>OpenIPSL.Electrical.FACTS.PSAT</a>.STATCOM</h2>
+<p>
+<span class="ModelicaDescription">Static Var Compensator</span>
+</p>
+<h3>Information</h3>
+
+<p>The following documentation is adapted from
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[Milano2010], chapter 20.3</a>:</p>
+<blockquote>
+<p>The implemented STATCOM model is a current injection model [...].
+The STATCOM current is always kept in quadrature in relation
+to the bus voltage so that only reactive power is exchanged between the ac system
+and the STATCOM.
+</p>
+</blockquote>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Device parameters</td></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Vn</td><td>Voltage rating [V]</td></tr>
+<tr><td>Kr</td><td>Regulator gain [pu/pu]</td></tr>
+<tr><td>Tr</td><td>Regulator time constant [s]</td></tr>
+<tr><td>i_Max</td><td>Maximum current (device base) [1]</td></tr>
+<tr><td>i_Min</td><td>Minimum current (device base) [1]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>v_POD</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TCSC<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.FACTS.PSAT.TCSCI.png" alt="OpenIPSL.Electrical.FACTS.PSAT.TCSC" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.FACTS.PSAT.TCSC"></a><a href="OpenIPSL_Electrical_FACTS_PSAT.html#OpenIPSL.Electrical.FACTS.PSAT"
+>OpenIPSL.Electrical.FACTS.PSAT</a>.TCSC</h2>
+<p>
+<span class="ModelicaDescription">Thyristor Controlled Series Compensator</span>
+</p>
+<h3>Information</h3>
+
+<p>
+A TCSC Regulator according to
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[Milano2010], chapter 20.2</a>.
+</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr><td>pref</td><td>Reference power [1]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Device parameters</td></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Vn</td><td>Voltage rating [V]</td></tr>
+<tr><td>ctrl</td><td>Type of control of the TCSC</td></tr>
+<tr><td>alpha_min</td><td>Minimum firing angle [rad]</td></tr>
+<tr><td>alpha_max</td><td> Maximum firing angle [rad]</td></tr>
+<tr><td>xTCSC_min</td><td>Minimum reactance [1]</td></tr>
+<tr><td>xTCSC_max</td><td>Maximum reactance [1]</td></tr>
+<tr><td>Tr</td><td>Regulator time constant [s]</td></tr>
+<tr><td>Kp</td><td>Proportional gain of PI controller [pu/pu]</td></tr>
+<tr><td>Ki</td><td>Integral gain of PI controller [pu/pu]</td></tr>
+<tr><td>Kr</td><td>Gain of stabilizing signal [pu/pu]</td></tr>
+<tr><td>x_L</td><td>Reactance (inductive) [1]</td></tr>
+<tr><td>x_C</td><td>Reactance (capacitive) [1]</td></tr>
+<tr><td>XL</td><td>Line reactance [1]</td></tr>
+<tr><td>G</td><td>Shunt half conductance [1]</td></tr>
+<tr><td>B</td><td>Shunt half susceptance [1]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>alpha0</td><td>Initial firing angle [rad]</td></tr>
+<tr><td>xTCSC0</td><td>Initial reactance [1]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>n</td><td>&nbsp;</td></tr>
+<tr><td>Vs_pod</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

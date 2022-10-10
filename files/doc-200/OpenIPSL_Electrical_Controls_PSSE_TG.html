@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Controls.PSSE.TG</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Turbine governor models from PSSE&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TG<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Controls.PSSE.TG"></a><a href="OpenIPSL_Electrical_Controls_PSSE.html#OpenIPSL.Electrical.Controls.PSSE"
+>OpenIPSL.Electrical.Controls.PSSE</a>.TG</h2>
+<p>
+<span class="ModelicaDescription">Turbine governor models from PSSE</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr5f390d8980aeb4c3PowerS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.ConstantPower" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.ConstantPower"
+>ConstantPower</a>
+</td>
+<td>Constant Power (feed through)</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.GAST" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.GAST"
+>GAST</a>
+</td>
+<td>GAST - Gas Turbine-Governor</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1"
+>GGOV1</a>
+</td>
+<td>GGOV1 - Variation of GE General Governor/Turbine Model [IEEE2013]</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1DU" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1DU"
+>GGOV1DU</a>
+</td>
+<td>GGOV1DU - Variation of GE General Governor/Turbine Model [IEEE2013]</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.HYGOV" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.HYGOV"
+>HYGOV</a>
+</td>
+<td>HYGOV - Hydro Turbine-Governor model</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contraa8f3d0e478642b1EEEG1S.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.IEEEG1" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.IEEEG1"
+>IEEEG1</a>
+</td>
+<td>IEEEG1 - 1981 IEEE Type 1 Turbine-Governor Model</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contraa92e7aa47861acfEESGOS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.IEESGO" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.IEESGO"
+>IEESGO</a>
+</td>
+<td>IEESGO - IEEE Standard Model for Turbine-Governor</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contraa92e7aa47861acfEESGOS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.TGOV1" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.TGOV1"
+>TGOV1</a>
+</td>
+<td>TGOV1 - Steam Turbine-Governor</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr6edbd169de94fb57assesS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses"
+>BaseClasses</a>
+</td>
+<td>Base classes for turbine governor models from PSSE</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ConstantPower<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr5f390d8980aeb4c3PowerI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.ConstantPower" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.ConstantPower"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.ConstantPower</h2>
+<p>
+<span class="ModelicaDescription">Constant Power (feed through)</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.BaseGovernor"
+>BaseClasses.BaseGovernor</a> (Base turbine governor model).</span></p>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+<tr><td>PMECH</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE GAST<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.GAST" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.GAST"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.GAST</h2>
+<p>
+<span class="ModelicaDescription">GAST - Gas Turbine-Governor</span>
+</p>
+<h3>Information</h3>
+Gas Turbine-Governor Model.
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified), <a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.BaseGovernor"
+>BaseClasses.BaseGovernor</a> (Base turbine governor model).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>R</td><td>Speed droop gain [1]</td></tr>
+<tr><td>T_1</td><td>Valve response time constant [s]</td></tr>
+<tr><td>T_2</td><td>Turbine response time constant [s]</td></tr>
+<tr><td>T_3</td><td>Load limit response time constant [s]</td></tr>
+<tr><td>AT</td><td>Ambient temperature load limit [1]</td></tr>
+<tr><td>K_T</td><td>Load-limited feedback path adjustment gain [1]</td></tr>
+<tr><td>V_MAX</td><td>Operational control high limit on fuel valve opening [1]</td></tr>
+<tr><td>V_MIN</td><td>Low output control limit on fuel valve opening [1]</td></tr>
+<tr><td>D_turb</td><td>Turbine damping [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+<tr><td>PMECH</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE GGOV1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.GGOV1</h2>
+<p>
+<span class="ModelicaDescription">GGOV1 - Variation of GE General Governor/Turbine Model [IEEE2013]</span>
+</p>
+<h3>Information</h3>
+
+<p>The following documentation is adapted from
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[PSSE-Models], chapter 7.12</a>:</p>
+<blockquote>
+<p>This is a general purpose Governor/Turbine model that can be used in dynamic studies.
+The model can be used to represent many different models such as gas turbines, aeroderivative turbines and diesel engines.
+This model represents the usual PSSE implementation of the GGOV1 and a fairly complete review of this model can be found in
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[IEEE2013]</a>.
+</p>
+<p>
+[...]
+</p>
+<p>
+This model is incredibly versatile and can be used to represent different turbine models with different control modes.
+The Governor-Turbine frequency control, for example, can have different feedback signals, such as electric power, turbine output, valve stroke or even an isochronous operation.
+Isochronous operations are used when the machine operates in an isolated system. Note that, in this case, the permanent droop parameter <code>R</code> should be set to zero.
+In addition to that, the parameters can be set so a particular control loop is used.
+This model allows the representation of a frequency control system, a temperature control system and an acceleration limiter control system.
+</p>
+<p>
+[...]
+</p>
+<p>
+In order to represent a diesel generator using this model, one should be careful with setting some parameters. For example, a diesel generator needs to have <code>flag</code> set to 1.
+This is because the diesel generator have teir fluid flow proportional on the speed. In addition to that, <code>Teng</code>, which represents the time delay from the engine, should be set to a number greater than 0.
+Finally, the variable <code>Dm</code> should also be set to a number greater than 0. This is because in diesel engines, the maximum power output decreases as speed increases.
+</p>
+</blockquote>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Rselect</td><td>Feedback signal for governor droop</td></tr>
+<tr><td>Flag</td><td>Switch for fuel source characteristic</td></tr>
+<tr><td>delay</td><td>Delay type inside the turbine model (use Pade Delay for linearisation)</td></tr>
+<tr><td>R</td><td>Permanent droop [1]</td></tr>
+<tr><td>T_pelec</td><td>Electrical power transducer time constant [s]</td></tr>
+<tr><td>maxerr</td><td>Maximum value for speed error signal [1]</td></tr>
+<tr><td>minerr</td><td>Minimum value for speed error signal [1]</td></tr>
+<tr><td>Kpgov</td><td>Governor proportional gain [1]</td></tr>
+<tr><td>Kigov</td><td>Governor integral gain [1/s]</td></tr>
+<tr><td>Kdgov</td><td>Governor derivative gain [s]</td></tr>
+<tr><td>Tdgov</td><td>Governor derivative controller time constant [s]</td></tr>
+<tr><td>Vmax</td><td>Maximum valve position limit [1]</td></tr>
+<tr><td>Vmin</td><td>Minimum valve position limit [1]</td></tr>
+<tr><td>Tact</td><td>Actuator time constant [s]</td></tr>
+<tr><td>Kturb</td><td>Turbine gain [1]</td></tr>
+<tr><td>Wfnl</td><td>No load fuel flow [1]</td></tr>
+<tr><td>Tb</td><td>Turbine lag time constant [s]</td></tr>
+<tr><td>Tc</td><td>Turbine lead time constant [s]</td></tr>
+<tr><td>Teng</td><td>Transport lag time constant for diesel engine [s]</td></tr>
+<tr><td>Tfload</td><td>Load Limiter time constant [s]</td></tr>
+<tr><td>Kpload</td><td>Load limiter proportional gain for PI controller [1]</td></tr>
+<tr><td>Kiload</td><td>Load limiter integral gain for PI controller [1/s]</td></tr>
+<tr><td>Ldref</td><td>Load limiter reference value [1]</td></tr>
+<tr><td>Dm</td><td>Mechanical damping coefficient [1]</td></tr>
+<tr><td>Ropen</td><td>Maximum valve opening rate [1/s]</td></tr>
+<tr><td>Rclose</td><td>Maximum valve closing rate [1/s]</td></tr>
+<tr><td>Kimw</td><td>Power controller (reset) gain [1/s]</td></tr>
+<tr><td>Aset</td><td>Acceleration limiter setpoint [1/s]</td></tr>
+<tr><td>Ka</td><td>Acceleration limiter gain [1]</td></tr>
+<tr><td>Ta</td><td>Acceleration limiter time constant [s]</td></tr>
+<tr><td>Trate</td><td>Turbine rating [W]</td></tr>
+<tr><td>db</td><td>Speed governor deadband [1]</td></tr>
+<tr><td>Tsa</td><td>Temperature detection lead time constant [s]</td></tr>
+<tr><td>Tsb</td><td>Temperature detection lag time constant [s]</td></tr>
+<tr><td>Rup</td><td>Maximum rate of load limit increase [1/s]</td></tr>
+<tr><td>Rdown</td><td>Maximum rate of load limit decrease [1/s]</td></tr>
+<tr><td>DELT</td><td>Time step used in simulation [s]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>Machine speed deviation from nominal (pu)</td></tr>
+<tr><td>PELEC</td><td>Machine electrical power (pu)</td></tr>
+<tr><td>PMECH</td><td>Turbine mechanical power (pu)</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE GGOV1DU<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1DU" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.GGOV1DU"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.GGOV1DU</h2>
+<p>
+<span class="ModelicaDescription">GGOV1DU - Variation of GE General Governor/Turbine Model [IEEE2013]</span>
+</p>
+<h3>Information</h3>
+
+<p>The following documentation is adapted from
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[PSSE-Models], chapter 7.13</a>:</p>
+<blockquote>
+<p>This is a general purpose Governor/Turbine model that can be used in dynamic studies. This model is a slightly different model than the GGOV1.
+The model can be used to represent many different models such as gas turbines, aeroderivative turbines and diesel engines.
+This model is a variation of the GGOV1 model and a fairly complete review can be found in
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[IEEE2013]</a>.
+</p>
+<p>
+[...]
+</p>
+<p>
+This model is incredibly versatile and can be used to represent different turbine models with different control modes.
+The Governor-Turbine frequency control, for example, can have different feedback signals, such as electric power, turbine output, valve stroke or even an isochronous operation.
+Isochronous operations are used when the machine operates in an isolated system. Note that, in this case, the permanent droop parameter <code>R</code> should be set to zero.
+In addition to that, the parameters can be set so a particular control loop is used.
+This model allows the representation of a frequency control system, a temperature control system and an acceleration limiter control system.
+</p>
+<p>
+[...]
+</p>
+<p>
+In order to represent a diesel generator using this model, one should be careful with setting some parameters. For example, a diesel generator needs to have <code>flag</code> set to 1.
+This is because the diesel generator have teir fluid flow proportional on the speed. In addition to that, <code>Teng</code>, which represents the time delay from the engine, should be set to a number greater than 0.
+Finally, the variable <code>Dm</code> should also be set to a number greater than 0. This is because in diesel engines, the maximum power output decreases as speed increases.
+</p>
+</blockquote>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Rselect</td><td>Feedback signal for governor droop</td></tr>
+<tr><td>Flag</td><td>Switch for fuel source characteristic</td></tr>
+<tr><td>delay</td><td>Delay type inside the turbine model (use Pade Delay for linearisation)</td></tr>
+<tr><td>R</td><td>Permanent droop [1]</td></tr>
+<tr><td>T_pelec</td><td>Electrical power transducer time constant [s]</td></tr>
+<tr><td>maxerr</td><td>Maximum value for speed error signal [1]</td></tr>
+<tr><td>minerr</td><td>Minimum value for speed error signal [1]</td></tr>
+<tr><td>Kpgov</td><td>Governor proportional gain [1]</td></tr>
+<tr><td>Kigov</td><td>Governor integral gain [1/s]</td></tr>
+<tr><td>Kdgov</td><td>Governor derivative gain [s]</td></tr>
+<tr><td>Tdgov</td><td>Governor derivative controller time constant [s]</td></tr>
+<tr><td>Vmax</td><td>Maximum valve position limit [1]</td></tr>
+<tr><td>Vmin</td><td>Minimum valve position limit [1]</td></tr>
+<tr><td>Tact</td><td>Actuator time constant [s]</td></tr>
+<tr><td>Kturb</td><td>Turbine gain [1]</td></tr>
+<tr><td>Wfnl</td><td>No load fuel flow [1]</td></tr>
+<tr><td>Tb</td><td>Turbine lag time constant [s]</td></tr>
+<tr><td>Tc</td><td>Turbine lead time constant [s]</td></tr>
+<tr><td>Teng</td><td>Transport lag time constant for diesel engine [s]</td></tr>
+<tr><td>Tfload</td><td>Load Limiter time constant [s]</td></tr>
+<tr><td>Kpload</td><td>Load limiter proportional gain for PI controller [1]</td></tr>
+<tr><td>Kiload</td><td>Load limiter integral gain for PI controller [1/s]</td></tr>
+<tr><td>Ldref</td><td>Load limiter reference value [1]</td></tr>
+<tr><td>Dm</td><td>Mechanical damping coefficient [1]</td></tr>
+<tr><td>Ropen</td><td>Maximum valve opening rate [1/s]</td></tr>
+<tr><td>Rclose</td><td>Maximum valve closing rate [1/s]</td></tr>
+<tr><td>Kimw</td><td>Power controller (reset) gain [1/s]</td></tr>
+<tr><td>Aset</td><td>Acceleration limiter setpoint [1/s]</td></tr>
+<tr><td>Ka</td><td>Acceleration limiter gain [1]</td></tr>
+<tr><td>Ta</td><td>Acceleration limiter time constant [s]</td></tr>
+<tr><td>Trate</td><td>Turbine rating [W]</td></tr>
+<tr><td>db</td><td>Speed governor deadband [1]</td></tr>
+<tr><td>Tsa</td><td>Temperature detection lead time constant [s]</td></tr>
+<tr><td>Tsb</td><td>Temperature detection lag time constant [s]</td></tr>
+<tr><td>Rup</td><td>Maximum rate of load limit increase [1/s]</td></tr>
+<tr><td>Rdown</td><td>Maximum rate of load limit decrease [1/s]</td></tr>
+<tr><td>DELT</td><td>Time step used in simulation [s]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>Machine speed deviation from nominal (pu)</td></tr>
+<tr><td>PELEC</td><td>Machine electrical power (pu)</td></tr>
+<tr><td>PMECH</td><td>Turbine mechanical power (pu)</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE HYGOV<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrfbae2e279816b343.GASTI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.HYGOV" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.HYGOV"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.HYGOV</h2>
+<p>
+<span class="ModelicaDescription">HYGOV - Hydro Turbine-Governor model</span>
+</p>
+<h3>Information</h3>
+ This is a hydro turbine-governor model.
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified), <a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.BaseGovernor"
+>BaseClasses.BaseGovernor</a> (Base turbine governor model).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>R</td><td>Permanent droop gain [1]</td></tr>
+<tr><td>r</td><td>Temporary droop gain [1]</td></tr>
+<tr><td>T_r</td><td>Governor time constant [s]</td></tr>
+<tr><td>T_f</td><td>Filter time constant [s]</td></tr>
+<tr><td>T_g</td><td>Servo time constant [s]</td></tr>
+<tr><td>VELM</td><td>Gate open/close velocity limit [1/s]</td></tr>
+<tr><td>G_MAX</td><td>Maximum gate limit [1]</td></tr>
+<tr><td>G_MIN</td><td>Minimum gate limit [1]</td></tr>
+<tr><td>T_w</td><td>Water time constant [s]</td></tr>
+<tr><td>A_t</td><td>Turbine gain [1]</td></tr>
+<tr><td>D_turb</td><td>Turbine damping [1]</td></tr>
+<tr><td>q_NL</td><td>Water flow at no load [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+<tr><td>PMECH</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IEEEG1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contraa8f3d0e478642b1EEEG1I.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.IEEEG1" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.IEEEG1"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.IEEEG1</h2>
+<p>
+<span class="ModelicaDescription">IEEEG1 - 1981 IEEE Type 1 Turbine-Governor Model</span>
+</p>
+<h3>Information</h3>
+Governor IEEEG1, IEEG1_GE and
+    IEEEG1D IEEE Type 1 Speed-Governor Model.
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>P0</td><td>Power reference of the governor [1]</td></tr>
+<tr><td>K</td><td>Regulation gain [1/pu]</td></tr>
+<tr><td>T_1</td><td>Control time constant [s]</td></tr>
+<tr><td>T_2</td><td>Control time constant [s]</td></tr>
+<tr><td>T_3</td><td>Control time constant [s]</td></tr>
+<tr><td>U_o</td><td>Max. rate if valve opening [1/s]</td></tr>
+<tr><td>U_c</td><td>Max. rate if valve closing [1/s]</td></tr>
+<tr><td>P_MAX</td><td>Max. valve position [1]</td></tr>
+<tr><td>P_MIN</td><td>Min. valve position [1]</td></tr>
+<tr><td>T_4</td><td>HP section time constant [s]</td></tr>
+<tr><td>K_1</td><td>Fraction of power from high pressure turbine (upper branch) [1]</td></tr>
+<tr><td>K_2</td><td>Fraction of power from high pressure turbine (lower branch) [1]</td></tr>
+<tr><td>T_5</td><td>Reheat plus intermediate pressure turbine time constant [s]</td></tr>
+<tr><td>K_3</td><td>Fraction of power from intermediate pressure turbine (upper branch) [1]</td></tr>
+<tr><td>K_4</td><td>Fraction of power from intermediate pressure turbine (lower branch) [1]</td></tr>
+<tr><td>T_6</td><td>Reheater plus intermediate pressure turbine time constant (second) [s]</td></tr>
+<tr><td>K_5</td><td>Fraction of power from low pressure turbine (first LP, upper branch) [1]</td></tr>
+<tr><td>K_6</td><td>Fraction of power from low pressure turbine (first LP, lower branch) [1]</td></tr>
+<tr><td>T_7</td><td>Low pressure turbine time constant [s]</td></tr>
+<tr><td>K_7</td><td>Fraction of power from low pressure turbine (second LP, upper branch) [1]</td></tr>
+<tr><td>K_8</td><td>Fraction of power from low pressure turbine (second LP, lower branch) [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED_HP</td><td>Machine speed deviation from nominal [pu]</td></tr>
+<tr><td>PMECH_HP</td><td>Turbine mechanical power [pu]</td></tr>
+<tr><td>PMECH_LP</td><td>Turbine mechanical power [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IEESGO<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contraa92e7aa47861acfEESGOI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.IEESGO" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.IEESGO"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.IEESGO</h2>
+<p>
+<span class="ModelicaDescription">IEESGO - IEEE Standard Model for Turbine-Governor</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified), <a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.BaseGovernor"
+>BaseClasses.BaseGovernor</a> (Base turbine governor model).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>T_1</td><td>Controller lag [s]</td></tr>
+<tr><td>T_2</td><td>Controller lead compensation [s]</td></tr>
+<tr><td>T_3</td><td>Governor lag [s]</td></tr>
+<tr><td>T_4</td><td>Delay due to steam inlet volumes associated with steam chest and inlet piping [s]</td></tr>
+<tr><td>T_5</td><td>Reheater delay including hot and cold leads [s]</td></tr>
+<tr><td>T_6</td><td>Delay due to IP-LP turbine, crossover pipes, and LP end hoods [s]</td></tr>
+<tr><td>K_1</td><td>Regulation gain [1/pu]</td></tr>
+<tr><td>K_2</td><td>Intermediate pressure turbine fraction [1]</td></tr>
+<tr><td>K_3</td><td>Low pressure turbine fraction  [1]</td></tr>
+<tr><td>P_MAX</td><td>Upper power limit [1]</td></tr>
+<tr><td>P_MIN</td><td>Lower power limit [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+<tr><td>PMECH</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TGOV1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contraa92e7aa47861acfEESGOI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.TGOV1" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.TGOV1"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG"
+>OpenIPSL.Electrical.Controls.PSSE.TG</a>.TGOV1</h2>
+<p>
+<span class="ModelicaDescription">TGOV1 - Steam Turbine-Governor</span>
+</p>
+<h3>Information</h3>
+Steam Turbine-Governor Model TGOV1.
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Icons.html#OpenIPSL.Icons.VerifiedModel"
+>Icons.VerifiedModel</a> (Icon for classes that were verified), <a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.BaseGovernor"
+>BaseClasses.BaseGovernor</a> (Base turbine governor model).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>R</td><td>Inverse of governor gain (the actual gain is 1/R) [1]</td></tr>
+<tr><td>D_t</td><td>Turbine damping factor (on Machine Base) [1]</td></tr>
+<tr><td>T_1</td><td>Regulator time constant. It must be greater than 0 [s]</td></tr>
+<tr><td>T_2</td><td>High-pressure reheater time constant [s]</td></tr>
+<tr><td>T_3</td><td>Reheater time constant. It must be greater than 0 [s]</td></tr>
+<tr><td>V_MAX</td><td>Maximum valve position (on Machine Base) [1]</td></tr>
+<tr><td>V_MIN</td><td>Minimum valve position (on Machine Base) [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+<tr><td>PMECH</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

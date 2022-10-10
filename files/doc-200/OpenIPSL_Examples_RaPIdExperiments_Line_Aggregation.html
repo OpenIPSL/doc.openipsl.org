@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Example systems used in line aggregation experiment&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Line_Aggregation<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation"></a><a href="OpenIPSL_Examples_RaPIdExperiments.html#OpenIPSL.Examples.RaPIdExperiments"
+>OpenIPSL.Examples.RaPIdExperiments</a>.Line_Aggregation</h2>
+<p>
+<span class="ModelicaDescription">Example systems used in line aggregation experiment</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This subpackage contains the models used in a line aggregation experiment. One of the models is designed for simulation while the other can be linearized or exported as an FMU.</p>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.RaPIdExf865e65bdf16f5cfostarS.png" alt="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Reference_system" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_RaPIdExperiments_Line_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Reference_system"
+>Reference_system</a>
+</td>
+<td>Reference power system model for line aggregation using RaPId</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.RaPIdExebb8b7610363cabbystemS.png" alt="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Aggregated_system" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_RaPIdExperiments_Line_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Aggregated_system"
+>Aggregated_system</a>
+</td>
+<td>Simple test system with aggregated lines for export and usage in RaPId</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Reference_system<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.RaPIdEx973d5ebf53276ff3ystemI.png" alt="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Reference_system" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Reference_system"></a><a href="OpenIPSL_Examples_RaPIdExperiments_Line_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation"
+>OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation</a>.Reference_system</h2>
+<p>
+<span class="ModelicaDescription">Reference power system model for line aggregation using RaPId</span>
+</p>
+<h3>Information</h3>
+
+<p>This is a Two-Machine system containing disturbances on the mechanical power supply of the generator connected to bus GEN1.
+These disturbances allow the user to observe dominant dynamics that need to be preserved when system is simplified.</p>
+<p>Simulate the system for 20 seconds. Variables of interest are:</p>
+<ul>
+<li><code>gENROE.SPEED</code></li>
+<li><code>add1.y</code></li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Aggregated_system<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.RaPIdExebb8b7610363cabbystemI.png" alt="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Aggregated_system" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation.Aggregated_system"></a><a href="OpenIPSL_Examples_RaPIdExperiments_Line_Aggregation.html#OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation"
+>OpenIPSL.Examples.RaPIdExperiments.Line_Aggregation</a>.Aggregated_system</h2>
+<p>
+<span class="ModelicaDescription">Simple test system with aggregated lines for export and usage in RaPId</span>
+</p>
+<h3>Information</h3>
+
+<p>This is a Two-Machine system contains inputs for disturbances on the mechanical power supply of the generator connected to bus GEN1.
+These disturbances allow the user to export this model as an FMU and add different disturbances in other software packages.
+Also note that all lines are aggregated into a single equivalent branch component.</p>
+<p>This system is not for simulation, but it can be used for linearization or FMU export.</p>
+
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pref_disturb</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>
