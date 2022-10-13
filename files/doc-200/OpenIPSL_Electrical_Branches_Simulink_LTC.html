@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Branches.Simulink.LTC</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Branch models with tap changing controls&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LTC<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Branches.Simulink.LTC"></a><a href="OpenIPSL_Electrical_Branches_Simulink.html#OpenIPSL.Electrical.Branches.Simulink"
+>OpenIPSL.Electrical.Branches.Simulink</a>.LTC</h2>
+<p>
+<span class="ModelicaDescription">Branch models with tap changing controls</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Branc9ccc7d5aff453e07C.LTCS.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC.LTC"
+>LTC</a>
+</td>
+<td>Load tap changing transformer branch</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Branca67c8e1a23b6ea75dbandS.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_deadband" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_deadband"
+>LTC_deadband</a>
+</td>
+<td>Deadband block for load tap changing transformer implementation</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Branca714c46ddb6cadb0witchS.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_switch" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_switch"
+>LTC_switch</a>
+</td>
+<td>Switch block for load tap changing transformer implementation</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Brancfe30979463b10b76tizerS.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_quantizer" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_quantizer"
+>LTC_quantizer</a>
+</td>
+<td>Quantizer block for load tap changing transformer implementation</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Branc3ad4814fe4efd368ookupS.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_lookup" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_lookup"
+>LTC_lookup</a>
+</td>
+<td>Lookup block for load tap changing transformer implementation</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LTC<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Branc9ccc7d5aff453e07C.LTCI.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC"></a><a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC"
+>OpenIPSL.Electrical.Branches.Simulink.LTC</a>.LTC</h2>
+<p>
+<span class="ModelicaDescription">Load tap changing transformer branch</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Uplim</td><td>&nbsp;</td></tr>
+<tr><td>Downlim</td><td>&nbsp;</td></tr>
+<tr><td>Ymin</td><td>Min Ratio</td></tr>
+<tr><td>Ymax</td><td>Max Ratio</td></tr>
+<tr><td>delay1</td><td>&nbsp;</td></tr>
+<tr><td>delay2</td><td>&nbsp;</td></tr>
+<tr><td>positionNo</td><td>&nbsp;</td></tr>
+<tr><td>r0</td><td>Transformer Ratio</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>r</td><td>&nbsp;</td></tr>
+<tr><td>u</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LTC_deadband<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Branca67c8e1a23b6ea75dbandI.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_deadband" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_deadband"></a><a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC"
+>OpenIPSL.Electrical.Branches.Simulink.LTC</a>.LTC_deadband</h2>
+<p>
+<span class="ModelicaDescription">Deadband block for load tap changing transformer implementation</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Uplim</td><td>&nbsp;</td></tr>
+<tr><td>Downlim</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>signal</td><td>&nbsp;</td></tr>
+<tr><td>u</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LTC_switch<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Branca714c46ddb6cadb0witchI.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_switch" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_switch"></a><a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC"
+>OpenIPSL.Electrical.Branches.Simulink.LTC</a>.LTC_switch</h2>
+<p>
+<span class="ModelicaDescription">Switch block for load tap changing transformer implementation</span>
+</p>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Signalin</td><td>&nbsp;</td></tr>
+<tr><td>LTCin</td><td>&nbsp;</td></tr>
+<tr><td>Normalin</td><td>&nbsp;</td></tr>
+<tr><td>r</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LTC_quantizer<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Brancfe30979463b10b76tizerI.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_quantizer" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_quantizer"></a><a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC"
+>OpenIPSL.Electrical.Branches.Simulink.LTC</a>.LTC_quantizer</h2>
+<p>
+<span class="ModelicaDescription">Quantizer block for load tap changing transformer implementation</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Ratio[1, 33]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>n</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE LTC_lookup<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Branc3ad4814fe4efd368ookupI.png" alt="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_lookup" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Branches.Simulink.LTC.LTC_lookup"></a><a href="OpenIPSL_Electrical_Branches_Simulink_LTC.html#OpenIPSL.Electrical.Branches.Simulink.LTC"
+>OpenIPSL.Electrical.Branches.Simulink.LTC</a>.LTC_lookup</h2>
+<p>
+<span class="ModelicaDescription">Lookup block for load tap changing transformer implementation</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Uplim</td><td>&nbsp;</td></tr>
+<tr><td>Downlim</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>u</td><td>&nbsp;</td></tr>
+<tr><td>out</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Controls.Simulink.ES</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Excitation system models based on Simulink implementation&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ES<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Controls.Simulink.ES"></a><a href="OpenIPSL_Electrical_Controls_Simulink.html#OpenIPSL.Electrical.Controls.Simulink"
+>OpenIPSL.Electrical.Controls.Simulink</a>.ES</h2>
+<p>
+<span class="ModelicaDescription">Excitation system models based on Simulink implementation</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrdbf247915b060f71ystemS.png" alt="OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystem" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_Simulink_ES.html#OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystem"
+>ExcitationSystem</a>
+</td>
+<td>This ES is composed by the OEL and PSS and excitation part</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contrdbf247915b060f71ystemS.png" alt="OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystemKp0" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_Simulink_ES.html#OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystemKp0"
+>ExcitationSystemKp0</a>
+</td>
+<td>Excitation system without PSS included</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ExcitationSystem<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contrdbf247915b060f71ystemI.png" alt="OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystem" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystem"></a><a href="OpenIPSL_Electrical_Controls_Simulink_ES.html#OpenIPSL.Electrical.Controls.Simulink.ES"
+>OpenIPSL.Electrical.Controls.Simulink.ES</a>.ExcitationSystem</h2>
+<p>
+<span class="ModelicaDescription">This ES is composed by the OEL and PSS and excitation part</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V0</td><td>Reference value of terminal voltage</td></tr>
+<tr><td>L2</td><td>Exciter parameter</td></tr>
+<tr><td>G</td><td>Exciter parameter</td></tr>
+<tr><td>Ta</td><td>Exciter parameter</td></tr>
+<tr><td>Tb</td><td>Exciter parameter</td></tr>
+<tr><td>vfd0</td><td>Initial Filed voltage</td></tr>
+<tr><td>r</td><td>OEL parameter</td></tr>
+<tr><td>f</td><td>OEL parameter</td></tr>
+<tr><td>L1</td><td>OEL parameter</td></tr>
+<tr><td>ifd_lim</td><td>OEL parameter</td></tr>
+<tr><td>Kp</td><td>Washout gain</td></tr>
+<tr><td>Tw</td><td>Washout time constant</td></tr>
+<tr><td>T1</td><td>Lead-lag filter time constant</td></tr>
+<tr><td>T2</td><td>Lead-lag filter time constant</td></tr>
+<tr><td>C</td><td>PSS output limiation</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>ifd</td><td>Field current</td></tr>
+<tr><td>V</td><td>Terminal voltage </td></tr>
+<tr><td>omega</td><td>Speed</td></tr>
+<tr><td>vfd</td><td>Field voltage</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ExcitationSystemKp0<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr8c8dceee07b9dfb3emKp0I.png" alt="OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystemKp0" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.Simulink.ES.ExcitationSystemKp0"></a><a href="OpenIPSL_Electrical_Controls_Simulink_ES.html#OpenIPSL.Electrical.Controls.Simulink.ES"
+>OpenIPSL.Electrical.Controls.Simulink.ES</a>.ExcitationSystemKp0</h2>
+<p>
+<span class="ModelicaDescription">Excitation system without PSS included</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V0</td><td>Reference value of terminal voltage</td></tr>
+<tr><td>L2</td><td>Exciter parameter</td></tr>
+<tr><td>G</td><td>Exciter parameter</td></tr>
+<tr><td>Ta</td><td>Exciter parameter</td></tr>
+<tr><td>Tb</td><td>Exciter parameter</td></tr>
+<tr><td>vfd0</td><td>Initial Filed voltage</td></tr>
+<tr><td>r</td><td>OEL parameter</td></tr>
+<tr><td>f</td><td>OEL parameter</td></tr>
+<tr><td>L1</td><td>OEL parameter</td></tr>
+<tr><td>ifd_lim</td><td>OEL parameter</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>ifd</td><td>Field current</td></tr>
+<tr><td>V</td><td>Terminal voltage </td></tr>
+<tr><td>vfd</td><td>Field voltage</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

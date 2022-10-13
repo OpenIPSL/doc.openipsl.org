@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.AKD</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Small subsystem representing the northern part of the Norwegian power system network&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AKD<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.AKD"></a><a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>OpenIPSL.Examples</a>.AKD</h2>
+<p>
+<span class="ModelicaDescription">Small subsystem representing the northern part of the Norwegian power system network</span><br>
+</p>
+<h3>Information</h3>
+
+<p>The AKD test system represents a small transmission grid that is provided by Statnett, the Norwegian Transmission System Operator. The grid represents a subsystem of the Norwegian power network, located in the northern part of the country.</p>
+<p>The system is composed of seven buses, six machines and one load center.</p>
+<p>The model underwent a software-to-software validation procedure against the PSSE model counterpart. The validation procedure assessed the behavior of the system after different disturbances that were applied to the system.</p>
+<p>This package contains three sub-packages:</p>
+<ul>
+<li><strong>Components</strong>: has basically two models that represent the generation units used in the system.</li>
+<li><strong>System</strong>: has the power grid model that can be simulated.</li>
+<li><strong>Data</strong>: contains the power flow data that is used to initialize the power grid.</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.ComponentsS.png" alt="OpenIPSL.Examples.AKD.Components" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Components.html#OpenIPSL.Examples.AKD.Components"
+>Components</a>
+</td>
+<td>Set of generation unit models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.ComponentsS.png" alt="OpenIPSL.Examples.AKD.System" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_System.html#OpenIPSL.Examples.AKD.System"
+>System</a>
+</td>
+<td>Power system model for simulation</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.ComponentsS.png" alt="OpenIPSL.Examples.AKD.Data" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data"
+>Data</a>
+</td>
+<td>Package with power flow data records for model initialization</td>
+</tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:39 2022.
+</address>
+</body>
+</html>

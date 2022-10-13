@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Solar PV models with DIgSILENT implementation&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE DIgSILENT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory.html#OpenIPSL.Electrical.Solar.PowerFactory"
+>OpenIPSL.Electrical.Solar.PowerFactory</a>.DIgSILENT</h2>
+<p>
+<span class="ModelicaDescription">Solar PV models with DIgSILENT implementation</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solar4e2b5cc755654419PlantS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PV_Plant" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PV_Plant"
+>PV_Plant</a>
+</td>
+<td>DIgSILENT model of a solar plant</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solar33eb41fd1eacaf8eliaryS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.Auxiliary" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT_Auxiliary.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.Auxiliary"
+>Auxiliary</a>
+</td>
+<td>Auxiliary models for implementation of DIgSILENT models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solar0c3f5b9da9f35006ollerS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.Controller" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.Controller"
+>Controller</a>
+</td>
+<td>Controller for the solar plant</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solar588b93532d3a495ausBarS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.DCBusBar" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.DCBusBar"
+>DCBusBar</a>
+</td>
+<td>Model of a DC busbar between the module and inverter</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solar6fb64f4a6a5a5234ArrayS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVArray" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVArray"
+>PVArray</a>
+</td>
+<td>Array of PV modules</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solarbdf9f14772911448oduleS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVModule" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVModule"
+>PVModule</a>
+</td>
+<td>Model of a single PV module</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solared5acd7c97b5222emiterS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.CurrentLimiter" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.CurrentLimiter"
+>CurrentLimiter</a>
+</td>
+<td>Limiter of d- and q-axis currents</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PV_Plant<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solar4e2b5cc755654419PlantI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PV_Plant" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PV_Plant"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"
+>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</a>.PV_Plant</h2>
+<p>
+<span class="ModelicaDescription">DIgSILENT model of a solar plant</span>
+</p>
+<h3>Information</h3>
+
+<p>
+A PV Plant implemented according to the DIgSILENT template in PowerFactory.
+</p>
+<p>NOTE 1: The PLL Dynamics are missing along with the active power reduction models for FRT events.
+</p>
+<p>NOTE 2: Keep in mind that if external irradiance is connected it needs to be matched for the initial active power for steady-state initialization.
+</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Plant parameters</td></tr>
+<tr><td>M_b</td><td>PV plant base power [V.A]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">PV Array Dimensions</td></tr>
+<tr><td>n_series</td><td>Number of modules in series</td></tr>
+<tr><td>n_parallel</td><td>Number of modules in parallel</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Parameters of PV Modules</td></tr>
+<tr><td>Tr</td><td>Time constant of modules [s]</td></tr>
+<tr><td>U0_stc</td><td>Open-circuit voltage at Standard Test Conditions [V]</td></tr>
+<tr><td>Umpp_stc</td><td>MPP voltage at Standard Test Conditions [V]</td></tr>
+<tr><td>Impp_stc</td><td>MPP current at Standard Test Conditions [A]</td></tr>
+<tr><td>Isc_stc</td><td>Short-circuit current at Standard Test Conditions [A]</td></tr>
+<tr><td>au</td><td>Temperature correction factor (voltage) [1/K]</td></tr>
+<tr><td>ai</td><td>Temperature correction factor (current) [1/K]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">DC busbar parameters</td></tr>
+<tr><td>C</td><td>Capacity of capacitor on DC busbar [F]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Current Controller Parameters</td></tr>
+<tr><td>Kp</td><td>Gain, Active Power PI-Controller</td></tr>
+<tr><td>Tip</td><td>Integration Time Constant, Active Power PI-Ctrl. [s]</td></tr>
+<tr><td>Trm</td><td>Measurement Delay [s]</td></tr>
+<tr><td>Tmpp</td><td>Time Delay MPP-Tracking [s]</td></tr>
+<tr><td>id_min</td><td>Min. Active Current Limit [1]</td></tr>
+<tr><td>id_max</td><td>Max. Active Current Limit [1]</td></tr>
+<tr><td>U_min</td><td>Minimal allowed DC-voltage [V]</td></tr>
+<tr><td>iq_min</td><td>Min. Reactive Current Limit [1]</td></tr>
+<tr><td>iq_max</td><td>Max. Reactive Current Limit [1]</td></tr>
+<tr><td>Deadband</td><td>Deadband for Dynamic AC Voltage Support</td></tr>
+<tr><td>K_FRT</td><td>Gain for Dynamic AC Voltage Support</td></tr>
+<tr><td>i_EEG</td><td>false = acc. TC2007; true = acc. SDLWindV</td></tr>
+<tr><td>maxAbsCur</td><td>Max. allowed absolute current [1]</td></tr>
+<tr><td>maxIq</td><td>Max.abs reactive current in normal operation [1]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Controller<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solar0c3f5b9da9f35006ollerI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.Controller" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.Controller"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"
+>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</a>.Controller</h2>
+<p>
+<span class="ModelicaDescription">Controller for the solar plant</span>
+</p>
+<h3>Information</h3>
+
+<p>
+Controller for DIgSILENT's implementation of the PV plant.
+</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Kp</td><td>Gain, Active Power PI-Controller</td></tr>
+<tr><td>Tip</td><td>Integration Time Constant, Active Power PI-Ctrl. [s]</td></tr>
+<tr><td>Tr</td><td>Measurement Delay [s]</td></tr>
+<tr><td>Tmpp</td><td>Time Delay MPP-Tracking [s]</td></tr>
+<tr><td>id_min</td><td>Min. Active Current Limit [1]</td></tr>
+<tr><td>id_max</td><td>Max. Active Current Limit [1]</td></tr>
+<tr><td>U_min</td><td>Minimal allowed DC-voltage [V]</td></tr>
+<tr><td>iq_min</td><td>Min. Reactive Current Limit</td></tr>
+<tr><td>iq_max</td><td>Max. Reactive Current Limit</td></tr>
+<tr><td>Deadband</td><td>Deadband for Dynamic AC Voltage Support</td></tr>
+<tr><td>K_FRT</td><td>Gain for Dynamic AC Voltage Support</td></tr>
+<tr><td>i_EEG</td><td>false = acc. TC2007; true = acc. SDLWindV</td></tr>
+<tr><td>maxAbsCur</td><td>Max. allowed absolute current [1]</td></tr>
+<tr><td>maxIq</td><td>Max.abs reactive current in normal operation [1]</td></tr>
+<tr><td>uac0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>iq0</td><td>Initial q-axis current [1]</td></tr>
+<tr><td>id0</td><td>Initial d-axis current [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>vdcref</td><td>&nbsp;</td></tr>
+<tr><td>uac</td><td>&nbsp;</td></tr>
+<tr><td>pred</td><td>&nbsp;</td></tr>
+<tr><td>vdcin</td><td>&nbsp;</td></tr>
+<tr><td>id_ref</td><td>&nbsp;</td></tr>
+<tr><td>iq_ref</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE DCBusBar<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solar588b93532d3a495ausBarI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.DCBusBar" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.DCBusBar"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"
+>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</a>.DCBusBar</h2>
+<p>
+<span class="ModelicaDescription">Model of a DC busbar between the module and inverter</span>
+</p>
+<h3>Information</h3>
+
+<p>
+DC busbar model for DIgSILENT's implementation of the PV plant.
+</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>C</td><td>Capacity of capacitor on DC busbar [F]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>P_conv</td><td>&nbsp;</td></tr>
+<tr><td>I_pv</td><td>current array</td></tr>
+<tr><td>Udc</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PVArray<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solar6fb64f4a6a5a5234ArrayI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVArray" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVArray"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"
+>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</a>.PVArray</h2>
+<p>
+<span class="ModelicaDescription">Array of PV modules</span>
+</p>
+<h3>Information</h3>
+
+<p>
+Model of a PV Array used in DIgSILENT's implementation of the PV plant. Provides optional inputs of irradiance (E) and temperature (theta). If those inputs are not connected, the model set temperature to 25&nbsp;&deg;C and irradiance so that it matches the specified initial power production.
+</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>P_init</td><td>Initial active power of the array [W]</td></tr>
+<tr><td>use_input_E</td><td>&nbsp;</td></tr>
+<tr><td>use_input_theta</td><td>&nbsp;</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">PV Array Dimensions</td></tr>
+<tr><td>n_series</td><td>Number of modules in series</td></tr>
+<tr><td>n_parallel</td><td>Number of modules in parallel</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Parameters of PV Modules</td></tr>
+<tr><td>Tr</td><td>Time constant of modules [s]</td></tr>
+<tr><td>U0_stc</td><td>Open-circuit voltage at Standard Test Conditions [V]</td></tr>
+<tr><td>Umpp_stc</td><td>MPP voltage at Standard Test Conditions [V]</td></tr>
+<tr><td>Impp_stc</td><td>MPP current at Standard Test Conditions [A]</td></tr>
+<tr><td>Isc_stc</td><td>Short-circuit current at Standard Test Conditions [A]</td></tr>
+<tr><td>au</td><td>Temperature correction factor (voltage) [1/K]</td></tr>
+<tr><td>ai</td><td>Temperature correction factor (current) [1/K]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Iarray</td><td>&nbsp;</td></tr>
+<tr><td>Vmpp_array</td><td>&nbsp;</td></tr>
+<tr><td>Uarray</td><td>&nbsp;</td></tr>
+<tr><td>E</td><td>&nbsp;</td></tr>
+<tr><td>theta</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PVModule<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solarbdf9f14772911448oduleI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVModule" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.PVModule"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"
+>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</a>.PVModule</h2>
+<p>
+<span class="ModelicaDescription">Model of a single PV module</span>
+</p>
+<h3>Information</h3>
+
+<p>
+Model of a PV Module within a PV array.
+</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>U0_stc</td><td>Open-circuit voltage at Standard Test Conditions [V]</td></tr>
+<tr><td>Umpp_stc</td><td>MPP voltage at Standard Test Conditions [V]</td></tr>
+<tr><td>Impp_stc</td><td>MPP current at Standard Test Conditions [A]</td></tr>
+<tr><td>Isc_stc</td><td>Short-circuit current at Standard Test Conditions [A]</td></tr>
+<tr><td>au</td><td>Temperature correction factor (voltage) [1/K]</td></tr>
+<tr><td>ai</td><td>Temperature correction factor (current) [1/K]</td></tr>
+<tr><td>use_input_E</td><td>If true irradiance is used as input</td></tr>
+<tr><td>use_input_theta</td><td>If true temperature is used as input</td></tr>
+<tr><td>P_init</td><td>Initial active power (needed only if input E is not used) [W]</td></tr>
+<tr><td>E_STC</td><td>[W/m2]</td></tr>
+<tr><td>theta_STC</td><td>[K]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>U</td><td>&nbsp;</td></tr>
+<tr><td>E</td><td>&nbsp;</td></tr>
+<tr><td>theta</td><td>&nbsp;</td></tr>
+<tr><td>I</td><td>&nbsp;</td></tr>
+<tr><td>Umpp</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE CurrentLimiter<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solared5acd7c97b5222emiterI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.CurrentLimiter" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT.CurrentLimiter"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_DIgSILENT.html#OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT"
+>OpenIPSL.Electrical.Solar.PowerFactory.DIgSILENT</a>.CurrentLimiter</h2>
+<p>
+<span class="ModelicaDescription">Limiter of d- and q-axis currents</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>maxAbsCur</td><td>[1]</td></tr>
+<tr><td>maxIq</td><td>[1]</td></tr>
+<tr><td>Deadband</td><td>[1]</td></tr>
+<tr><td>i_EEG</td><td>&nbsp;</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>idin</td><td>&nbsp;</td></tr>
+<tr><td>iqin</td><td>&nbsp;</td></tr>
+<tr><td>duac</td><td>&nbsp;</td></tr>
+<tr><td>idout</td><td>&nbsp;</td></tr>
+<tr><td>iqout</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:56 2022.
+</address>
+</body>
+</html>

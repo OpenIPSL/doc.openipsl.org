@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.ThreePhase</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Package with three-phase and hybrid positive-sequence/three-phase models&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ThreePhase<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.ThreePhase"></a><a href="OpenIPSL_Electrical.html#OpenIPSL.Electrical"
+>OpenIPSL.Electrical</a>.ThreePhase</h2>
+<p>
+<span class="ModelicaDescription">Package with three-phase and hybrid positive-sequence/three-phase models</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains three-phase models that can be used to create systems where unbalance plays an important role.
+ Distribution and sub-transmission systems are candidates.</p>
+<p>Three-phase systems can be easily connected to equivalent positive-sequence systems by using hybrid positive-sequence/three-phase devices.
+These models are called MonoTri and are usually represented as a pi-equivalent model. Transformers and power lines have their MonoTri representation in this package.</p>
+<p>In addition, multi-phase bus, bank and load models are also available here. The modelling of such devices is based, mainly, on the following works:</p>
+<ul>
+<li><em>A hybrid three-phase single-phase power flow formulation</em>, by J.M.T. Marinho, and G.N. Taranto, and</li>
+<li><em>Computer modelling of electrical power systems</em>, by J. Arrillaga, C.P. Arnold, and B.J. Harker. </li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.ThreePhase.BanksS.png" alt="OpenIPSL.Electrical.ThreePhase.Banks" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Banks.html#OpenIPSL.Electrical.ThreePhase.Banks"
+>Banks</a>
+</td>
+<td>Multi-phase capacitor bank models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.ThreePhase.BanksS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches.html#OpenIPSL.Electrical.ThreePhase.Branches"
+>Branches</a>
+</td>
+<td>Multi-phase and hybrid positive-sequence/three-phase lines and transformers</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.ThreePhase.BanksS.png" alt="OpenIPSL.Electrical.ThreePhase.Buses" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Buses.html#OpenIPSL.Electrical.ThreePhase.Buses"
+>Buses</a>
+</td>
+<td>Multi-phase buses</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.ThreePhase.BanksS.png" alt="OpenIPSL.Electrical.ThreePhase.Loads" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Loads.html#OpenIPSL.Electrical.ThreePhase.Loads"
+>Loads</a>
+</td>
+<td>Multi-phase load models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Three8f32f419badf4d83onentS.png" alt="OpenIPSL.Electrical.ThreePhase.ThreePhaseComponent" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase.html#OpenIPSL.Electrical.ThreePhase.ThreePhaseComponent"
+>ThreePhaseComponent</a>
+</td>
+<td>Partial model for inheritance of single-phase base power based on three-phase system base power.</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ThreePhaseComponent<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.ThreePhase.ThreePhaseComponent"></a><a href="OpenIPSL_Electrical_ThreePhase.html#OpenIPSL.Electrical.ThreePhase"
+>OpenIPSL.Electrical.ThreePhase</a>.ThreePhaseComponent</h2>
+<p>
+<span class="ModelicaDescription">Partial model for inheritance of single-phase base power based on three-phase system base power.</span>
+</p>
+<h3>Information</h3>
+
+<p>If the three-phase model deals with power, it is necessary to extand this partial model.
+It basically takes the system base power, which is a three-phase value, and calculates the per-phase base power.
+This is necessary for obtaining the correct per-unit values of current and voltages in a three-phase power system connected to a positive-sequence-equivalent system.</p>
+<p>For instance, if the system base is 100 MVA, in a positive-sequence-equivalent grid, the phase base is 33.33 MVA.</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base [V.A]</td></tr>
+<tr><td>S_p</td><td>Phase base [V.A]</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:56 2022.
+</address>
+</body>
+</html>

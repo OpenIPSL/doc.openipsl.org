@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.Tutorial.Example_3</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Adding complexity and simulating a larger system&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_3<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_3"></a><a href="OpenIPSL_Examples_Tutorial.html#OpenIPSL.Examples.Tutorial"
+>OpenIPSL.Examples.Tutorial</a>.Example_3</h2>
+<p>
+<span class="ModelicaDescription">Adding complexity and simulating a larger system</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package illustrates how it is possible to model a 9-bus system and simulate it using Modelica and the OpenIPSL.</p>
+<p>The simulation of this system also illustrates how oscillations occur on top of each other in a real system, showing that many modes can be excited with severe disturbances such as a three-phase-to-ground fault.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriac2c839f80102b6c3roupsS.png" alt="OpenIPSL.Examples.Tutorial.Example_3.Generation_Groups" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_3_Generation_Groups.html#OpenIPSL.Examples.Tutorial.Example_3.Generation_Groups"
+>Generation_Groups</a>
+</td>
+<td>Package with a set of generation units that is used in Example 3 system</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoria95118713076ed298ple_3S.png" alt="OpenIPSL.Examples.Tutorial.Example_3.Example_3" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_3.html#OpenIPSL.Examples.Tutorial.Example_3.Example_3"
+>Example_3</a>
+</td>
+<td>Fully assembled 9-bus 3-generator test system</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_3<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.Tutoria95118713076ed298ple_3I.png" alt="OpenIPSL.Examples.Tutorial.Example_3.Example_3" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_3.Example_3"></a><a href="OpenIPSL_Examples_Tutorial_Example_3.html#OpenIPSL.Examples.Tutorial.Example_3"
+>OpenIPSL.Examples.Tutorial.Example_3</a>.Example_3</h2>
+<p>
+<span class="ModelicaDescription">Fully assembled 9-bus 3-generator test system</span>
+</p>
+<h3>Information</h3>
+
+<p>This example system represents a 9-bus 3-generator test system with a three-phase-to-ground fault at bus 9 and it must be simulated during 20 seconds.</p>
+<p>Variables of interest are:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>B2.v</code></li>
+<li><code>B3.v</code></li>
+<li><code>Gen1.gen.delta</code></li>
+<li><code>Gen2.gen.delta</code></li>
+<li><code>Gen3.gen.delta</code></li>
+</ul>
+<p>Note that the voltage curves present different acting modes. Also note that disturbances in the AVR reference voltage can be added to each generation unit.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples).</span></p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:39 2022.
+</address>
+</body>
+</html>

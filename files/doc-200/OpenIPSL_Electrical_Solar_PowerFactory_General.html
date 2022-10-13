@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Solar.PowerFactory.General</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;General models for PowerFactory devices&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE General<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Solar.PowerFactory.General"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory.html#OpenIPSL.Electrical.Solar.PowerFactory"
+>OpenIPSL.Electrical.Solar.PowerFactory</a>.General</h2>
+<p>
+<span class="ModelicaDescription">General models for PowerFactory devices</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solarcb083d72a7c4b7e1nstatS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmGenstat" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General.ElmGenstat"
+>ElmGenstat</a>
+</td>
+<td>Static generator</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solara53df836cebb06f2lmVacS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmVac" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General.ElmVac"
+>ElmVac</a>
+</td>
+<td>Controllable voltage source</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solarbd68f4307da2a65ci_pllS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmPhi_pll" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General.ElmPhi_pll"
+>ElmPhi_pll</a>
+</td>
+<td>Phase-locked loop (PLL)</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Solar3df0be63e4eccc9eicdroS.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.Picdro" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General.Picdro"
+>Picdro</a>
+</td>
+<td>Pick-up drop-off implementation for protection functions</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ElmGenstat<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solarcb083d72a7c4b7e1nstatI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmGenstat" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmGenstat"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General"
+>OpenIPSL.Electrical.Solar.PowerFactory.General</a>.ElmGenstat</h2>
+<p>
+<span class="ModelicaDescription">Static generator</span>
+</p>
+<h3>Information</h3>
+
+<p>
+Static generator implemented currently only as a current source.
+</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Generator parameters</td></tr>
+<tr><td>M_b</td><td>Machine base power [VA]</td></tr>
+<tr><td>pll_connected</td><td>Enable/disable use of PLL inputs</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>id_ref</td><td>&nbsp;</td></tr>
+<tr><td>iq_ref</td><td>&nbsp;</td></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>i</td><td>&nbsp;</td></tr>
+<tr><td>v</td><td>&nbsp;</td></tr>
+<tr><td>sinref</td><td>Optional PLL input for sine</td></tr>
+<tr><td>cosref</td><td>Optional PLL input for cosine</td></tr>
+<tr><td>P</td><td>&nbsp;</td></tr>
+<tr><td>Q</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ElmVac<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solara53df836cebb06f2lmVacI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmVac" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmVac"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General"
+>OpenIPSL.Electrical.Solar.PowerFactory.General</a>.ElmVac</h2>
+<p>
+<span class="ModelicaDescription">Controllable voltage source</span>
+</p>
+<h3>Information</h3>
+
+<p>
+Controllable voltage source with frequency and volage as inputs.
+</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>f0</td><td>&nbsp;</td></tr>
+<tr><td>v</td><td>&nbsp;</td></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ElmPhi_pll<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solarbd68f4307da2a65ci_pllI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmPhi_pll" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.General.ElmPhi_pll"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General"
+>OpenIPSL.Electrical.Solar.PowerFactory.General</a>.ElmPhi_pll</h2>
+<p>
+<span class="ModelicaDescription">Phase-locked loop (PLL)</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>angle_0rad</td><td>&nbsp;</td></tr>
+<tr><td>omega_0</td><td>&nbsp;</td></tr>
+<tr><td>v_0</td><td>&nbsp;</td></tr>
+<tr><td>PLLEnable</td><td>Enable/disable PLL (PLL not implemented yet)</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>sinphi</td><td>&nbsp;</td></tr>
+<tr><td>cosphi</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Picdro<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Solar3df0be63e4eccc9eicdroI.png" alt="OpenIPSL.Electrical.Solar.PowerFactory.General.Picdro" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Solar.PowerFactory.General.Picdro"></a><a href="OpenIPSL_Electrical_Solar_PowerFactory_General.html#OpenIPSL.Electrical.Solar.PowerFactory.General"
+>OpenIPSL.Electrical.Solar.PowerFactory.General</a>.Picdro</h2>
+<p>
+<span class="ModelicaDescription">Pick-up drop-off implementation for protection functions</span>
+</p>
+<h3>Information</h3>
+
+<p>
+This function implements a logical pick-up-drop-off function commonly used when designingprotection schemes (e.g. fault detection, signal out-of-range, etc.).</p>
+
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Tpick</td><td>Pick-up time delay [s]</td></tr>
+<tr><td>Tdrop</td><td>Drop-off time delay [s]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>condition</td><td>&nbsp;</td></tr>
+<tr><td>trip</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

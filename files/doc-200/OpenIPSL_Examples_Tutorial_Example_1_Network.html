@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.Tutorial.Example_1.Network</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Set of steps illustrating how to assemble a network model using the OpenIPSL&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Network<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1.Network"></a><a href="OpenIPSL_Examples_Tutorial_Example_1.html#OpenIPSL.Examples.Tutorial.Example_1"
+>OpenIPSL.Examples.Tutorial.Example_1</a>.Network</h2>
+<p>
+<span class="ModelicaDescription">Set of steps illustrating how to assemble a network model using the OpenIPSL</span><br>
+</p>
+<h3>Information</h3>
+
+<p>The task of modeling the network should be done after the modeling of the generation units. If you have not done it yet, follow the instructions on package Generator.</p>
+<p>The modeling procedure of the three-bus system is divided into five steps:</p>
+<ul>
+<li><strong>Step 1</strong>: bus models are dragged into the diagram, together with the generation unit model and the system data in <code>SysData</code>.</li>
+<li><strong>Step 2</strong>: branch models, such as power lines and transformers, are placed in the diagram.</li>
+<li><strong>Step 3</strong>: infinite bus model is instantiated in the network model.</li>
+<li><strong>Step 4</strong>: fault model is placed in the diagram.</li>
+<li><strong>Step 5</strong>: connections between models are performed.</li>
+</ul>
+<p> More information about each step is displayed in the graphics/diagram layer of the model. Note that you also need to input the parameter values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriad2fc398bed967801tep_1S.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_1" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network.Step_1"
+>Step_1</a>
+</td>
+<td>Creating system model, adding buses, generator and system data</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriad2fc398bed967801tep_1S.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_2" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network.Step_2"
+>Step_2</a>
+</td>
+<td>Adding branch models to network</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriad2fc398bed967801tep_1S.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_3" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network.Step_3"
+>Step_3</a>
+</td>
+<td>Adding infinite bus</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriad2fc398bed967801tep_1S.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_4" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network.Step_4"
+>Step_4</a>
+</td>
+<td>Adding fault event</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriad2fc398bed967801tep_1S.png" alt="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_5" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network.Step_5"
+>Step_5</a>
+</td>
+<td>Connecting models</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Step_1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_1"></a><a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network"
+>OpenIPSL.Examples.Tutorial.Example_1.Network</a>.Step_1</h2>
+<p>
+<span class="ModelicaDescription">Creating system model, adding buses, generator and system data</span>
+</p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Step_2<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_2"></a><a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network"
+>OpenIPSL.Examples.Tutorial.Example_1.Network</a>.Step_2</h2>
+<p>
+<span class="ModelicaDescription">Adding branch models to network</span>
+</p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Step_3<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_3"></a><a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network"
+>OpenIPSL.Examples.Tutorial.Example_1.Network</a>.Step_3</h2>
+<p>
+<span class="ModelicaDescription">Adding infinite bus</span>
+</p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Step_4<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_4"></a><a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network"
+>OpenIPSL.Examples.Tutorial.Example_1.Network</a>.Step_4</h2>
+<p>
+<span class="ModelicaDescription">Adding fault event</span>
+</p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Step_5<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_1.Network.Step_5"></a><a href="OpenIPSL_Examples_Tutorial_Example_1_Network.html#OpenIPSL.Examples.Tutorial.Example_1.Network"
+>OpenIPSL.Examples.Tutorial.Example_1.Network</a>.Step_5</h2>
+<p>
+<span class="ModelicaDescription">Connecting models</span>
+</p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>

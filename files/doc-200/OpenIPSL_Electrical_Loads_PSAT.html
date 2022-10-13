@@ -1,0 +1,524 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Loads.PSAT</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Load models from PSAT&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PSAT<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Loads.PSAT"></a><a href="OpenIPSL_Electrical_Loads.html#OpenIPSL.Electrical.Loads"
+>OpenIPSL.Electrical.Loads</a>.PSAT</h2>
+<p>
+<span class="ModelicaDescription">Load models from PSAT</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyS.png" alt="OpenIPSL.Electrical.Loads.PSAT.ExponentialRecovery" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.ExponentialRecovery"
+>ExponentialRecovery</a>
+</td>
+<td>Exload - Exponential Recovery Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyS.png" alt="OpenIPSL.Electrical.Loads.PSAT.FrequencyDependent" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.FrequencyDependent"
+>FrequencyDependent</a>
+</td>
+<td>Fl - Frequency Dependent Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyS.png" alt="OpenIPSL.Electrical.Loads.PSAT.Mixed" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.Mixed"
+>Mixed</a>
+</td>
+<td>Mixload - Mixed Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyS.png" alt="OpenIPSL.Electrical.Loads.PSAT.PQ" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.PQ"
+>PQ</a>
+</td>
+<td>Pl - Constant PQ Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyS.png" alt="OpenIPSL.Electrical.Loads.PSAT.PQvar" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.PQvar"
+>PQvar</a>
+</td>
+<td>Equations come from the mathematical separation in between reals and imaginary of S=P+jQ=UI*</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loadsdafa20b4bcec6544olledS.png" alt="OpenIPSL.Electrical.Loads.PSAT.ThermostaticallyControlled" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.ThermostaticallyControlled"
+>ThermostaticallyControlled</a>
+</td>
+<td>Thload - Thermostatically Controlled Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loadsd1e6cf168b8ba236ndentS.png" alt="OpenIPSL.Electrical.Loads.PSAT.VoltageDependent" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.VoltageDependent"
+>VoltageDependent</a>
+</td>
+<td>Voltage Dependent Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loadsd1e6cf168b8ba236ndentS.png" alt="OpenIPSL.Electrical.Loads.PSAT.ZIP" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.ZIP"
+>ZIP</a>
+</td>
+<td>ZIP Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads1107148c65f20086InputS.png" alt="OpenIPSL.Electrical.Loads.PSAT.ZIP_ExtInput" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.ZIP_ExtInput"
+>ZIP_ExtInput</a>
+</td>
+<td>PSAT ZIP load with additional input</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads.PSAT.ZIP_JimmaS.png" alt="OpenIPSL.Electrical.Loads.PSAT.ZIP_Jimma" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT.ZIP_Jimma"
+>ZIP_Jimma</a>
+</td>
+<td>Jimma - Jimma&#39;s Load</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Loads79848a9c3a03c470assesS.png" alt="OpenIPSL.Electrical.Loads.PSAT.BaseClasses" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses"
+>BaseClasses</a>
+</td>
+<td>Base load models from PSAT</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ExponentialRecovery<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyI.png" alt="OpenIPSL.Electrical.Loads.PSAT.ExponentialRecovery" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.ExponentialRecovery"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.ExponentialRecovery</h2>
+<p>
+<span class="ModelicaDescription">Exload - Exponential Recovery Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Tp</td><td>Active power time constant [s]</td></tr>
+<tr><td>Tq</td><td>Reactive power time constant [s]</td></tr>
+<tr><td>alpha_s</td><td>Static active power exponent</td></tr>
+<tr><td>alpha_t</td><td>Dynamic active power exponent</td></tr>
+<tr><td>beta_s</td><td>Static reactive power exponent</td></tr>
+<tr><td>beta_t</td><td>Dynamic reactive power exponent</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FrequencyDependent<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyI.png" alt="OpenIPSL.Electrical.Loads.PSAT.FrequencyDependent" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.FrequencyDependent"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.FrequencyDependent</h2>
+<p>
+<span class="ModelicaDescription">Fl - Frequency Dependent Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>alpha_p</td><td>Active power voltage coefficient</td></tr>
+<tr><td>alpha_q</td><td>Reactive power voltage coefficient</td></tr>
+<tr><td>beta_p</td><td>Active power frequency coefficient</td></tr>
+<tr><td>beta_q</td><td>Reactive power frequency coefficient</td></tr>
+<tr><td>Tf</td><td>Filter time constant [s]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Mixed<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyI.png" alt="OpenIPSL.Electrical.Loads.PSAT.Mixed" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.Mixed"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.Mixed</h2>
+<p>
+<span class="ModelicaDescription">Mixload - Mixed Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Kpf</td><td>Frequency coefficient for the active power [1]</td></tr>
+<tr><td>alpha</td><td>Voltage exponent for the active power</td></tr>
+<tr><td>Tpv</td><td>Time constant of dV/dt for the active power [s]</td></tr>
+<tr><td>Kqf</td><td>Frequency coefficient for the reactive power [1]</td></tr>
+<tr><td>beta</td><td>Voltage exponent for the reactive power</td></tr>
+<tr><td>Tqv</td><td>Time constant of dV/dt for the reactive power [s]</td></tr>
+<tr><td>Tfv</td><td>Time constant of voltage magnitude filter [s]</td></tr>
+<tr><td>Tft</td><td>Time constant of voltage angle filter [s]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PQ<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyI.png" alt="OpenIPSL.Electrical.Loads.PSAT.PQ" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.PQ"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.PQ</h2>
+<p>
+<span class="ModelicaDescription">Pl - Constant PQ Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">To Be Implemented</td></tr>
+<tr><td>Vmax</td><td>maximum voltage [1]</td></tr>
+<tr><td>Vmin</td><td>minimum voltage [1]</td></tr>
+<tr><td>forcePQ</td><td>force constant PQ-load, false may cause simulation problems</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PQvar<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads415c19290fc52cd8overyI.png" alt="OpenIPSL.Electrical.Loads.PSAT.PQvar" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.PQvar"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.PQvar</h2>
+<p>
+<span class="ModelicaDescription">Equations come from the mathematical separation in between reals and imaginary of S=P+jQ=UI*</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Variation 1</td></tr>
+<tr><td>t_start_1</td><td>Start time of first load variation [s]</td></tr>
+<tr><td>t_end_1</td><td>End time of first load variation [s]</td></tr>
+<tr><td>dP1</td><td>First active load variation [W]</td></tr>
+<tr><td>dQ1</td><td>First reactive load variation [var]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Variation 2</td></tr>
+<tr><td>t_start_2</td><td>Start time of second Load variation [s]</td></tr>
+<tr><td>t_end_2</td><td>End time of second load variation [s]</td></tr>
+<tr><td>dP2</td><td>Second active load variation [W]</td></tr>
+<tr><td>dQ2</td><td>Second reactive load variation [var]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">To Be Implemented</td></tr>
+<tr><td>Vmax</td><td>maximum voltage [1]</td></tr>
+<tr><td>Vmin</td><td>minimum voltage [1]</td></tr>
+<tr><td>forcePQ</td><td>force &#39;constant&#39; PQ-load, false may cause simulation problems</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ThermostaticallyControlled<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loadsdafa20b4bcec6544olledI.png" alt="OpenIPSL.Electrical.Loads.PSAT.ThermostaticallyControlled" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.ThermostaticallyControlled"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.ThermostaticallyControlled</h2>
+<p>
+<span class="ModelicaDescription">Thload - Thermostatically Controlled Load</span>
+</p>
+<h3>Information</h3>
+
+<p>
+This load defines a dynamic load with temperature control. This
+component is initialized after the power flow solution and needs a PQ load connected
+at the same bus.</p>
+<p>
+For more information see <a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[Milano2013]</a>,
+section "16.6 Thermostatically Controlled Load".
+</p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Kl</td><td>Ceiling conductance output</td></tr>
+<tr><td>Kp</td><td>Gain of the proportional controller [pu/pu]</td></tr>
+<tr><td>Ki</td><td>Gain of the integral controller [pu/pu]</td></tr>
+<tr><td>Ti</td><td>Time constant of integral controller [s]</td></tr>
+<tr><td>T1</td><td>Time constant of the thermal load [s]</td></tr>
+<tr><td>T_ref</td><td>Reference temperature [degC]</td></tr>
+<tr><td>T0</td><td>Initial temperature [degC]</td></tr>
+<tr><td>G0</td><td>Initial conductance [1]</td></tr>
+<tr><td>Gmax</td><td>Maximum conductance [1]</td></tr>
+<tr><td>Gmin</td><td>Minimum conductance [1]</td></tr>
+<tr><td>K1</td><td>Active power gain [pu/pu]</td></tr>
+<tr><td>K3</td><td>Gain anti wind-up</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>t_ref</td><td>Reference temperature</td></tr>
+<tr><td>t_a</td><td>Ambient temperature</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE VoltageDependent<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loadsd1e6cf168b8ba236ndentI.png" alt="OpenIPSL.Electrical.Loads.PSAT.VoltageDependent" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.VoltageDependent"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.VoltageDependent</h2>
+<p>
+<span class="ModelicaDescription">Voltage Dependent Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>alphap</td><td>Active power exponent</td></tr>
+<tr><td>alphaq</td><td>Reactive power exponent</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ZIP<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loadsd1e6cf168b8ba236ndentI.png" alt="OpenIPSL.Electrical.Loads.PSAT.ZIP" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.ZIP"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.ZIP</h2>
+<p>
+<span class="ModelicaDescription">ZIP Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Pz</td><td>Conductance [1]</td></tr>
+<tr><td>Pi</td><td>Active current [1]</td></tr>
+<tr><td>Pp</td><td>Active power [1]</td></tr>
+<tr><td>Qz</td><td>Susceptance [1]</td></tr>
+<tr><td>Qi</td><td>Reactive current [1]</td></tr>
+<tr><td>Qp</td><td>Reactive power [1]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ZIP_ExtInput<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads1107148c65f20086InputI.png" alt="OpenIPSL.Electrical.Loads.PSAT.ZIP_ExtInput" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.ZIP_ExtInput"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.ZIP_ExtInput</h2>
+<p>
+<span class="ModelicaDescription">PSAT ZIP load with additional input</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Pz</td><td>Conductance [1]</td></tr>
+<tr><td>Pi</td><td>Active current [1]</td></tr>
+<tr><td>Pp</td><td>Active power [1]</td></tr>
+<tr><td>Qz</td><td>Susceptance [1]</td></tr>
+<tr><td>Qi</td><td>Reactive current [1]</td></tr>
+<tr><td>Qp</td><td>Reactive power [1]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>u</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ZIP_Jimma<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Loads.PSAT.ZIP_JimmaI.png" alt="OpenIPSL.Electrical.Loads.PSAT.ZIP_Jimma" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Loads.PSAT.ZIP_Jimma"></a><a href="OpenIPSL_Electrical_Loads_PSAT.html#OpenIPSL.Electrical.Loads.PSAT"
+>OpenIPSL.Electrical.Loads.PSAT</a>.ZIP_Jimma</h2>
+<p>
+<span class="ModelicaDescription">Jimma - Jimma&#39;s Load</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Loads_PSAT_BaseClasses.html#OpenIPSL.Electrical.Loads.PSAT.BaseClasses.baseLoad"
+>BaseClasses.baseLoad</a> (Base load for PSAT models).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Tf</td><td>Time constant of the high-pass filter [s]</td></tr>
+<tr><td>Pz</td><td>Conductance [1]</td></tr>
+<tr><td>Pi</td><td>Active current [1]</td></tr>
+<tr><td>Pp</td><td>Active power [1]</td></tr>
+<tr><td>Qz</td><td>Susceptance [1]</td></tr>
+<tr><td>Qi</td><td>Reactive current [1]</td></tr>
+<tr><td>Qp</td><td>Reactive power [1]</td></tr>
+<tr><td>Kv</td><td>coefficient of the voltage time derivative [1/s]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [VA]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

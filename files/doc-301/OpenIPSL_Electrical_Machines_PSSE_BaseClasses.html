@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Machines.PSSE.BaseClasses</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Base classes for base machines from PSSE&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE BaseClasses<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Machines.PSSE.BaseClasses"></a><a href="OpenIPSL_Electrical_Machines_PSSE.html#OpenIPSL.Electrical.Machines.PSSE"
+>OpenIPSL.Electrical.Machines.PSSE</a>.BaseClasses</h2>
+<p>
+<span class="ModelicaDescription">Base classes for base machines from PSSE</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.BasesPackage (Icon for packages containing base classes).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Machibce02c4c14b61bddchineS.png" alt="OpenIPSL.Electrical.Machines.PSSE.BaseClasses.baseMachine" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Machines_PSSE_BaseClasses.html#OpenIPSL.Electrical.Machines.PSSE.BaseClasses.baseMachine"
+>baseMachine</a>
+</td>
+<td>Base machine for PSSE models</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE baseMachine<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Machibce02c4c14b61bddchineI.png" alt="OpenIPSL.Electrical.Machines.PSSE.BaseClasses.baseMachine" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Machines.PSSE.BaseClasses.baseMachine"></a><a href="OpenIPSL_Electrical_Machines_PSSE_BaseClasses.html#OpenIPSL.Electrical.Machines.PSSE.BaseClasses"
+>OpenIPSL.Electrical.Machines.PSSE.BaseClasses</a>.baseMachine</h2>
+<p>
+<span class="ModelicaDescription">Base machine for PSSE models</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Machine parameters</td></tr>
+<tr><td>M_b</td><td>Machine base power [V.A]</td></tr>
+<tr><td>Tpd0</td><td>d-axis transient open-circuit time constant [s]</td></tr>
+<tr><td>Tppd0</td><td>d-axis sub-transient open-circuit time constant [s]</td></tr>
+<tr><td>Tppq0</td><td>q-axis sub-transient open-circuit time constant [s]</td></tr>
+<tr><td>H</td><td>Inertia constant [s]</td></tr>
+<tr><td>D</td><td>Speed damping</td></tr>
+<tr><td>Xd</td><td>d-axis reactance [1]</td></tr>
+<tr><td>Xq</td><td>q-axis reactance [1]</td></tr>
+<tr><td>Xpd</td><td>d-axis transient reactance [1]</td></tr>
+<tr><td>Xppd</td><td>d-axis sub-transient reactance [1]</td></tr>
+<tr><td>Xppq</td><td>q-axis sub-transient reactance [1]</td></tr>
+<tr><td>Xl</td><td>leakage reactance [1]</td></tr>
+<tr><td>S10</td><td>Saturation factor at 1.0 pu [1]</td></tr>
+<tr><td>S12</td><td>Saturation factor at 1.2 pu [1]</td></tr>
+<tr><td>R_a</td><td>Armature resistance [1]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Initialization</td></tr>
+<tr><td>w0</td><td>Initial speed deviation from nominal [1]</td></tr>
+<tr class="ModelicaParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>&nbsp;</td></tr>
+<tr><td>SPEED</td><td>Machine speed deviation from nominal [pu]</td></tr>
+<tr><td>PMECH</td><td>Turbine mechanical power (machine base)</td></tr>
+<tr><td>PMECH0</td><td>Initial value of machine electrical power (machine base)</td></tr>
+<tr><td>ETERM</td><td>Machine terminal voltage [pu]</td></tr>
+<tr><td>EFD</td><td>Generator main field voltage [pu]</td></tr>
+<tr><td>EFD0</td><td>Initial generator main field voltage [pu]</td></tr>
+<tr><td>PELEC</td><td>Machine electrical power (machine base)</td></tr>
+<tr><td>ISORCE</td><td>Machine source current [pu]</td></tr>
+<tr><td>ANGLE</td><td>Machine relative rotor angle</td></tr>
+<tr><td>XADIFD</td><td>Machine field current [pu]</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:56 2022.
+</address>
+</body>
+</html>

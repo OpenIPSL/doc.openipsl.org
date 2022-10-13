@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.KundurSMIB</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Single-machine infinite bus model used in the Example 13.2 of the Kundur&#39;s book&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE KundurSMIB<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.KundurSMIB"></a><a href="OpenIPSL_Examples.html#OpenIPSL.Examples"
+>OpenIPSL.Examples</a>.KundurSMIB</h2>
+<p>
+<span class="ModelicaDescription">Single-machine infinite bus model used in the Example 13.2 of the Kundur&#39;s book</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This example shows how a Single-Machine-Infinite-Bus (SMIB) system can be used to assess the impacts of an Automatic Voltage Regulator (AVR) and of a Power System Stabilizer (PSS) in transient stability studies.</p>
+<p>Three test systems are assembled to test three different configurations in generation units:</p>
+<ul>
+<li><strong>Configuration 1</strong>: only a machine composing a generation unit.</li>
+<li><strong>Configuration 2</strong>: a machine and an AVR.</li>
+<li><strong>Configuration 3</strong>: a machine, the AVR and the PSS.</li>
+</ul>
+<p>To test and compare the results, the same disturbance is applied to the three systems.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.KundurSMIB.SMIBS.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB"
+>SMIB</a>
+</td>
+<td>Single-Machine-Infinite-Bus system with generation unit composed of Machine</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.KundurSMIB.SMIBS.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB_AVR" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB_AVR"
+>SMIB_AVR</a>
+</td>
+<td>Single-Machine-Infinite-Bus system with generation unit composed of Machine and AVR</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.KundurSMIB.SMIBS.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB_AVR_PSS" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB_AVR_PSS"
+>SMIB_AVR_PSS</a>
+</td>
+<td>Single-Machine-Infinite-Bus system with generation unit composed of Machine, AVR and PSS</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.KundurSab1450be608333b4roupsS.png" alt="OpenIPSL.Examples.KundurSMIB.Generation_Groups" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_KundurSMIB_Generation_Groups.html#OpenIPSL.Examples.KundurSMIB.Generation_Groups"
+>Generation_Groups</a>
+</td>
+<td>Package with models for the different generation units tested in this example</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.KundurSf82ef102abad5e3crtialS.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB_Partial" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB_Partial"
+>SMIB_Partial</a>
+</td>
+<td>Partial model containing the network elements</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SMIB<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.KundurSMIB.SMIBI.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.KundurSMIB.SMIB"></a><a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB"
+>OpenIPSL.Examples.KundurSMIB</a>.SMIB</h2>
+<p>
+<span class="ModelicaDescription">Single-Machine-Infinite-Bus system with generation unit composed of Machine</span>
+</p>
+<h3>Information</h3>
+
+<p>This example system represents an SMIB system with generation unit composed only of a machine. The system should be simulated during 10 seconds.</p>
+<p>Variables of interest are:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>G1.machine.delta</code></li>
+</ul>
+<p>Note that the system is unstable. Compare these variables with the ones obtained when simulating <code>SMIB_AVR</code> and <code>SMIB_AVR_PSS</code> for 10 seconds.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB_Partial"
+>SMIB_Partial</a> (Partial model containing the network elements).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SMIB_AVR<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.KundurSMIB.SMIBI.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB_AVR" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.KundurSMIB.SMIB_AVR"></a><a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB"
+>OpenIPSL.Examples.KundurSMIB</a>.SMIB_AVR</h2>
+<p>
+<span class="ModelicaDescription">Single-Machine-Infinite-Bus system with generation unit composed of Machine and AVR</span>
+</p>
+<h3>Information</h3>
+
+<p>This example system represents an SMIB system with generation unit composed of a machine and an AVR. The system should be simulated during 10 seconds.</p>
+<p>Variables of interest are:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>G1.machine.delta</code></li>
+</ul>
+<p>Note that the system is unstable. Compare these variables with the ones obtained when simulating <code>SMIB</code> and <code>SMIB_AVR_PSS</code> for 10 seconds.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB_Partial"
+>SMIB_Partial</a> (Partial model containing the network elements).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SMIB_AVR_PSS<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.KundurSMIB.SMIBI.png" alt="OpenIPSL.Examples.KundurSMIB.SMIB_AVR_PSS" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.KundurSMIB.SMIB_AVR_PSS"></a><a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB"
+>OpenIPSL.Examples.KundurSMIB</a>.SMIB_AVR_PSS</h2>
+<p>
+<span class="ModelicaDescription">Single-Machine-Infinite-Bus system with generation unit composed of Machine, AVR and PSS</span>
+</p>
+<h3>Information</h3>
+
+<p>This example system represents an SMIB system with generation unit composed of a machine, an AVR and a PSS. The system should be simulated during 10 seconds.</p>
+<p>Variables of interest are:</p>
+<ul>
+<li><code>B1.v</code></li>
+<li><code>G1.machine.delta</code></li>
+</ul>
+<p>Note that the system is now stable. Compare these variables with the ones obtained when simulating <code>SMIB</code> and <code>SMIB_AVR</code> for 10 seconds.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Example (Icon for runnable examples), <a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB.SMIB_Partial"
+>SMIB_Partial</a> (Partial model containing the network elements).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SMIB_Partial<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.KundurSMIB.SMIB_Partial"></a><a href="OpenIPSL_Examples_KundurSMIB.html#OpenIPSL.Examples.KundurSMIB"
+>OpenIPSL.Examples.KundurSMIB</a>.SMIB_Partial</h2>
+<p>
+<span class="ModelicaDescription">Partial model containing the network elements</span>
+</p>
+<h3>Information</h3>
+
+<p>Partial network model used in the SMIB systems, composed of three buses and an infinite bus.</p>
+
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:39 2022.
+</address>
+</body>
+</html>

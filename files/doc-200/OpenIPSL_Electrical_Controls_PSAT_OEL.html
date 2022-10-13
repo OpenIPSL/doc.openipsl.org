@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Controls.PSAT.OEL</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Over Excitation Limiter (OEL) models from PSAT&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE OEL<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Controls.PSAT.OEL"></a><a href="OpenIPSL_Electrical_Controls_PSAT.html#OpenIPSL.Electrical.Controls.PSAT"
+>OpenIPSL.Electrical.Controls.PSAT</a>.OEL</h2>
+<p>
+<span class="ModelicaDescription">Over Excitation Limiter (OEL) models from PSAT</span><br>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr1b59b4245a00589dL.OELS.png" alt="OpenIPSL.Electrical.Controls.PSAT.OEL.OEL" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_OEL.html#OpenIPSL.Electrical.Controls.PSAT.OEL.OEL"
+>OEL</a>
+</td>
+<td>PSATs Over-Excitation Limiter</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr269aeefd4e3e7dc4rrentS.png" alt="OpenIPSL.Electrical.Controls.PSAT.OEL.FieldCurrent" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSAT_OEL.html#OpenIPSL.Electrical.Controls.PSAT.OEL.FieldCurrent"
+>FieldCurrent</a>
+</td>
+<td>Estimates the field current from P,Q,V and the d- and q-axis reactances</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE OEL<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr1b59b4245a00589dL.OELI.png" alt="OpenIPSL.Electrical.Controls.PSAT.OEL.OEL" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.OEL.OEL"></a><a href="OpenIPSL_Electrical_Controls_PSAT_OEL.html#OpenIPSL.Electrical.Controls.PSAT.OEL"
+>OpenIPSL.Electrical.Controls.PSAT.OEL</a>.OEL</h2>
+<p>
+<span class="ModelicaDescription">PSATs Over-Excitation Limiter</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>T0</td><td>Integrator time constant [s]</td></tr>
+<tr><td>xd</td><td>d-axis estimated generator reactance (machine base) [1]</td></tr>
+<tr><td>xq</td><td>q-axis estimated generator reactance (machine base) [1]</td></tr>
+<tr><td>if_lim</td><td>Maximum field current (system base) [1]</td></tr>
+<tr><td>vOEL_max</td><td>Maximum output signal (machine base) [1]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr class="ModelicaParameterGroup"><td colspan="2">Machine parameters</td></tr>
+<tr><td>Sn</td><td>Power rating [VA]</td></tr>
+<tr><td>Vn</td><td>Voltage rating [V]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>v</td><td>Generator terminal voltage [pu]</td></tr>
+<tr><td>p</td><td>Active power [pu]</td></tr>
+<tr><td>q</td><td>Reactive power [pu]</td></tr>
+<tr><td>v_ref</td><td>&nbsp;</td></tr>
+<tr><td>v_ref0</td><td>Generator terminal voltage [pu]</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FieldCurrent<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr269aeefd4e3e7dc4rrentI.png" alt="OpenIPSL.Electrical.Controls.PSAT.OEL.FieldCurrent" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSAT.OEL.FieldCurrent"></a><a href="OpenIPSL_Electrical_Controls_PSAT_OEL.html#OpenIPSL.Electrical.Controls.PSAT.OEL"
+>OpenIPSL.Electrical.Controls.PSAT.OEL</a>.FieldCurrent</h2>
+<p>
+<span class="ModelicaDescription">Estimates the field current from P,Q,V and the d- and q-axis reactances</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>xd</td><td>[1]</td></tr>
+<tr><td>xq</td><td>[1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>v</td><td>generator terminal voltage [pu]</td></tr>
+<tr><td>p</td><td>active power [pu]</td></tr>
+<tr><td>q</td><td>reactive power [pu]</td></tr>
+<tr><td>ifield</td><td>estimated field current [pu]</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:43 2022.
+</address>
+</body>
+</html>

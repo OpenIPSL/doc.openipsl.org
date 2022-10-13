@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Set of functions used to calculate hybrid positive-sequence/three-phase impedance matrices for transformers&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TransformerFcn<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri</a>.TransformerFcn</h2>
+<p>
+<span class="ModelicaDescription">Set of functions used to calculate hybrid positive-sequence/three-phase impedance matrices for transformers</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains a set of functions used to calculate hybrid positive-sequence/three-phase impedance matrices depending on the transformer connection, and if positive, negative and zero Norton equivalent impedances are considered to have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg"
+>Yg_Yg</a>
+</td>
+<td>Calculation of impedance matrices for a grounded-wye-grounded-wye-connected hybrid transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D"
+>D_D</a>
+</td>
+<td>Calculation of impedance matrices for a delta-delta-connected hybrid transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y"
+>Y_Y</a>
+</td>
+<td>Calculation of impedance matrices for a wye-wye-connected hybrid transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Yg" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Yg"
+>D_Yg</a>
+</td>
+<td>Calculation of hybrid impedance matrices for a delta-grounded-wye-connected three-phase transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_D" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_D"
+>Yg_D</a>
+</td>
+<td>Calculation of hybrid impedance matrices for a grounded-wye-delta-connected three-phase transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_D" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_D"
+>Y_D</a>
+</td>
+<td>Calculation of hybrid impedance matrices for a wye-delta-connected three-phase transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Y" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Y"
+>D_Y</a>
+</td>
+<td>Calculation of hybrid impedance matrices for a delta-wye-connected three-phase transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y"
+>Yg_Y</a>
+</td>
+<td>Calculation of impedance matrices for a grounded-wye-wye-connected hybrid transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg"
+>Y_Yg</a>
+</td>
+<td>Calculation of impedance matrices for a wye-grounded-wye-connected hybrid transformer.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg_FinImp" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg_FinImp"
+>Yg_Yg_FinImp</a>
+</td>
+<td>Calculation of impedance matrices for a grounded-wye-grounded-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D_FinImp" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D_FinImp"
+>D_D_FinImp</a>
+</td>
+<td>Calculation of impedance matrices for a delta-delta-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y_FinImp" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y_FinImp"
+>Y_Y_FinImp</a>
+</td>
+<td>Calculation of impedance matrices for a wye-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y_FinImp" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y_FinImp"
+>Yg_Y_FinImp</a>
+</td>
+<td>Calculation of impedance matrices for a grounded-wye-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Threec7474d101ec51227verseS.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg_FinImp" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg_FinImp"
+>Y_Yg_FinImp</a>
+</td>
+<td>Calculation of impedance matrices for a wye-grounded-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Yg_Yg<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Yg_Yg</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a grounded-wye-grounded-wye-connected hybrid transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary and secondary windings connected in grounded-wye (grounded-wye).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE D_D<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.D_D</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a delta-delta-connected hybrid transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary and secondary windings connected in delta.
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Y_Y<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Y_Y</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a wye-wye-connected hybrid transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary and secondary windings connected in wye (star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE D_Yg<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Yg" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Yg"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.D_Yg</h2>
+<p>
+<span class="ModelicaDescription">Calculation of hybrid impedance matrices for a delta-grounded-wye-connected three-phase transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in delta and its secondary windings connected in grounded-wye (grounded-star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Yg_D<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_D" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_D"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Yg_D</h2>
+<p>
+<span class="ModelicaDescription">Calculation of hybrid impedance matrices for a grounded-wye-delta-connected three-phase transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in grounded-wye (grounded-star) and its secondary windings connected in delta.
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Y_D<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_D" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_D"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Y_D</h2>
+<p>
+<span class="ModelicaDescription">Calculation of hybrid impedance matrices for a wye-delta-connected three-phase transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in wye (star) and its secondary windings connected in delta.
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE D_Y<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Y" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_Y"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.D_Y</h2>
+<p>
+<span class="ModelicaDescription">Calculation of hybrid impedance matrices for a delta-wye-connected three-phase transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in delta and its secondary windings connected in wye (star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Yg_Y<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Yg_Y</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a grounded-wye-wye-connected hybrid transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in grounded-wye (grounded-star) and its secondary windings connected in wye (star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Y_Yg<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Y_Yg</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a wye-grounded-wye-connected hybrid transformer.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in wye (star) and its secondary windings connected ingrounded-wye (grounded-star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have infinite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Yg_Yg_FinImp<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg_FinImp" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Yg_FinImp"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Yg_Yg_FinImp</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a grounded-wye-grounded-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary and secondary windings connected in grounded-wye (grounded-star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+<tr><td>Y012[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE D_D_FinImp<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D_FinImp" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.D_D_FinImp"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.D_D_FinImp</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a delta-delta-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary and secondary windings connected in delta.
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+<tr><td>Y012[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Y_Y_FinImp<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y_FinImp" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Y_FinImp"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Y_Y_FinImp</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a wye-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary and secondary windings connected in wye (star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+<tr><td>Y012[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Yg_Y_FinImp<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y_FinImp" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Yg_Y_FinImp"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Yg_Y_FinImp</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a grounded-wye-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in grounded-wye (grounded-star) and its secondary windings connected in wye (star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+<tr><td>Y012[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Y_Yg_FinImp<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Three7f5b47463255cd51Yg_YgI.png" alt="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg_FinImp" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn.Y_Yg_FinImp"></a><a href="OpenIPSL_Electrical_ThreePhase_Branches_MonoTri_TransformerFcn.html#OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn"
+>OpenIPSL.Electrical.ThreePhase.Branches.MonoTri.TransformerFcn</a>.Y_Yg_FinImp</h2>
+<p>
+<span class="ModelicaDescription">Calculation of impedance matrices for a wye-grounded-wye-connected hybrid transformer. Finite values of Norton equivalent impedances are taken into account.</span>
+</p>
+<h3>Information</h3>
+
+<p>This function calculates impedance matrices of a hybrid positive-sequece/three-phase transformer modeled as a pi-equivalent.</p>
+<p>The transformer that uses this function should have its primary windings connected in wye (star) and its secondary windings connected in grounded-wye (grounded-star).
+In addition, this function considers that positive-, negative-, and zero-sequence Norton equivalent impedances have finite values.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Function (Icon for functions).</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>X</td><td>&nbsp;</td></tr>
+<tr><td>R</td><td>&nbsp;</td></tr>
+<tr><td>tap</td><td>&nbsp;</td></tr>
+<tr><td>Y012[1, 18]</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Y[1, 32]</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Oct  6 17:41:44 2022.
+</address>
+</body>
+</html>

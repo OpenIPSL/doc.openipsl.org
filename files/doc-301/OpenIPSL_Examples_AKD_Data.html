@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.AKD.Data</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Package with power flow data records for model initialization&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Data<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.AKD.Data"></a><a href="OpenIPSL_Examples_AKD.html#OpenIPSL.Examples.AKD"
+>OpenIPSL.Examples.AKD</a>.Data</h2>
+<p>
+<span class="ModelicaDescription">Package with power flow data records for model initialization</span><br>
+</p>
+<h3>Information</h3>
+
+<p>This package contains the power flow data that is used to initialize the dynamic models. The power flow solution was calculated using PSSE.</p>
+
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.Data.AKD_PF_powersS.png" alt="OpenIPSL.Examples.AKD.Data.AKD_PF_powers" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data.AKD_PF_powers"
+>AKD_PF_powers</a>
+</td>
+<td>Record for active and reactive injected powers</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.Data.AKD_PF_powersS.png" alt="OpenIPSL.Examples.AKD.Data.AKD_PF_voltages" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data.AKD_PF_voltages"
+>AKD_PF_voltages</a>
+</td>
+<td>Record for voltage magnitudes and angles</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.AKD.Data.AKD_PF_powersS.png" alt="OpenIPSL.Examples.AKD.Data.PF_data" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data.PF_data"
+>PF_data</a>
+</td>
+<td>PSSE complete data record</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AKD_PF_powers<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.AKD.Data.AKD_PF_powersI.png" alt="OpenIPSL.Examples.AKD.Data.AKD_PF_powers" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.AKD.Data.AKD_PF_powers"></a><a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data"
+>OpenIPSL.Examples.AKD.Data</a>.AKD_PF_powers</h2>
+<p>
+<span class="ModelicaDescription">Record for active and reactive injected powers</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Record (Icon for records).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>P58553</td><td>&nbsp;</td></tr>
+<tr><td>Q58553</td><td>&nbsp;</td></tr>
+<tr><td>P58566</td><td>&nbsp;</td></tr>
+<tr><td>Q58566</td><td>&nbsp;</td></tr>
+<tr><td>P58567</td><td>&nbsp;</td></tr>
+<tr><td>Q58567</td><td>&nbsp;</td></tr>
+<tr><td>P58573</td><td>&nbsp;</td></tr>
+<tr><td>Q58573</td><td>&nbsp;</td></tr>
+<tr><td>P58583</td><td>&nbsp;</td></tr>
+<tr><td>Q58583</td><td>&nbsp;</td></tr>
+<tr><td>P58653</td><td>&nbsp;</td></tr>
+<tr><td>Q58653</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AKD_PF_voltages<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.AKD.Data.AKD_PF_powersI.png" alt="OpenIPSL.Examples.AKD.Data.AKD_PF_voltages" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.AKD.Data.AKD_PF_voltages"></a><a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data"
+>OpenIPSL.Examples.AKD.Data</a>.AKD_PF_voltages</h2>
+<p>
+<span class="ModelicaDescription">Record for voltage magnitudes and angles</span>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Record (Icon for records).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>V58553</td><td>&nbsp;</td></tr>
+<tr><td>A58553</td><td>&nbsp;</td></tr>
+<tr><td>V58563</td><td>&nbsp;</td></tr>
+<tr><td>A58563</td><td>&nbsp;</td></tr>
+<tr><td>V58566</td><td>&nbsp;</td></tr>
+<tr><td>A58566</td><td>&nbsp;</td></tr>
+<tr><td>V58567</td><td>&nbsp;</td></tr>
+<tr><td>A58567</td><td>&nbsp;</td></tr>
+<tr><td>V58573</td><td>&nbsp;</td></tr>
+<tr><td>A58573</td><td>&nbsp;</td></tr>
+<tr><td>V58583</td><td>&nbsp;</td></tr>
+<tr><td>A58583</td><td>&nbsp;</td></tr>
+<tr><td>V58653</td><td>&nbsp;</td></tr>
+<tr><td>A58653</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PF_data<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Examples.AKD.Data.AKD_PF_powersI.png" alt="OpenIPSL.Examples.AKD.Data.PF_data" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.AKD.Data.PF_data"></a><a href="OpenIPSL_Examples_AKD_Data.html#OpenIPSL.Examples.AKD.Data"
+>OpenIPSL.Examples.AKD.Data</a>.PF_data</h2>
+<p>
+<span class="ModelicaDescription">PSSE complete data record</span>
+</p>
+<h3>Information</h3>
+
+<p>This record package contains two templates that can be used as replaceable records for changing the operating point in which the system is initialized. The templates are: </p>
+<ul>
+<li><strong>Voltages</strong>: composed of voltage magnitude, in per unit, and angles, in radians.</li>
+<li><strong>Powers</strong>: composed of active and reactive power values in VA and Var, respectively, that are injected in the node.</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Record (Icon for records).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>replaceable record Voltages</td><td>PSSE voltages from power flow solution</td></tr>
+<tr><td>replaceable record Powers</td><td>PSSE powers from power flow solution</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Mon Oct 10 14:35:39 2022.
+</address>
+</body>
+</html>
