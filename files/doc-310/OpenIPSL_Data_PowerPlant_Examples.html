@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Data.PowerPlant.Examples</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Examples to illustrate the usage of parameter data sets in OpenIPSL&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Examples<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Data.PowerPlant.Examples"></a><a href="OpenIPSL_Data_PowerPlant.html#OpenIPSL.Data.PowerPlant"
+>OpenIPSL.Data.PowerPlant</a>.Examples</h2>
+<p>
+<span class="ModelicaDescription">Examples to illustrate the usage of parameter data sets in OpenIPSL</span>
+</p>
+<h3>Information</h3>
+
+<p>This package contains two examples aimed to illustrate the correct use of parameter data sets in OpenIPSL:</p>
+<ul>
+<li><a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples.Anderson"
+><code>Anderson</code></a>.</li>
+<li><a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples.IEEE421"
+><code>IEEE421</code></a>.</li>
+</ul>
+<p>Please read the <a href="OpenIPSL_Data_PowerPlant.html#OpenIPSL.Data.PowerPlant.HowTo"
+><strong>How-To</strong> guide</a> before studying the examples.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.f2cf4ae728b96420ersonS.png" alt="OpenIPSL.Data.PowerPlant.Examples.Anderson" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples.Anderson"
+>Anderson</a>
+</td>
+<td>SMIB system to learn how to use the data set records (Anderson book)</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.f2cf4ae728b96420ersonS.png" alt="OpenIPSL.Data.PowerPlant.Examples.IEEE421" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples.IEEE421"
+>IEEE421</a>
+</td>
+<td>SMIB system to learn how to use the data set records (IEEE421.5 standard)</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.Examples.PFDataS.png" alt="OpenIPSL.Data.PowerPlant.Examples.PFData" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Examples_PFData.html#OpenIPSL.Data.PowerPlant.Examples.PFData"
+>PFData</a>
+</td>
+<td>Records with Power Flow solutions as obtained from GridCal and pf2rec</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Anderson<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Data.PowerPlant.f2cf4ae728b96420ersonI.png" alt="OpenIPSL.Data.PowerPlant.Examples.Anderson" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Data.PowerPlant.Examples.Anderson"></a><a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples"
+>OpenIPSL.Data.PowerPlant.Examples</a>.Anderson</h2>
+<p>
+<span class="ModelicaDescription">SMIB system to learn how to use the data set records (Anderson book)</span>
+</p>
+<h3>Information</h3>
+
+<p>
+This example demonstrates the use of records with synchronous machine,
+excitation system, power system stabilizer and turbine-governor model parameters,
+based on data sets published in <a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[Anderson2002]</a>.
+The generator group for this example includes a
+<a href="OpenIPSL_Electrical_Machines_PSSE.html#OpenIPSL.Electrical.Machines.PSSE.GENROE"
+>GENROE</a>
+machine together with an
+<a href="OpenIPSL_Electrical_Controls_PSSE_ES.html#OpenIPSL.Electrical.Controls.PSSE.ES.ESDC1A"
+>ESDC1A</a>
+excitation system model, an
+<a href="OpenIPSL_Electrical_Controls_PSSE_PSS.html#OpenIPSL.Electrical.Controls.PSSE.PSS.IEE2ST"
+>IEE2ST</a>
+PSS model and an
+<a href="OpenIPSL_Electrical_Controls_PSSE_TG.html#OpenIPSL.Electrical.Controls.PSSE.TG.IEESGO"
+>IEESGO</a>
+turbine-governor model.
+</p>
+<h5>Instructions</h5>
+<p>
+Please start by completing the 3 first steps of the instructions in
+<a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup.Generator2"
+>
+<code>GenerationGroup.Generator2</code></a>.
+A <code>OpenIPSL.Data.PowerPlant.GUDynamics</code> record must be dragged and dropped
+into that model and its <code>GUnitDynamics</code> parameter must be propagated before
+continuing with the following steps:
+</p>
+<ol>
+<li>Open the parameter window of the generation group component.</li>
+<li>Choose the appropriate parameter data set for the generating unit dynamics
+    from the <code>GUnitDynamics</code> dropdown list. To do this, double-click the
+    <code>generator1</code> component. Then, expand the drop-down list of the
+    <code>GUnitDynamics</code> parameter. Finally, choose the
+    <em>Anderson Fossil Steam Unit 15 (448 MVA)</em> option.</li>
+<li>Choose the right data set for the <code>powerFlow</code> record.
+    The procedure is very similar as in the previous step.
+    This time just expand the drop-down list of the <code>PowerFlow</code>
+    parameter of the <code>powerFlow</code> record.
+    <em>Choose the PF solutions for Pload = 50 MW</em> option.</li>
+<li>Insert component references to the <code>powerFlow</code> record to define
+    the initial power flow values. This has to be done for the following components:
+    <ul>
+    <li>generator1: <code>P_0=powerFlow.powerFlow.machines.PG1</code>;
+        <code>Q_0=powerFlow.powerFlow.machines.QG1</code>;
+        <code>v_0=powerFlow.powerFlow.bus.v1</code>;
+        <code>angle_0=powerFlow.powerFlow.bus.A1</code>.</li>
+    <li>gENCLS: <code>P_0=powerFlow.powerFlow.machines.PG2</code>;
+        <code>Q_0=powerFlow.powerFlow.machines.QG2</code>;
+        <code>v_0=powerFlow.powerFlow.bus.v2</code>;
+        <code>angle_0=powerFlow.powerFlow.bus.A2</code>.</li>
+    <li>constantLoad: P_0=<code>powerFlow.powerFlow.loads.PL1</code>;
+        <code>Q_0=powerFlow.powerFlow.loads.QL1</code>;
+        <code>v_0=powerFlow.powerFlow.bus.v3</code>;
+        <code>angle_0=powerFlow.powerFlow.bus.A3</code>.</li>
+    </ul></li>
+<li>Go back to the instructions in
+<a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup.Generator2"
+>
+<code>GenerationGroup.Generator2</code></a>
+and follow step 4.</li>
+</ol>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Tests_BaseClasses.html#OpenIPSL.Tests.BaseClasses.SMIB"
+>OpenIPSL.Tests.BaseClasses.SMIB</a> (SMIB - Single Machine Infinite Base system with one load.).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>gENCLS</td><td>&nbsp;</td></tr>
+<tr><td>constantLoad</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IEEE421<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Data.PowerPlant.f2cf4ae728b96420ersonI.png" alt="OpenIPSL.Data.PowerPlant.Examples.IEEE421" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Data.PowerPlant.Examples.IEEE421"></a><a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples"
+>OpenIPSL.Data.PowerPlant.Examples</a>.IEEE421</h2>
+<p>
+<span class="ModelicaDescription">SMIB system to learn how to use the data set records (IEEE421.5 standard)</span>
+</p>
+<h3>Information</h3>
+
+<p>
+This example demonstrates the use of records with synchronous machine, excitation system,
+and power system stabilizer parameters, based on data sets published in <a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[IEEE2005]</a>.
+The generator group for this example includes a
+<a href="OpenIPSL_Electrical_Machines_PSSE.html#OpenIPSL.Electrical.Machines.PSSE.GENSAE"
+>GENSAE</a>
+machine together with an
+<a href="OpenIPSL_Electrical_Controls_PSSE_ES.html#OpenIPSL.Electrical.Controls.PSSE.ES.ESST1A"
+>ESST1A</a>
+excitation system model and a
+<a href="OpenIPSL_Electrical_Controls_PSSE_PSS.html#OpenIPSL.Electrical.Controls.PSSE.PSS.PSS2B"
+>PSS2B</a>
+PSS model.
+</p>
+<h5>Instructions</h5>
+<p>
+Please start by completing the 3 first steps of the instructions in
+<a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup.Generator1"
+>
+<code>GenerationGroup.Generator1</code></a>.
+A <code>OpenIPSL.Data.PowerPlant.GUDynamics</code> record must be dragged and
+dropped into that model and its <code>GUnitDynamics</code> parameter must be
+propagated before continuing with the following steps:
+</p>
+<ol>
+<li>Open the parameter window of the generation group component.</li>
+<li>Choose the appropriate parameter data set for the generating unit dynamics
+    from the <code>GUnitDynamics</code> dropdown list. To do this, double-click
+    the <code>generator1</code> component. Then, expand the drop-down list of
+    the <code>GUnitDynamics</code> parameter. Finally, choose the
+    <em>IEEE421.5 ST1A Type Excitation System Model Data Set 1</em> option.</li>
+<li>Choose the right data set for the <code>powerFlow</code> record.
+    The procedure is very similar as in the previous step.
+    This time just expand the drop-down list of the <code>PowerFlow</code> parameter
+    of the <code>powerFlow</code> record.
+    <em>Choose the PF solutions for <code>Pload = 50 MW</code></em> option.</li>
+<li>Insert component references to the <code>powerFlow</code> record to define
+    the initial power flow values. This has to be done for the following components:
+    <ul>
+    <li>generator1: <code>P_0=powerFlow.powerFlow.machines.PG1</code>;
+        <code>Q_0=powerFlow.powerFlow.machines.QG1</code>;
+        <code>v_0=powerFlow.powerFlow.bus.v1</code>;
+        <code>angle_0=powerFlow.powerFlow.bus.A1</code>.</li>
+    <li>gENCLS: <code>P_0=powerFlow.powerFlow.machines.PG2</code>;
+        <code>Q_0=powerFlow.powerFlow.machines.QG2</code>;
+        <code>v_0=powerFlow.powerFlow.bus.v2</code>;
+        <code>angle_0=powerFlow.powerFlow.bus.A2</code>.</li>
+    <li>constantLoad: <code>P_0=powerFlow.powerFlow.loads.PL1</code>;
+        <code>Q_0=powerFlow.powerFlow.loads.QL1</code>;
+        <code>v_0=powerFlow.powerFlow.bus.v3</code>;
+        <code>angle_0=powerFlow.powerFlow.bus.A3</code>.</li>
+    </ul></li>
+<li>Go back to the instructions in
+<a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup.Generator1"
+>
+<code>GenerationGroup.Generator1</code></a> and follow step 4.</li>
+</ol>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Tests_BaseClasses.html#OpenIPSL.Tests.BaseClasses.SMIB"
+>OpenIPSL.Tests.BaseClasses.SMIB</a> (SMIB - Single Machine Infinite Base system with one load.).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>gENCLS</td><td>&nbsp;</td></tr>
+<tr><td>constantLoad</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:56:12 2026.
+</address>
+</body>
+</html>

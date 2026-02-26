@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Basic components for WEHGOV turbine governor model&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE WEHGOV<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses"
+>OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses</a>.WEHGOV</h2>
+<p>
+<span class="ModelicaDescription">Basic components for WEHGOV turbine governor model</span>
+</p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr407df7db7388e21bernorS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Governor" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses_WEHGOV.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Governor"
+>Governor</a>
+</td>
+<td>WEHGOV governor and hydraulic actuators</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Contr089e1dea47dfab1erbineS.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Turbine" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses_WEHGOV.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Turbine"
+>Turbine</a>
+</td>
+<td>WEHGOV turbine dynamics</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Governor<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr407df7db7388e21bernorI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Governor" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Governor"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses_WEHGOV.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV"
+>OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV</a>.Governor</h2>
+<p>
+<span class="ModelicaDescription">WEHGOV governor and hydraulic actuators</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>S_b</td><td>System base [V.A]</td></tr>
+<tr><td>M_b</td><td>System base [V.A]</td></tr>
+<tr><td>R_PERM_PE</td><td>Pelec gain [1]</td></tr>
+<tr><td>R_PERM_GATE</td><td>Feedback Gate gain [1]</td></tr>
+<tr><td>T_PE</td><td>Electrical power transducer time constant [s]</td></tr>
+<tr><td>M</td><td>Feedback control switch</td></tr>
+<tr><td>SP_Band</td><td>Speed deadband [1]</td></tr>
+<tr><td>KP</td><td>Governor proportional gain [1]</td></tr>
+<tr><td>KI</td><td>Governor integral gain [1/s]</td></tr>
+<tr><td>KD</td><td>Governor derivative gain [s]</td></tr>
+<tr><td>TD</td><td>Governor derivative controller time constant [s]</td></tr>
+<tr><td>TP</td><td>Pilot valve time constant [s]</td></tr>
+<tr><td>GMAX</td><td>Maximum limit for the gate position [1]</td></tr>
+<tr><td>GMIN</td><td>Minimum limit for the gate position [1]</td></tr>
+<tr><td>DICN</td><td>PID integral controller limit from field tuning [1]</td></tr>
+<tr><td>DPV</td><td>Change in valve output [1]</td></tr>
+<tr><td>TDV</td><td>Distribution valve time constant [s]</td></tr>
+<tr><td>GTMXOP</td><td>Maximum gate opening rate [p.u./s] [1]</td></tr>
+<tr><td>GTMXCL</td><td>Maximum gate closing rate [p.u./s] [1]</td></tr>
+<tr><td>Tg</td><td>Distribution valve limit [1]</td></tr>
+<tr><td>G1</td><td>Gate position 1  [1]</td></tr>
+<tr><td>G2</td><td>Gate position 2  [1]</td></tr>
+<tr><td>G3</td><td>Gate position 3  [1]</td></tr>
+<tr><td>G4</td><td>Gate position 4  [1]</td></tr>
+<tr><td>G5</td><td>Gate position 5  [1]</td></tr>
+<tr><td>FLWG1</td><td>Water flow rate 1  [1]</td></tr>
+<tr><td>FLWG2</td><td>Water flow rate 2  [1]</td></tr>
+<tr><td>FLWG3</td><td>Water flow rate 3  [1]</td></tr>
+<tr><td>FLWG4</td><td>Water flow rate 4  [1]</td></tr>
+<tr><td>FLWG5</td><td>Water flow rate 5  [1]</td></tr>
+<tr><td>FLWP1</td><td>Water flow rate 1  [1]</td></tr>
+<tr><td>FLWP2</td><td>Water flow rate 2  [1]</td></tr>
+<tr><td>FLWP3</td><td>Water flow rate 3  [1]</td></tr>
+<tr><td>FLWP4</td><td>Water flow rate 4  [1]</td></tr>
+<tr><td>FLWP5</td><td>Water flow rate 5  [1]</td></tr>
+<tr><td>FLWP6</td><td>Water flow rate 6  [1]</td></tr>
+<tr><td>FLWP7</td><td>Water flow rate 7  [1]</td></tr>
+<tr><td>FLWP8</td><td>Water flow rate 8  [1]</td></tr>
+<tr><td>FLWP9</td><td>Water flow rate 9  [1]</td></tr>
+<tr><td>FLWP10</td><td>Water flow rate 10  [1]</td></tr>
+<tr><td>Pmech1</td><td>Mechanical power 1  [1]</td></tr>
+<tr><td>Pmech2</td><td>Water flow rate 2  [1]</td></tr>
+<tr><td>Pmech3</td><td>Water flow rate 3  [1]</td></tr>
+<tr><td>Pmech4</td><td>Water flow rate 4  [1]</td></tr>
+<tr><td>Pmech5</td><td>Water flow rate 5  [1]</td></tr>
+<tr><td>Pmech6</td><td>Water flow rate 6  [1]</td></tr>
+<tr><td>Pmech7</td><td>Water flow rate 7  [1]</td></tr>
+<tr><td>Pmech8</td><td>Water flow rate 8  [1]</td></tr>
+<tr><td>Pmech9</td><td>Water flow rate 9  [1]</td></tr>
+<tr><td>Pmech10</td><td>Water flow rate 10  [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PELEC</td><td>&nbsp;</td></tr>
+<tr><td>PREF</td><td>&nbsp;</td></tr>
+<tr><td>Gate_Position</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Turbine<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Contr089e1dea47dfab1erbineI.png" alt="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Turbine" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV.Turbine"></a><a href="OpenIPSL_Electrical_Controls_PSSE_TG_BaseClasses_WEHGOV.html#OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV"
+>OpenIPSL.Electrical.Controls.PSSE.TG.BaseClasses.WEHGOV</a>.Turbine</h2>
+<p>
+<span class="ModelicaDescription">WEHGOV turbine dynamics</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>S_b</td><td>System base [V.A]</td></tr>
+<tr><td>M_b</td><td>System base [V.A]</td></tr>
+<tr><td>G1</td><td>Gate position 1  [1]</td></tr>
+<tr><td>G2</td><td>Gate position 2  [1]</td></tr>
+<tr><td>FLWG1</td><td>Water flow rate 1  [1]</td></tr>
+<tr><td>FLWG2</td><td>Water flow rate 2  [1]</td></tr>
+<tr><td>TW</td><td>Water time constant [s]</td></tr>
+<tr><td>FLWP1</td><td>Water flow rate 1  [1]</td></tr>
+<tr><td>FLWP2</td><td>Water flow rate 2  [1]</td></tr>
+<tr><td>FLWP3</td><td>Water flow rate 3  [1]</td></tr>
+<tr><td>FLWP4</td><td>Water flow rate 4  [1]</td></tr>
+<tr><td>FLWP5</td><td>Water flow rate 5  [1]</td></tr>
+<tr><td>FLWP6</td><td>Water flow rate 6  [1]</td></tr>
+<tr><td>Pmech1</td><td>Mechanical power 1  [1]</td></tr>
+<tr><td>Pmech2</td><td>Water flow rate 2  [1]</td></tr>
+<tr><td>Pmech3</td><td>Water flow rate 3  [1]</td></tr>
+<tr><td>Pmech4</td><td>Water flow rate 4  [1]</td></tr>
+<tr><td>Pmech5</td><td>Water flow rate 5  [1]</td></tr>
+<tr><td>Pmech6</td><td>Water flow rate 6  [1]</td></tr>
+<tr><td>D_TURB</td><td>Turbine damping [1]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Gate_Position</td><td>&nbsp;</td></tr>
+<tr><td>PMECH</td><td>&nbsp;</td></tr>
+<tr><td>SPEED</td><td>&nbsp;</td></tr>
+<tr><td>PMECH0</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:56:09 2026.
+</address>
+</body>
+</html>

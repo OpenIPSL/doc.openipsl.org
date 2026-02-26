@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Data.PowerPlant.Anderson</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Typical System Data taken from Appendix D of the book \&quot;Power System Control and Stability\&quot; by Paul M. Anderson and A. Fouad.&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Anderson<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Data.PowerPlant.Anderson"></a><a href="OpenIPSL_Data_PowerPlant.html#OpenIPSL.Data.PowerPlant"
+>OpenIPSL.Data.PowerPlant</a>.Anderson</h2>
+<p>
+<span class="ModelicaDescription">Typical System Data taken from Appendix D of the book &quot;Power System Control and Stability&quot; by Paul M. Anderson and A. Fouad.</span>
+</p>
+<h3>Information</h3>
+
+<p>Records with typical data for different types of generation plants. The data covers most parameters for generating group components, including the synchronous generator, exciter, turbine-governor system, and power system stabilizer.</p>
+<p>Listed below is a cross reference between trademarks/manufacturers and IEEE excitation system model types:</p>
+<ul>
+<li>General Electric Amplidyne (NA101, NA108, NA143, NA143A) : <strong>DC1A</strong></li>
+<li>Allis Chalmers Corp. Regulex (REGULUX) : <strong>DC1A</strong></li>
+<li>Westinghouse-Magastat (WMA): <strong>DC1A</strong> or <strong>DC3A</strong></li>
+<li>ASEA and Brown Boveri &amp; Cie (BBC) : <strong>DC1A</strong></li>
+<li>General Electric GFA 4 : <strong>DC3A</strong></li>
+<li>Westinghouse BJ30 : <strong>DC3A</strong></li>
+<li>Westinghouse High Initial Response Brushless excitation system (BRLS) : <strong>AC2A</strong></li>
+<li>Westinghouse Type WTA Brushless excitation system : <strong>AC2A</strong></li>
+<li>General Electric SCR : <strong>ST1A</strong></li>
+<li>General Electric SCT-PPT (SCPT) : <strong>ST2A</strong></li>
+</ul>
+<p>Sources:</p>
+<ul>
+<li>Anderson, P. M., &amp; Fouad, A. A. (2008).&nbsp;<em>Power system control and stability</em>. John Wiley &amp; Sons. Pages: 566-580.</li>
+<li>IEEE (2005), <em>IEEE Recommended Practice for Excitation System Models for Power System Stability Studies</em>. New York, NY 10016-5997, USA.</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.VariantsPackage (Icon for package containing variants).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlantS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.Hydro" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_Hydro.html#OpenIPSL.Data.PowerPlant.Anderson.Hydro"
+>Hydro</a>
+</td>
+<td>Typical Data for Hydro (H) Units</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlantS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.Steam" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_Steam.html#OpenIPSL.Data.PowerPlant.Anderson.Steam"
+>Steam</a>
+</td>
+<td>Typical Data for Different Types of Steam (H) Units</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlantS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.SynCondensor" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_SynCondensor.html#OpenIPSL.Data.PowerPlant.Anderson.SynCondensor"
+>SynCondensor</a>
+</td>
+<td>Typical Data for Synchronous Condensor (SC) Units</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlantS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.Combustion" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_Combustion.html#OpenIPSL.Data.PowerPlant.Anderson.Combustion"
+>Combustion</a>
+</td>
+<td>Typical Data for Combustion Turbine (CT) Units</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.GenerationGroupS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.MachineData" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_MachineData.html#OpenIPSL.Data.PowerPlant.Anderson.MachineData"
+>MachineData</a>
+</td>
+<td>Records with Synchronous Machine Dynamic Parameters</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.GenerationGroupS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.ESData" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_ESData.html#OpenIPSL.Data.PowerPlant.Anderson.ESData"
+>ESData</a>
+</td>
+<td>Records with Excitation System (ES) Parameters</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.GenerationGroupS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.TurbGovData" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_TurbGovData.html#OpenIPSL.Data.PowerPlant.Anderson.TurbGovData"
+>TurbGovData</a>
+</td>
+<td>Records with Turbine-Governor Parameters</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.GenerationGroupS.png" alt="OpenIPSL.Data.PowerPlant.Anderson.PSSData" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_Anderson_PSSData.html#OpenIPSL.Data.PowerPlant.Anderson.PSSData"
+>PSSData</a>
+</td>
+<td>Records with Power System Stabilizer (PSS) Parameters</td>
+</tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:56:12 2026.
+</address>
+</body>
+</html>

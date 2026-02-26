@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;This package contains additional add ons that can be added to the original renewable models.&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AddOnBlocks<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks"></a><a href="OpenIPSL_Electrical_Renewables_PSSE.html#OpenIPSL.Electrical.Renewables.PSSE"
+>OpenIPSL.Electrical.Renewables.PSSE</a>.AddOnBlocks</h2>
+<p>
+<span class="ModelicaDescription">This package contains additional add ons that can be added to the original renewable models.</span>
+</p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.Renewc85477255f100f0cPowerS.png" alt="OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks.IrradianceToPower" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_Renewables_PSSE_AddOnBlocks.html#OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks.IrradianceToPower"
+>IrradianceToPower</a>
+</td>
+<td>PV Array Power Output from Irradiance.</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE IrradianceToPower<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.Renewc85477255f100f0cPowerI.png" alt="OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks.IrradianceToPower" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks.IrradianceToPower"></a><a href="OpenIPSL_Electrical_Renewables_PSSE_AddOnBlocks.html#OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks"
+>OpenIPSL.Electrical.Renewables.PSSE.AddOnBlocks</a>.IrradianceToPower</h2>
+<p>
+<span class="ModelicaDescription">PV Array Power Output from Irradiance.</span>
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>M_b</td><td>Equipment apparent power [V.A]</td></tr>
+<tr><td>Ypv</td><td>Rated capacity of the PV array [W]</td></tr>
+<tr><td>Tcstc</td><td>PV cell temperature under standard test conditions [K]</td></tr>
+<tr><td>fpv</td><td>PV derating factor</td></tr>
+<tr><td>ap</td><td>Temperature coefficient of power</td></tr>
+<tr><td>Gtstc</td><td>Radiant energy fluence rate of PV array [W/m2]</td></tr>
+<tr><td>SolarRadiationTable[:, :]</td><td>Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])</td></tr>
+<tr><td>SolarArrayTemperatureTable[:, :]</td><td>Table matrix (time = first column; e.g., table=[0, 0; 1, 1; 2, 4])</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>Ppv</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:56:10 2026.
+</address>
+</body>
+</html>

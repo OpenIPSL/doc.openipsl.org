@@ -1,0 +1,1475 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.Tutorial.Example_4.Instructions</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Instructions&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Instructions<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions"></a><a href="OpenIPSL_Examples_Tutorial_Example_4.html#OpenIPSL.Examples.Tutorial.Example_4"
+>OpenIPSL.Examples.Tutorial.Example_4</a>.Instructions</h2>
+
+  <h4>Before You Start</h4>
+  <h5>Prerequisites</h5>
+  <ul>
+    <li>Dymola/OpenModelica installation.</li>
+    <li>
+      <strong>GridCal</strong> setup to generate the power flow solutions. Please refer to section <a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.InstallingGridCal"
+>Installing GridCal</a> for installation instructions.
+    </li>
+    <li>OpenIPSL library.</li>
+    <li>Python scripts to be found within the <a href="../Resources/utils">Resources</a> folder of the OpenIPSL library. </li>
+  </ul>
+  <h5>System Parameters</h5>
+  <p>The system parameters for the static power flow model are listed below:</p>
+  <table cellspacing="0" cellpadding="0" border="1">
+    <caption align="bottom"><em>* A three-phase fault is to be set at bus FAULT</em></caption>
+    <tr>
+      <th bgcolor="#b3e6ff">
+        <p align="center">
+          <strong>Bus No.</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Bus Name</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Type</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>V (pu)</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Angle</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>P (MW)</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Q (Mvar)</strong></p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">1 </p>
+      </td>
+      <td>
+        <p align="center">B01 </p>
+      </td>
+      <td>
+        <p align="center">PV </p>
+      </td>
+      <td>
+        <p align="center">1.0000 </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+      <td>
+        <p align="center">40.0000 </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">2 </p>
+      </td>
+      <td>
+        <p align="center">B02 </p>
+      </td>
+      <td>
+        <p align="center">Slack </p>
+      </td>
+      <td>
+        <p align="center">1.0000 </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">3 </p>
+      </td>
+      <td>
+        <p align="center">B03* </p>
+      </td>
+      <td>
+        <p align="center">PQ </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">4 </p>
+      </td>
+      <td>
+        <p align="center">B04 </p>
+      </td>
+      <td>
+        <p align="center">PQ </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+      <td>
+        <p align="center">From PF </p>
+      </td>
+      <td>
+        <p align="center">50.0000 </p>
+      </td>
+      <td>
+        <p align="center">10.0000 </p>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <table cellspacing="0" cellpadding="0" border="1">
+    <tr>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Line Name</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>From Bus</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>To Bus</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>R (pu)</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>X (pu)</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>B (pu)</strong></p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">line_01 </p>
+      </td>
+      <td>
+        <p align="center">B01 </p>
+      </td>
+      <td>
+        <p align="center">B03 </p>
+      </td>
+      <td>
+        <p align="center">0.0010 </p>
+      </td>
+      <td>
+        <p align="center">0.2000 </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">line_02 </p>
+      </td>
+      <td>
+        <p align="center">B03 </p>
+      </td>
+      <td>
+        <p align="center">B02 </p>
+      </td>
+      <td>
+        <p align="center">0.0010 </p>
+      </td>
+      <td>
+        <p align="center">0.2000 </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">line_03 </p>
+      </td>
+      <td>
+        <p align="center">B03 </p>
+      </td>
+      <td>
+        <p align="center">B04 </p>
+      </td>
+      <td>
+        <p align="center">0.0005 </p>
+      </td>
+      <td>
+        <p align="center">0.1000 </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">line_04 </p>
+      </td>
+      <td>
+        <p align="center">B04 </p>
+      </td>
+      <td>
+        <p align="center">B02 </p>
+      </td>
+      <td>
+        <p align="center">0.0005 </p>
+      </td>
+      <td>
+        <p align="center">0.1000 </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>For the dynamic part of the simulation, the parameters of the models are:</p>
+  <table cellspacing="0" cellpadding="0" border="1">
+    <tr>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Generator (Bus)</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Generator Type</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Exciter</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Turbine Governor</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Stabilizer</strong></p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">1 </p>
+      </td>
+      <td>
+        <p align="center">GENROE </p>
+      </td>
+      <td>
+        <p align="center">None </p>
+      </td>
+      <td>
+        <p align="center">None </p>
+      </td>
+      <td>
+        <p align="center">None </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">3 </p>
+      </td>
+      <td>
+        <p align="center">GENCLS </p>
+      </td>
+      <td>
+        <p align="center">None </p>
+      </td>
+      <td>
+        <p align="center">None </p>
+      </td>
+      <td>
+        <p align="center">None </p>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <table cellspacing="0" cellpadding="0" border="1">
+    <tr>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Generator (Bus)</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Parameter</strong></p>
+      </th>
+      <th bgcolor="#b3e6ff">
+        <p align="center"><strong>Value</strong></p>
+      </th>
+    </tr>
+    <tr>
+      <td rowspan="17">
+        <p align="center">GENROE</p>
+      </td>
+      <td>
+        <p align="center">Mbase </p>
+      </td>
+      <td>
+        <p align="center">100 MVA </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">T&apos;do (&gt; 0) </p>
+      </td>
+      <td>
+        <p align="center">5.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">T&apos;&apos;do (&gt; 0) </p>
+      </td>
+      <td>
+        <p align="center">0.0700 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">T&apos;qo (&gt; 0) </p>
+      </td>
+      <td>
+        <p align="center">0.9000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">T&apos;&apos;qo (&gt; 0) </p>
+      </td>
+      <td>
+        <p align="center">0.0900 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">H, Inertia </p>
+      </td>
+      <td>
+        <p align="center">4.2800 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">D, Speed Damping </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Xd </p>
+      </td>
+      <td>
+        <p align="center">1.8400 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Xq </p>
+      </td>
+      <td>
+        <p align="center">1.7500 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">X&apos;d </p>
+      </td>
+      <td>
+        <p align="center">0.4100 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">X&apos;q </p>
+      </td>
+      <td>
+        <p align="center">0.6000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">X&apos;&apos;d = X&apos;&apos;q </p>
+      </td>
+      <td>
+        <p align="center">0.2000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Xl </p>
+      </td>
+      <td>
+        <p align="center">0.1200 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">S(1.0) </p>
+      </td>
+      <td>
+        <p align="center">0.1100 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">S(1.2) </p>
+      </td>
+      <td>
+        <p align="center">0.3900 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Ra </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Xsource (= Xpq) </p>
+      </td>
+      <td>
+        <p align="center">0.2000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="5">
+        <p align="center">GENCLS</p>
+      </td>
+      <td>
+        <p align="center">Mbase </p>
+      </td>
+      <td>
+        <p align="center">100 MVA </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Inertia H </p>
+      </td>
+      <td>
+        <p align="center">5.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Damping Constant D </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">Ra </p>
+      </td>
+      <td>
+        <p align="center">0.0000 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center">XSource </p>
+      </td>
+      <td>
+        <p align="center">0.2000 </p>
+      </td>
+    </tr>
+  </table>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuide.OverviewS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.SMIBSystemAssembly" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.SMIBSystemAssembly"
+>SMIBSystemAssembly</a>
+</td>
+<td>Assembling a SMIB System</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuide.OverviewS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.PFRecordCreation" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.PFRecordCreation"
+>PFRecordCreation</a>
+</td>
+<td>Creating the PF Structure</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuide.OverviewS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.InstallingGridCal" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.InstallingGridCal"
+>InstallingGridCal</a>
+</td>
+<td>Installing GridCal</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuide.OverviewS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.PopulatingRecords" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.PopulatingRecords"
+>PopulatingRecords</a>
+</td>
+<td>Populating PF Records</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuide.OverviewS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.DefiningGenerationGroups" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.DefiningGenerationGroups"
+>DefiningGenerationGroups</a>
+</td>
+<td>More Detailed GU Models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuide.OverviewS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.AutomatingAnalysis" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.AutomatingAnalysis"
+>AutomatingAnalysis</a>
+</td>
+<td>Automating Analysis</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE SMIBSystemAssembly<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.SMIBSystemAssembly" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions.SMIBSystemAssembly"></a><a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>OpenIPSL.Examples.Tutorial.Example_4.Instructions</a>.SMIBSystemAssembly</h2>
+
+  <h5>Assembling a SMIB System</h5>
+  <ol>
+    <li>Open Dymola.</li>
+    <li>Load the OpenIPSL library.</li>
+    <li>Create a new package called <font color="blue"><code>SMIB</code></font>. Make sure to unselect the option to save the contents of the package in one file.
+        <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/SMIBPackageCreation.png" alt="SMIBPackageCreation" />
+    </p>
+    </li>
+    <li>Inside <font color="blue"><code>SMIB</code></font> create two sub-packages named <font color="blue"><code>Experiments</code></font> and <font color="blue"><code>BaseModels</code></font>. Then add two sub-packages inside <font color="blue"><code>BaseModels</code></font> called <font color="blue"><code>GenerationUnits</code></font> and <font color="blue"><code>BaseNetwork</code></font>. Once again, remember to keep the option to &#34; <em>save the contents of the package in one file</em>&#34; unselected. </li>
+    <li>To follow the structure and appearance convention of packages in Modelica, we can add an icon to the <font color="blue"><code>Experiments</code></font> package. Double-click the <font color="blue"><code>Experiments</code></font> package and go to the text layer to add the following line of class extension:
+    <blockquote><pre>
+<strong>package</strong> Experiments
+   <strong>extends</strong> <em>Modelica.Icons.Example</em>;
+
+<strong>end</strong> Experiments;
+    </pre></blockquote>
+    </li>
+    <li>Inside <font color="blue"><code>BaseNetwork</code></font>, create a new <em>partial</em> model called <font color="blue"><code>SMIBPartial</code></font>. </li>
+    <li>Go to the Package Browser, navigate to <font color="blue"><code>OpenIPSL.Interfaces.Generator</code></font>, and right-click the icon to create a new model by class extension. Name the new model <font color="blue"><code>InfiniteBus</code></font> and place it inside <font color="blue"><code>GenerationUnits</code></font>.
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/InfiniteBusModelCreation.png" alt="InfiniteBusModelCreation" />
+    </p>
+    </li>
+    <li>Repeat the procedure to create a new model called <font color="blue"><code>GeneratorOnly</code></font>. Your package should look as follows:
+        <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/InitialPackageStructure.png" alt="InitialPackageStructure" />
+    </p>
+        </li>
+    <li>Inside <font color="blue"><code>InfiniteBus</code></font>, drag and drop a <font color="blue"><code>GENCLS</code></font> generator model from <font color="blue"><code>OpenIPSL.Electrical.Machines.PSSE</code></font>. </li>
+    <li>Connect the <strong><font color="blue">blue pin</font></strong> of the <font color="blue"><code>GENCLS</code></font> component to <font color="blue"><code>pwPin</code></font>. </li>
+    <li>Now drag and drop a <font color="blue"><code>GENROE</code></font> generator model from <font color="blue"><code>OpenIPSL.Electrical.Machines.PSSE</code></font> to <font color="blue"><code>GeneratorOnly</code></font>.
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/AddingGENROEBlock.png" alt="AddingGENROEBlock" />
+    </p>
+    </li>
+    <li>Connect the output pin <font color="blue"><code>PMECH0</code></font> on the right to the input pin <font color="blue"><code>PMECH</code></font> on the left of the <font color="blue"><code>GENROE</code></font> block. Do the same for the <font color="blue"><code>EFD0</code></font> output and input <font color="blue"><code>EFD</code></font> on the bottom. Also, connect the blue pin to <font color="blue"><code>pwPin</code></font>. Your connections should look as follows
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/DefaultGENROEConnections.png" alt="DefaultGENROEConnections" />
+    </p>
+    </li>
+    <li>Double click the <font color="blue"><code>GENCLS</code></font> block inside the <font color="blue"><code>InfiniteBus</code></font> model. Be sure to enter all the machine parameters in the figure below:
+        <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/GENCLSMachineParameters.png" alt="GENCLSMachineParameters" />
+    </p>
+        </li>
+    <li>Switch to the Modelica Text of the <font color="blue"><code>InfiniteBus</code></font> model. Propagate the power flow parameters one layer up as indicated in the highlighted text of the following code chunk:
+    <blockquote><pre>
+<strong>model</strong> InfiniteBus
+  <strong>extends</strong> <em>OpenIPSL.Interfaces.Generator</em>;
+  <em>OpenIPSL.Electrical.Machines.PSSE.GENCLS</em> gENCLS(P_0=P_0,
+    Q_0=Q_0,
+    v_0=v_0,
+    angle_0=angle_0,
+    M_b=100000000,
+    H=5.0000,
+    D=0.0000,
+    R_a=0.0000,
+    X_d=0.2000)
+    a..;
+<strong>equation</strong>
+  connect(gENCLS.p, pwPin)
+    a..;
+<strong>end</strong> InfiniteBus;
+    </pre></blockquote>
+    </li>
+    <li>Go to the diagram layer of the <font color="blue"><code>GeneratorOnly</code></font> model, double click the <font color="blue"><code>GENROE</code></font> component and fill in the power flow data fields. Notice that no explicit values should be passed to <font color="blue"><code>v_0</code></font> ( <font color="blue"><code>V_0</code></font> in OpenIPSL 1.5), <font color="blue"><code>angle_0</code></font>, <font color="blue"><code>P_0</code></font>, and <font color="blue"><code>Q_0</code></font>. These values are propagated from an upper layer.
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/GENROEParameterPropagation.png" alt="GENROEParameterPropagation" />
+    </p>
+    </li>
+    <li>Similarly, pass the dynamical machine parameters to the generator model
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/GENROEMachineParameters.png" alt="GENROEMachineParameters" />
+    </p>
+    </li>
+    <li>Go now to the diagram layer of the <font color="blue"><code>SMIBPartial</code></font> model. Drag and drop the following components:
+          <ul>
+        <li>four buses from <font color="blue"><code>OpenIPSL.Buses.Bus</code></font> (you could also work with <font color="blue"><code>OpenIPSL.Buses.BusExt</code></font>); </li>
+        <li>four lines from <font color="blue"><code>OpenIPSL.Branches.PwLine</code></font>; </li>
+        <li>a <font color="blue"><code>Load</code></font> from <font color="blue"><code>OpenIPSL.Electrical.Loads.PSSE</code></font>; </li>
+        <li>a <font color="blue"><code>PwFault</code></font> from <font color="blue"><code>OpenIPSL.Electrical.Events</code></font>; </li>
+        <li>a <font color="blue"><code>SystemBase</code></font> from <font color="blue"><code>OpenIPSL.Electrical.SystemBase</code></font>. Set the base frequency to 50 Hz and the base to 100 MVA; </li>
+        <li>an <font color="blue"><code>InfiniteBus</code></font> generation unit. </li>
+      </ul>
+      <p><br></p>
+    </li>
+    <li>Connect and name the different components as shown below:
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/SMIBModelConnections.png" alt="SMIBModelConnections" />
+    </p>
+    </li>
+    <li>Enter the parameters for each of the four lines, as indicated in the corresponding table at the beginning of this document. For example, lines 1 and 2 should have the following parameters:
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/LineParameters.png" alt="LineParameters" />
+    </p>
+    </li>
+    <li>Click the <font color="blue"><code>B01</code></font> component and select the option to display the power flow. Do the same for the remaining buses and the generation unit component. </li>
+    <li>Double click the <font color="blue"><code>pwFault</code></font> block and fill in the parameters as indicated below:
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/FaultBlockParameters.png" alt="FaultBlockParameters" />
+    </p>
+    </li>
+    <li>Inside <font color="blue"><code>Experiments</code></font> create a new model named SMIB by extending the <font color="blue"><code>SMIBPartial</code></font> model. Although not entirely required, add the following line to the Modelica text to include an icon to the model:
+    <blockquote><pre>
+<strong>model</strong> SMIB
+  <strong>extends</strong> <em>Modelica.Icons.Example</em>;
+  <strong>extends</strong> <em>BaseModels.BaseNetwork.SMIBPartial</em>;
+<strong>end</strong> SMIB;
+    </pre></blockquote>
+    <hr>
+    <p>&#x1F4CC; You should have a package structure similar to this:</p>
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/UpdatedPackageStructure.png" alt="UpdatedPackageStructure" />
+    </p>
+    <hr>
+    </li>
+    <li>Drag-and-drop a <font color="blue"><code>GeneratorOnly</code></font> component from the <font color="blue"><code>GenerationUnits</code></font> package to the diagram layer of the SMIB model. Name it genunit and make sure that the <em>Display power flow</em> option inside its parameters window is checked. </li>
+    <li>Connect <font color="blue"><code>genunit</code></font> to bus <font color="blue"><code>B01</code></font>. The model should look as follows:
+    <p>
+      <img src="../Resources/images/example_4/SMIBSystemAssembly/FinalSMIBModel.png" alt="FinalSMIBModel" />
+    </p>
+    </li>
+    <li>Save your models. You should see several .mo files accompanying the model inside a folder called <font color="blue"><code>SMIB</code></font>. </li>
+    <li>Close Dymola or unload your SMIB model.</li>
+  </ol>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PFRecordCreation<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.PFRecordCreation" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions.PFRecordCreation"></a><a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>OpenIPSL.Examples.Tutorial.Example_4.Instructions</a>.PFRecordCreation</h2>
+
+  <h5>Creating and Integrating the Power Flow Structure</h5>
+  <p>After completing the instructions in <a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions.SMIBSystemAssembly"
+>Assembling a SMIB System</a>, you should have a <font color="blue"><code>SMIB</code></font> folder inside your working directory. </p>
+  <ol>
+    <li>Create a directory called <font color="blue"><code>SMIB_Example</code></font> at the same level where the <font color="blue"><code>SMIB</code></font> folder is located. </li>
+    <li>Create a directory called <font color="blue"><code>models</code></font> below your new <font color="blue"><code>SMIB_Example</code></font> folder. </li>
+    <li>Move the <font color="blue"><code>SMIB</code></font> folder below the previously added <font color="blue"><code>models</code></font> folder. </li>
+    <li>Copy the <font color="blue"><code>pf2rec</code></font> folder from <a href="../Resources/utils">Resources</a> to the <font color="blue"><code>SMIB_Example</code></font> folder. </li>
+    <li>Move the <font color="blue"><code>create_records.py</code></font> and <font color="blue"><code>run_pf.py</code></font> Python files one level up (i.e., to the <font color="blue"><code>SMIB_Example</code></font> folder). The tree below shows how your folder structure should look like:
+    <blockquote><pre>
+C:\Users\...>tree /f /a SMIB_Example
+Folder PATH listing
+Volume serial number is ...
+C:\USERS\...\SMIB_Example
+|   create_records.py
+|   run_pf.py
++---models
+|   \---SMIB
+|       |   ...
+|
+\---pf2rec
+    |   create_pf_records.py
+    |   generate_component_list.py
+    |   gridcal2rec.py
+    |   __init__.py
+    |   ...
+    </pre></blockquote>
+    </li>
+    <li>Reload your model or run Dymola, depending on what you did at the end of the previous section. Create a package inside the root package <font color="blue"><code>SMIB</code></font> and name it <font color="blue"><code>Utilities</code></font>. </li>
+    <li>Add a new function inside <font color="blue"><code>Utilities</code></font> called <font color="blue"><code>saveTotalSMIBModel</code></font>. Remember that the procedure for creating functions is the same as for other kinds of classes such as <font color="blue"><code>Package</code></font>, <font color="blue"><code>Model</code></font> or <font color="blue"><code>Record</code></font>. </li>
+    <li>Go to the Modelica text of the function and type the following code:
+    <blockquote><pre>
+<strong>function</strong> saveTotalSMIBModel "Save the SMIB package as a total model"
+  <strong>extends</strong> <em>Modelica.Icons.Function</em>;
+  <strong>output</strong> <em>Boolean</em> ok "= true if succesful";
+<strong>protected</strong>
+  <em>String</em> targetDir = "C:/Users/Miguel/SMIB_Example/models/SMIB";
+<strong>algorithm</strong>
+  ok := <em>saveTotalModel</em>(targetDir + "/" + "SMIBTotal.mo", "SMIB", <strong>true</strong>);
+<strong>end</strong> saveTotalSMIBModel;
+    </pre></blockquote>
+    <hr>
+    <p>&#x1f528; <strong>Update</strong> the <em>targetDir</em> variable value with the appropriate path to reach the <font color="blue"><code>SMIB</code></font> folder. </p>
+    <p>&#x1F4CC; This function has no inputs and only one boolean output. The modelica standard function <em><font color="blue"><code>saveTotalModel</code></font></em> is called inside the algorithm section with predefined arguments. You can check the information view of <em><font color="blue"><code>saveTotalModel</code></font></em> to get to know the proper use of each of its parameters. To do that, make sure the <font color="blue"><code>DymolaCommands</code></font> library is loaded within the Package Browser. Then navigate as shown in the picture below </p>
+    <p>
+      <img src="../Resources/images/example_4/PFRecordCreation/SaveTotalModelFunction.png" alt="SaveTotalModelFunction" />
+    </p>
+    <hr>
+    </li>
+    <li>Right-click the <font color="blue"><code>saveTotalSMIBModel</code></font> function from the Package Browser. Select the &quot; <em>Call Function...</em>&quot; option and then click the <font color="blue"><code>OK</code></font> button. As a result, you should be able to see a new file called <em><font color="blue"><code>SMIBTotal.mo</code></font></em> in the same folder where your model files are being stored. </li>
+    <li>Go to the system terminal, change the current directory to the location where the <font color="blue"><code>create_records</code></font> Python script is placed and execute it as indicated below.
+    <blockquote><pre>
+<strong>python</strong> create_records.py
+    </pre></blockquote>
+    </li>
+    <li>Go back to Dymola and refresh ( <img src="../Resources/images/example_4/PFRecordCreation/RefreshButton.png" alt="RefreshButton" />) the SMIB package.
+    <hr>
+    <p>
+    &#x1F4CC; The Python script <font color="blue"><code>create_records</code></font> should have created a new package inside your model that looks like this
+    </p>
+    <p>
+      <img src="../Resources/images/example_4/PFRecordCreation/PFDataPackageStructure.png" alt="PFDataPackageStructure" />
+    </p>
+    <hr>
+    </li>
+    <li>Double-click the <font color="blue"><code>SMIBPartial</code></font> model to open its diagram view. From the new <font color="blue"><code>PFData</code></font> package, drag and drop <strong>one</strong>
+      <font color="blue"><code>PowerFlow</code></font> element on your canvas. <strong>For convenience, rename it as</strong>
+      <font color="blue"><code>pf</code></font>.
+    <p>
+      <img src="../Resources/images/example_4/PFRecordCreation/PowerFlowRecordInstantiation.png" alt="PowerFlowRecordInstantiation" />
+    </p>
+    </li>
+    <li>Link the power flow variables to the different components as indicated below. <em>Yes, unfortunately you must type them!</em>
+    <p>
+      <img src="../Resources/images/example_4/PFRecordCreation/ComponentReferenceToPFRecord.png" alt="ComponentReferenceToPFRecord" />
+    </p>
+  <table cellspacing="0" cellpadding="1" border="1">
+    <thead>
+      <tr>
+        <th bgcolor="#b3e6ff">Component</th>
+        <th bgcolor="#b3e6ff">V_0</th>
+        <th bgcolor="#b3e6ff">A_0</th>
+        <th bgcolor="#b3e6ff">P_0</th>
+        <th bgcolor="#b3e6ff">Q_0</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>B01 (bus)</td>
+        <td>pf.powerflow.bus.v1</td>
+        <td>pf.powerflow.bus.A1</td>
+        <td>N/A</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6">B02 (bus)</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.bus.v2</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.bus.A2</td>
+        <td bgcolor="#e6e6e6">N/A</td>
+        <td bgcolor="#e6e6e6">N/A</td>
+      </tr>
+      <tr>
+        <td>B03 (bus)</td>
+        <td>pf.powerflow.bus.v3</td>
+        <td>pf.powerflow.bus.A3</td>
+        <td>N/A</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6">B04 (bus)</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.bus.v4</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.bus.A4</td>
+        <td bgcolor="#e6e6e6">N/A</td>
+        <td bgcolor="#e6e6e6">N/A</td>
+      </tr>
+      <tr>
+        <td>load (load)</td>
+        <td>pf.powerflow.bus.v3</td>
+        <td>pf.powerflow.bus.A3</td>
+        <td>pf.powerflow.load.PL1</td>
+        <td>pf.powerflow.load.QL1</td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6">InfiniteBus (gen)</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.bus.v2</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.bus.A2</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.machine.PG2</td>
+        <td bgcolor="#e6e6e6">pf.powerflow.machine.QG2</td>
+      </tr>
+    </tbody>
+  </table>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you check your model now, you should see an error because we have not defined the power flow values. We have just pointed to the container which will have it. Next, we generate the power flow results using <font color="blue"><code>GridCal</code></font>.</p>
+    </li>
+    <li>Now open the diagram layer of your SMIB model inside the <font color="blue"><code>Experiments</code></font> package. Link the power flow variables to <font color="blue"><code>genunit</code></font> as specified in the following table:
+  <table cellspacing="0" cellpadding="0" border="1">
+    <thead>
+      <tr>
+        <th bgcolor="#b3e6ff">Component</th>
+        <th bgcolor="#b3e6ff">V_0</th>
+        <th bgcolor="#b3e6ff">A_0</th>
+        <th bgcolor="#b3e6ff">P_0</th>
+        <th bgcolor="#b3e6ff">Q_0</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>genunit (gen)</td>
+        <td>pf.powerflow.bus.v1</td>
+        <td>pf.powerflow.bus.A1</td>
+        <td>pf.powerflow.machine.PG1</td>
+        <td>pf.powerflow.machine.QG1</td>
+      </tr>
+    </tbody>
+  </table>
+    </li>
+  </ol>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE InstallingGridCal<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.InstallingGridCal" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions.InstallingGridCal"></a><a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>OpenIPSL.Examples.Tutorial.Example_4.Instructions</a>.InstallingGridCal</h2>
+
+  <h5>Installing GridCal</h5>
+  <p>At this point, we have a record structure to keep the power flow solutions linked to the SMIB power system elements. It is our next task to populate the records and for that to be done we need a Python script that runs a library called <em>GridCal</em> which computes the power flow. To properly install <em>GridCal</em> please follow the steps listed below: </p>
+  <ol type="1">
+    <li>Download <a href="https://www.python.org/downloads">Python</a> and install it. Note that GridCal developpers encourage to install the latest version of Python <a href="https://github.com/SanPen/GridCal?tab=readme-ov-file#package-installation">here</a>.
+    <hr>
+    <p>&#x1F4CC; To install Python for all users you must first run the installer as administrator. Then, you need to choose the <strong>Customize installation</strong> option. Click the <strong>Next</strong> button, which will open the <strong>Advanced Options</strong> window. Finally, tick the <em>Install Python 3.x for all users</em> checkbox before clicking the <strong>Install</strong> button. </p>
+    <p>&#x1F4CC; Choosing the <strong>Customize installation</strong> option will also allow you to customize the install location. </p>
+    <p>&#x1F4CC; If you want Python to be recognized as a command in every console/command window you need to add it to <strong>PATH</strong>. This can be done by clicking the <em>Add python.exe to PATH</em> checkbox from the initial window. </p>
+    <hr>
+    </li>
+    <li>(Optional) Create a new Python <em>virtual environment</em> to encapsulate the GridCal Installation and its dependencies.
+    <hr>
+    <p>&#x1F4CC; <em>Virtual environments</em> allow you to separate particular experimental setups from the generic Python installation. This way, you can install GridCal and its dependencies on a virtual environment, which could later be removed without affecting your main Python installation. </p>
+    <hr>
+      <ol type="a">
+        <li>Open a command window/console and browse to the path where you want to create the <em>virtual environment</em>. </li>
+        <li>Install the <strong>virtualenv</strong> tool by using the following command:
+        <blockquote><pre>
+<strong>python</strong> -m <strong>pip install</strong> virtualenv
+        </pre></blockquote>
+        <blockquote><pre>
+Example:
+C:\Users\Miguel\SMIB_Example><strong>python</strong> -m <strong>pip</strong> list
+Package Version
+------- -------
+pip 24.2
+
+C:\Users\Miguel\SMIB_Example><strong>python</strong> -m <strong>pip install</strong> virtualenv
+Collecting virtualenv
+  Downloading virtualenv-20.27.0-py3-none-any.whl.metadata (4.5 kB)
+...
+Installing collected packages: distlib, platformdirs, filelock, virtualenv
+Successfully installed distlib-0.3.9 filelock-3.16.1 platformdirs-4.3.6 virtualenv-20.27.0
+
+C:\Users\Miguel\SMIB_Example>
+        </pre></blockquote>
+        </li>
+        <li>Type the following command where <font color="blue"><code>&lt;&lt;env_name&gt;&gt;</code></font> should be replaced by the actual name you want to give to the <em>environment</em> (e.g., <font color="blue"><code>openipsl_tutorial</code></font>).
+        <blockquote><pre>
+<strong>python</strong> -m venv &lt;&lt;env_name&gt;&gt;
+        </pre></blockquote>
+    <hr>
+    <p>&#x1F4CC; A folder with the same name as your virtual environment (i.e., <font color="blue"><code>&lt;&lt;env_name&gt;&gt;</code></font>) will be created in your current directory. </p>
+    <hr>
+        </li>
+      </ol>
+    </li>
+    <li>(Optional) Activate the environment by calling the <strong>activate</strong> script located under .\<font color="blue"><code>&lt;&lt;env_name&gt;&gt;</code></font>\Scripts\:
+    <blockquote><pre>
+C:\Users\Miguel\SMIB_Example>.\openipsl_tutorial\Scripts\<strong>activate</strong>
+
+<strong>(openipsl_tutorial)</strong> C:\Users\Miguel\SMIB_Example>
+    </pre></blockquote>
+    <hr>
+    <p>&#x1F4CC; Please notice that whenever you want to use your environment again and your environment session is no longer open, you first need to open a command prompt/console, then locate the path where the environment is and finally call the <font color="blue"><code>activate</code></font> script as indicated above. An environment session is typically finalized by calling the <font color="blue"><code>deactivate</code></font> script. </p>
+    <hr>
+    <p>After successfully activating a virtual environment you will see the name of the environment enclosed in parenthesis as shown below</p>
+    <blockquote><pre>
+<strong>(openipsl_tutorial)</strong> C:\Users\Miguel\SMIB_Example>
+    </pre></blockquote>
+    </li>
+    <li>Clean <code>pip</code> cache.
+    <blockquote><pre>
+<strong>python</strong> -m <strong>pip cache purge</strong>
+    </pre></blockquote>
+    </li>
+    <li>Install the <strong>gridcal</strong> python package as follows:
+    <blockquote><pre>
+(openipsl_tutorial) C:\Users\Miguel\SMIB_Example><strong>python</strong> -m <strong>pip install</strong> gridcal
+Collecting gridcal
+  Using cached GridCal-5.1.52.tar.gz (1.0 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting setuptools>=41.0.1 (from gridcal)
+  Using cached setuptools-75.2.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting wheel>=0.37.2 (from gridcal)
+...
+Successfully built gridcal GridCalEngine grapheme
+Installing collected packages: xlwt, wcwidth, pywin32, pytz, py4j, pure-eval, grapheme, xlrd, wrapt, wheel, websockets, urllib3, tzdata, traitlets, tornado, threadpoolctl, six, shiboken6, setuptools, pyzmq, pyqtdarktheme, pyparsing, pygments, psutil, prompt-toolkit, pluggy, platformdirs, pillow, parso, packaging, numpy, networkx, nest-asyncio, llvmlite, kiwisolver, joblib, iniconfig, idna, html5lib-modern, geographiclib, future, fonttools, executing, et-xmlfile, dill, decorator, debugpy, darkdetect, cycler, colorama, cloudpickle, charset-normalizer, chardet, certifi, about-time, tqdm, scipy, requests, rdflib, qtpy, python-dateutil, pytest, PySide6-Essentials, pyproj, pyarrow, openpyxl, opencv-python, numba, nptyping, matplotlib-inline, jupyter-core, jedi, highspy, h5py, geopy, Deprecated, contourpy, comm, cma, autograd, asttokens, alive-progress, stack-data, scikit-learn, PySide6-Addons, pandas, matplotlib, jupyter-client, hyperopt, windpowerlib, PySide6, pymoo, pvlib, ipython, ipykernel, qtconsole, GridCalEngine, gridcal
+Successfully installed Deprecated-1.2.14 GridCalEngine-5.1.52 PySide6-6.6.3.1 PySide6-Addons-6.6.3.1 PySide6-Essentials-6.6.3.1 about-time-4.2.1 alive-progress-3.1.5 asttokens-2.4.1 autograd-1.7.0 certifi-2024.8.30 chardet-5.2.0 charset-normalizer-3.4.0 cloudpickle-3.1.0 cma-3.2.2 colorama-0.4.6 comm-0.2.2 contourpy-1.3.0 cycler-0.12.1 darkdetect-0.8.0 debugpy-1.8.7 decorator-5.1.1 dill-0.3.9 et-xmlfile-1.1.0 executing-2.1.0 fonttools-4.54.1 future-1.0.0 geographiclib-2.0 geopy-2.4.1 grapheme-0.6.0 gridcal-5.1.52 h5py-3.12.1 highspy-1.8.0 html5lib-modern-1.2 hyperopt-0.2.7 idna-3.10 iniconfig-2.0.0 ipykernel-6.29.5 ipython-8.28.0 jedi-0.19.1 joblib-1.4.2 jupyter-client-8.6.3 jupyter-core-5.7.2 kiwisolver-1.4.7 llvmlite-0.43.0 matplotlib-3.9.2 matplotlib-inline-0.1.7 nest-asyncio-1.6.0 networkx-3.4.2 nptyping-2.5.0 numba-0.60.0 numpy-1.26.4 opencv-python-4.10.0.84 openpyxl-3.1.5 packaging-24.1 pandas-2.2.3 parso-0.8.4 pillow-11.0.0 platformdirs-4.3.6 pluggy-1.5.0 prompt-toolkit-3.0.48 psutil-6.1.0 pure-eval-0.2.3 pvlib-0.11.1 py4j-0.10.9.7 pyarrow-17.0.0 pygments-2.18.0 pymoo-0.6.1.3 pyparsing-3.2.0 pyproj-3.7.0 pyqtdarktheme-0.1.7 pytest-8.3.3 python-dateutil-2.9.0.post0 pytz-2024.2 pywin32-308 pyzmq-26.2.0 qtconsole-5.6.0 qtpy-2.4.1 rdflib-7.1.0 requests-2.32.3 scikit-learn-1.5.2 scipy-1.14.1 setuptools-75.2.0 shiboken6-6.6.3.1 six-1.16.0 stack-data-0.6.3 threadpoolctl-3.5.0 tornado-6.4.1 tqdm-4.66.5 traitlets-5.14.3 tzdata-2024.2 urllib3-2.2.3 wcwidth-0.2.13 websockets-13.1 wheel-0.44.0 windpowerlib-0.2.2 wrapt-1.16.0 xlrd-2.0.1 xlwt-1.3.0
+
+(openipsl_tutorial) C:\Users\Miguel\SMIB_Example>
+    </pre></blockquote>
+    </li>
+    <li>Verify that the Python packages were installed correctly, especially <em>GridCal v5.1.52 or newer</em>:
+    <blockquote><pre>
+(openipsl_tutorial) C:\Users\Miguel\SMIB_Example><strong>python</strong> -m <strong>pip list</strong>
+Package Version
+------------------ -----------
+about-time 4.2.1
+alive-progress 3.1.5
+asttokens 2.4.1
+...
+grapheme 0.6.0
+GridCal 5.1.52
+GridCalEngine 5.1.52
+...
+ipykernel 6.29.5
+ipython 8.28.0
+...
+jupyter_core 5.7.2
+...
+matplotlib 3.9.2
+matplotlib-inline 0.1.7
+nest-asyncio 1.6.0
+networkx 3.4.2
+...
+numpy 1.26.4
+openpyxl 3.1.5
+...
+pandas 2.2.3
+...
+pywin32 308
+pyzmq 26.2.0
+qtconsole 5.6.0
+QtPy 2.4.1
+...
+scipy 1.14.1
+setuptools 75.2.0
+...
+xlrd 2.0.1
+xlwt 1.3.0
+    </pre></blockquote>
+    <hr>
+    <p>&#x1F4CC; Remember that GridCal has only been installed in the current environment. Therefore, whenever you use a script that requires this library the environment should be activated.</p>
+    <hr>
+    </li>
+    <li>Test your installation running this Python command:
+    <blockquote><pre>
+<strong>import</strong> GridCalEngine.api as gce
+    </pre></blockquote>
+    <blockquote><pre>
+(openipsl_tutorial) C:\Users\Miguel\SMIB_Example><strong>python</strong>
+Python 3.12.7 (tags/v3.12.7:0b05ead, Oct 1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import GridCalEngine.api as gce
+>>>
+    </pre></blockquote>
+    <p>As shown above you should not get any errors.</p>
+    </li>
+    <li>(<strong>Optional but recommended</strong>) Install <font color="blue"><code>JupyterLab</code></font> by using <code>pip</code> inside of your environment:
+    <blockquote><pre>
+<strong>pip install</strong> jupyterlab
+    </pre></blockquote>
+    <p>You can deactivate your environment at any time when you no longer require GridCal by using the following command:</p>
+    <blockquote><pre>
+.\<font color="blue"><code>&lt;&lt;env_name&gt;&gt;</code></font>\Scripts\<strong>deactivate</strong>
+    </pre></blockquote>
+        </li>
+  </ol>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PopulatingRecords<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.PopulatingRecords" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions.PopulatingRecords"></a><a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>OpenIPSL.Examples.Tutorial.Example_4.Instructions</a>.PopulatingRecords</h2>
+
+  <h5>Populating Power Flows with GridCal</h5>
+  <p>The next step is to populate our model with power flow results generated from GridCal. For simplicity, we will create a power flow model from an accompanying PSS/E <font color="blue"><code>.raw</code></font>. However, it is possible to run the power flows from a native GridCal model. </p>
+  <ol>
+    <li>Create a new <a href="../Resources/utils/pfRecordCreator/models/_new/SMIB">PSSE_Files</a> folder within <font color="blue"><code>SMIB_Example/models/SMIB</code></font> folder.
+    <p>
+      <img src="../Resources/images/example_4/PopulatingRecords/PSSEFilesFolder.png" alt="PSSEFilesFolder" />
+    </p>
+    </li>
+    <li>Create a new PSS/E raw file called <font color="blue"><code>SMIB_Base_Case.raw</code></font> within the <font color="blue"><code>PSSE_Files</code></font> folder. Copy and paste the following text inside the file and save it:
+    <blockquote><pre>
+0,   100.00, 33, 0, 1, 50.00     / PSS(R)E-33.4    FRI, FEB 26 2021  16:31
+SMIB
+
+     1,'B01         ', 100.0000,2,   1,   1,   1,1.00000,   4.0463,1.10000,0.90000,1.10000,0.90000
+     2,'B02         ', 100.0000,3,   1,   1,   1,1.00000,   0.0000,1.10000,0.90000,1.10000,0.90000
+     3,'B03         ', 100.0000,1,   1,   1,   1,0.99598,  -0.2870,1.10000,0.90000,1.10000,0.90000
+     4,'B04         ', 100.0000,1,   1,   1,   1,0.99199,  -0.5763,1.10000,0.90000,1.10000,0.90000
+0 / END OF BUS DATA, BEGIN LOAD DATA
+     4,'1 ',1,   1,   1,    50.000,    10.000,     0.000,     0.000,     0.000,     0.000,   1,1,0
+0 / END OF LOAD DATA, BEGIN FIXED SHUNT DATA
+0 / END OF FIXED SHUNT DATA, BEGIN GENERATOR DATA
+     1,'1 ',    40.000,     5.417,    60.000,     0.000,1.00000,     0,   100.000, 0.00000E+0, 2.00000E-1, 0.00000E+0, 0.00000E+0,1.00000,1,  100.0,    80.000,     0.000,   1,1.0000
+     2,'1 ',    10.017,     8.007,    60.000,     0.000,1.00000,     0,   100.000, 0.00000E+0, 2.00000E-1, 0.00000E+0, 0.00000E+0,1.00000,1,  100.0,    80.000,     0.000,   1,1.0000
+0 / END OF GENERATOR DATA, BEGIN BRANCH DATA
+     1,     4,'1 ', 1.00000E-3, 2.00000E-1,   0.00000,    0.00,    0.00,    0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,1,   0.00,   1,1.0000
+     2,     3,'1 ', 5.00000E-4, 1.00000E-1,   0.00000,    0.00,    0.00,    0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,2,   0.00,   1,1.0000
+     2,     4,'1 ', 1.00000E-3, 2.00000E-1,   0.00000,    0.00,    0.00,    0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,2,   0.00,   1,1.0000
+     3,     4,'1 ', 5.00000E-4, 1.00000E-1,   0.00000,    0.00,    0.00,    0.00,  0.00000,  0.00000,  0.00000,  0.00000,1,2,   0.00,   1,1.0000
+0 / END OF BRANCH DATA, BEGIN TRANSFORMER DATA
+0 / END OF TRANSFORMER DATA, BEGIN AREA DATA
+0 / END OF AREA DATA, BEGIN TWO-TERMINAL DC DATA
+0 / END OF TWO-TERMINAL DC DATA, BEGIN VSC DC LINE DATA
+0 / END OF VSC DC LINE DATA, BEGIN IMPEDANCE CORRECTION DATA
+0 / END OF IMPEDANCE CORRECTION DATA, BEGIN MULTI-TERMINAL DC DATA
+0 / END OF MULTI-TERMINAL DC DATA, BEGIN MULTI-SECTION LINE DATA
+0 / END OF MULTI-SECTION LINE DATA, BEGIN ZONE DATA
+0 / END OF ZONE DATA, BEGIN INTER-AREA TRANSFER DATA
+0 / END OF INTER-AREA TRANSFER DATA, BEGIN OWNER DATA
+0 / END OF OWNER DATA, BEGIN FACTS DEVICE DATA
+0 / END OF FACTS DEVICE DATA, BEGIN SWITCHED SHUNT DATA
+0 / END OF SWITCHED SHUNT DATA, BEGIN GNE DATA
+0 / END OF GNE DATA, BEGIN INDUCTION MACHINE DATA
+0 / END OF INDUCTION MACHINE DATA
+Q
+    </pre></blockquote>
+    </li>
+    <li>Execute <font color="blue"><code>run_pf.py</code></font> from a terminal.
+    <blockquote><pre>
+<strong>python</strong> run_pf.py SMIB
+
+(openipsl_tutorial) c:\Users\Miguel\SMIB_Example><strong>python</strong> run_pf.py SMIB
+It 0, error 0.5, converged False, x [0. 0. 0. 1. 1.], dx not computed yet
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iter: 1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+It 1, error 0.016918884074426793, converged False, x [ 0.07000175 -0.00498304 -0.00996608  0.99658333  0.99316667], dx [ 0.07000175 -0.00498304 -0.00996608 -0.00341667 -0.00683333]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iter: 2
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+It 2, error 2.1358057256101737e-05, converged False, x [ 0.07061997 -0.00500866 -0.01005764  0.99598493  0.99199502], dx [ 0.00061822 -0.00002562 -0.00009156 -0.00059841 -0.00117164]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iter: 3
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+It 3, error 3.453681785003937e-11, converged False, x [ 0.0706208  -0.00500868 -0.01005778  0.99598418  0.99199354], dx [ 0.00000083 -0.00000002 -0.00000014 -0.00000075 -0.00000148]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iter: 4
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+It 4, error 3.802513859341161e-15, converged True, x [ 0.0706208  -0.00500868 -0.01005778  0.99598418  0.99199354], dx [ 0. -0. -0. -0. -0.]
+
+(openipsl_tutorial) c:\Users\Miguel\SMIB_Example>
+
+    </pre></blockquote>
+    <hr>
+    <p>&#x1F4CC; A new power flow record called <font color="blue"><code>PF00000</code></font> should be generated inside the <font color="blue"><code>PFData</code></font> subfolder. </p>
+  <hr>
+    </li>
+    <li>Refresh your model. You should get a new file called <font color="blue"><code>PF0000.mo</code></font> inside your <font color="blue"><code>PFData</code></font> folder. In fact, there should be a new file in every subfolder too.
+    <p>
+      <img src="../Resources/images/example_4/PopulatingRecords/FilesAfterPFPopulation.png" alt="FilesAfterPFPopulation" />
+    </p>
+    </li>
+    <li>In the diagram layer of your SMIB model, double click the power flow component <font color="blue"><code>pf</code></font>. Select the newly created power flow <font color="blue"><code>PF00000</code></font> as the value for the <font color="blue"><code>PowerFlow</code></font> field. By doing so, we are specifying that the model will initialize using the power flow results in that specific container.
+    <p>&#x1F4CC; You can alternatively modify the <strong>Modelica Text</strong> of the <font color="blue"><code>SMIB</code></font> Experiment model as follows: </p>
+    <blockquote><pre>
+model SMIB
+  extends Modelica.Icons.Example;
+  <strong>extends BaseModels.BaseNetwork.SMIBPartial(pf(redeclare record PowerFlow = PFData.PF00000));</strong>
+  replaceable BaseModels.GeneratingUnits.GeneratorOnly       genunit...
+equation
+  ...
+  annotation ...
+end SMIB;
+    </pre></blockquote>
+    <p>
+      <img src="../Resources/images/example_4/PopulatingRecords/ChoosePopulatedPFRecord.png" alt="ChoosePopulatedPFRecord" />
+    </p>
+    <p>To see the power flow values in Dymola, click on the <em>square button</em>
+      <img src="../Resources/images/example_4/PopulatingRecords/EditButton.png" alt="EditButton" /> on the left of the <font color="blue"><code>PowerFlow</code></font> selection menu.
+    </p>
+    <p>You should see that the power flow record is composed of four fields: <em>bus</em>, <em>load</em>, <em>machine </em>and <em>transformer</em>. </p>
+    <p>
+      <img src="../Resources/images/example_4/PopulatingRecords/InspectPFRecordValues.png" alt="InspectPFRecordValues" />
+    </p>
+    <p>Inside each field, we can detail the power flow results</p>
+    <p>
+      <img src="../Resources/images/example_4/PopulatingRecords/BusVoltageAndAngleValuesExample.png" alt="BusVoltageAndAngleValuesExample" />
+    </p>
+    </li>
+    <li>Simulate the SMIB model for 2 seconds. Plot the voltage buses. Notice that the power flow solution initializes the dynamical simulation in an equilibrium (i.e., flat) so that the states of the system are not changing.
+    <p>
+      <img src="../Resources/images/example_4/PopulatingRecords/SimulationResultsWithInitialSSResponse.png" alt="SimulationResultsWithInitialSSResponse" />
+    </p>
+        </li>
+  </ol>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE DefiningGenerationGroups<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.DefiningGenerationGroups" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions.DefiningGenerationGroups"></a><a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>OpenIPSL.Examples.Tutorial.Example_4.Instructions</a>.DefiningGenerationGroups</h2>
+
+  <h5>Adding Generation Unit Models in More Detail</h5>
+  <p>Let us now proceed to create alternative representations of a generation unit so that we can use them in our experiments.</p>
+  <ol>
+    <li>Expand your <font color="blue"><code>GenerationUnits</code></font> package and duplicate the <font color="blue"><code>GeneratorOnly</code></font> model to create a new model called <font color="blue"><code>GeneratorTurbGov</code></font> that also has a turbine/governor block.
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/GeneratorTurbGovModelCreation.png" alt="GeneratorTurbGovModelCreation" />
+    </p>
+    </li>
+    <li>Go to the diagram layer of the model and drag-and-drop a <font color="blue"><code>IEEEG1</code></font> turbine/governor block from <font color="blue"><code>OpenIPSL.Electrical.Controls.PSSE.TG</code></font>. </li>
+    <li>It is highly recommended that you increase the dimensions of the canvas so that the components could be better distributed. One way of achieving this is by right-clicking the diagram layer and choosing the <strong>Attributes</strong> option. In the <strong>Graphics</strong> tab modify the coordinates as indicated below:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/AdjustDiagramCoordinates.png" alt="AdjustDiagramCoordinates" />
+    </p>
+    </li>
+    <li>Remove the connection between the <font color="blue"><code>PMECH0</code></font> output and the <font color="blue"><code>PMECH</code></font> input of the machine. Be aware that we now have a turbine block, therefore connect its HP-stage mechanical power output to the corresponding input of the machine. Your model should look like this:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ConnectingTurbineGovernorBlock.png" alt="ConnectingTurbineGovernorBlock" />
+    </p>
+    </li>
+    <li>Provide the following values for the <font color="blue"><code>IEEEG1</code></font> parameters:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/SettingIEEEG1Parameters.png" alt="SettingIEEEG1Parameters" />
+    </p>
+    </li>
+    <li>Check the model and make sure that everything is fine.</li>
+    <li>Open the diagram layer of your <font color="blue"><code>SMIB</code></font> experiment model and double-click the <em>genunit</em> component. </li>
+    <li>Go to the <strong>Attributes</strong> tab and click the replaceable option. Then click the <strong>Constraining Clause</strong> checkbox and select <font color="blue"><code>OpenIPSL.Interfaces.Generator</code></font> from the drop-down list.
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ReplaceableGenerator.png" alt="ReplaceableGenerator" />
+    </p>
+    <hr>
+    <p>&#x1F4CC; The <font color="blue"><code>GenerationUnit</code></font> icon should now turn into </p>
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ReplaceableGenerationUnitIcon.png" alt="ReplaceableGenerationUnitIcon" />
+    </p>
+    <hr>
+    </li>
+    <li>In <strong>Simulation Setup</strong> go to the <strong>Output</strong> tab and make sure that you are keeping at least 10 results:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ResultsToKeep.png" alt="ResultsToKeep" />
+    </p>
+    </li>
+    <li>Go back to the diagram layer for the <font color="blue"><code>SMIB</code></font> model and right-click the <em>genunit</em> block to change the class to the " <em>Machine with Turbine and Governor</em>" option.
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ChangeClassToMachineWithTurbGovernor.png" alt="ChangeClassToMachineWithTurbGovernor" />
+    </p>
+    </li>
+    <li>Simulate the model again for 2 seconds.</li>
+    <li>Plot the active power output (P) from <em>genunit</em> and compare it to the result you got from the previous simulation (where the generation unit model did not include the turbine/governor block). </li>
+    <li>Create a new generation unit model including the electrical machine, the turbine/governor and an excitation system. Name the new model <font color="blue"><code>GeneratorTurbGovAVR</code></font>. For this to be done make sure you duplicate the <font color="blue"><code>GeneratorTurbGov</code></font> model.
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/CreateGeneratorTurbGovAVR.png" alt="CreateGeneratorTurbGovAVR" />
+    </p>
+    </li>
+    <li>Drag-and-drop an <font color="blue"><code>ESST1A</code></font> excitation system block from <font color="blue"><code>OpenIPSL.Electrical.Controls.PSSE.ES</code></font> to the diagram layer of the new model. Add 4 <code>Constant</code> blocks from <font color="blue"><code>Modelica.Blocks.Sources</code></font> too. </li>
+    <li>Increase the dimensions of the diagram layer as required to comfortably resize and connect your components. Check out what we did in step 3. A suggestion is shown below:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/AdjustDiagramCoordinatesB.png" alt="AdjustDiagramCoordinatesB" />
+    </p>
+    </li>
+    <li>In the <font color="blue"><code>GENROE</code></font> machine component, remove the connection between <font color="blue"><code>EFD</code></font> and <font color="blue"><code>EFD0</code></font>. The <font color="blue"><code>EFD</code></font> input of the machine should now be connected to the respective output from the excitation system. </li>
+    <li>Add the following connections between the machine and the excitation system:
+    <p>&nbsp;</p>
+  <table cellspacing="0" cellpadding="1" border="1">
+    <thead>
+      <tr>
+        <th bgcolor="#b3e6ff">GENROE Machine</th>
+        <th bgcolor="#b3e6ff">EEST1A</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p align="center">ETERM</p></td>
+        <td><p align="center">VT</p></td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6"><p align="center">ETERM</p></td>
+        <td bgcolor="#e6e6e6"><p align="center">ECOMP</p></td>
+      </tr>
+      <tr>
+        <td><p align="center">EFD0</p></td>
+        <td><p align="center">EFD0</p></td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6"><p align="center">XADIFD</p></td>
+        <td bgcolor="#e6e6e6"><p align="center">XADIFD</p></td>
+      </tr>
+    </tbody>
+  </table>
+    <p>&nbsp;</p>
+    </li>
+    <li>Use the <code>Constant</code> blocks to set the excitation system inputs to the values indicated in the following table:
+    <p>&nbsp;</p>
+  <table cellspacing="0" cellpadding="1" border="1">
+    <thead>
+      <tr>
+        <th bgcolor="#b3e6ff">Input</th>
+        <th bgcolor="#b3e6ff">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p align="center">VOTHSG</p></td>
+        <td><p align="center">0</p></td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6"><p align="center">VOTHSG2</p></td>
+        <td bgcolor="#e6e6e6"><p align="center">0</p></td>
+      </tr>
+      <tr>
+        <td><p align="center">VUEL</p></td>
+        <td><p align="center">0</p></td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6"><p align="center">VOEL</p></td>
+        <td bgcolor="#e6e6e6"><p align="center">Modelica.Constants.inf</p></td>
+      </tr>
+      <tr>
+        <td><p align="center">VUEL2</p></td>
+        <td><p align="center">-Modelica.Constants.inf</p></td>
+      </tr>
+      <tr>
+        <td bgcolor="#e6e6e6"><p align="center">VUEL3</p></td>
+        <td bgcolor="#e6e6e6"><p align="center">-Modelica.Constants.inf</p></td>
+      </tr>
+    </tbody>
+  </table>
+    <p>&nbsp;</p>
+    <p>Your model should now look like this:</p>
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ConnectingExcitationSystemBlock.png" alt="ConnectingExcitationSystemBlock" />
+    </p>
+    </li>
+    <li>Double-click the excitation system component and input the parameter values as indicated below:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/SettingESST1AParameters.png" alt="SettingESST1AParameters" />
+    </p>
+    </li>
+    <li>Check the generation unit model to verify that everything is fine. Then go to the <font color="blue"><code>SMIB</code></font> experiment model and change the class of the <em>genunit</em> component so that it now uses the model with the excitation system. </li>
+    <li>In the diagram layer of the <font color="blue"><code>SMIB</code></font> model when right-clicking the <em>genunit</em> component, you should now be able to see the new generation unit model among the options for class change. Update the component class so that it uses the most recent generation unit model.
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ChangeClassToMachineWithTurbGovernorPSS.png" alt="ChangeClassToMachineWithTurbGovernorPSS" />
+    </p>
+    </li>
+    <li>Simulate the <font color="blue"><code>SMIB</code></font> model for 10 seconds. </li>
+    <li>Plot the active power (P) and the reactive power (Q) outputs from <em>genunit</em> in different diagrams. Then, plot the voltage (V) from all the buses in another window. </li>
+    <li>Go to the <font color="blue"><code>
+        <font color="blue"><code>GenerationUnit</code></font>s </code></font> package and create a new model by duplicating <font color="blue"><code>GeneratorTurbGovAVR</code></font>. Name the new model <font color="blue"><code>GeneratorTurbGovAVRPSS</code></font>. This generation unit model is going to include a power system stabilizer (PSS).
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/CreateGeneratorTurbGovAVRPSS.png" alt="CreateGeneratorTurbGovAVRPSS" />
+    </p>
+    </li>
+    <li>Navigate the <font color="blue"><code>OpenIPSL.Electrical.Controls.PSSE.PSS</code></font> package and locate the <font color="blue"><code>PSS2A</code></font> model (<em>Dual-Input Stabilizer Model [IEEE1992]</em>). Drag-and-drop an instance to the diagram layer of the new generation unit model. </li>
+    <li>Remove the constant source block that is connected to the <font color="blue"><code>VOTHSG</code></font> input of the excitation system component. Now this input should be connected to the output of the <font color="blue"><code>PSS2A</code></font> block. </li>
+    <li>Connect the <font color="blue"><code>V_S1</code></font> and <font color="blue"><code>V_S2</code></font> inputs of the <font color="blue"><code>PSS2A</code></font> block to the <font color="blue"><code>SPEED_HP</code></font> and <font color="blue"><code>PELEC</code></font> outputs of the machine component, respectively.
+    <p>Make sure that your model looks like the figure below:</p>
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/ConnectingPSSBlock.png" alt="ConnectingPSSBlock" />
+    </p>
+    </li>
+    <li>Double-click the <font color="blue"><code>PSS2A</code></font> component in order to update the parameters as indicated below:
+    <p>
+      <img src="../Resources/images/example_4/DefiningGenerationGroups/SettingPSS2AParameters.png" alt="SettingPSS2AParameters" />
+    </p>
+        </li>
+  </ol>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AutomatingAnalysis<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.UsersGuideI.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions.AutomatingAnalysis" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Examples.Tutorial.Example_4.Instructions.AutomatingAnalysis"></a><a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>OpenIPSL.Examples.Tutorial.Example_4.Instructions</a>.AutomatingAnalysis</h2>
+
+  <h5>Automating Analysis with Modelica functions</h5>
+  <ol>
+    <li>Open the diagram layer of the <font color="blue"><code>SMIBPartial</code></font> model. Remember that this model is located in the following path: <font color="blue"><code>SMIB.BaseModels.BaseNetwork</code></font>. </li>
+    <li>Double-click the load component and go to the Attributes tab. In the <em>Properties</em> group select the <em>Replaceable</em> option. Then click the Constraining clause checkbox and browse for class by pressing the button <img src="../Resources/images/example_4/AutomatingAnalysis/ExpandButton.png" alt="ExpandButton" />. From the package tree select <font color="blue"><code>OpenIPSL.Electrical.Loads.PSSE.BaseClasses.baseLoad</code></font> as shown in the figure below.
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/ReplaceableLoad.png" alt="ReplaceableLoad" />
+    </p>
+    </li>
+    <li>In the package browser, go to the <font color="blue"><code>Experiments</code></font> package, create a new model by duplicating <font color="blue"><code>SMIB</code></font> and name it <font color="blue"><code>SMIBVarLoad</code></font>.
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/CreateSMIBVarLoadModel.png" alt="CreateSMIBVarLoadModel" />
+    </p>
+    </li>
+    <li>Now right-click the load component of the <font color="blue"><code>SMIBVarLoad</code></font> model and change the class to <em><font color="blue"><code>PSS/E Load with variation</code></font></em> as indicated in the following picture:
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/ChangeClassToLoadWithVariation.png" alt="ChangeClassToLoadWithVariation" />
+    </p>
+    </li>
+    <li>Double-click the load component to update its power flow parameters. You can either use the button to insert a component reference or type directly each value according to the following settings:
+      <p>&nbsp;</p>
+      <ul>
+        <li>P_0: <em>pf.powerflow.loads.PL1</em></li>
+        <li>Q_0: <em>pf.powerflow.loads.QL1</em></li>
+        <li>v_0: <em>pf.powerflow.bus.V3</em></li>
+        <li>angle_0: <em>pf.powerflow.bus.A3</em></li>
+      </ul>
+      <p>&nbsp;</p>
+    </li>
+    <li>Specify a load drop of 0.1 pu starting at t = 10 sec and for a duration of 60 sec.
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/SettingVariableLoadParameters.png" alt="SettingVariableLoadParameters" />
+    </p>
+    </li>
+    <li>This time we want to see the effect of a perturbation on the load. Therefore, double-click the fault component and change its time parameters so that the fault event occurs after the new simulation stop time (100 sec).
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/SettingFaultParameters.png" alt="SettingFaultParameters" />
+    </p>
+    </li>
+    <li>Change the class of the genunit component of the <font color="blue"><code>SMIBVarLoad</code></font> model to the <font color="blue"><code>GeneratorTurbGovAVRPSS</code></font> model. You will find it as &quot;<em>Machine with Turbine, Governor, Excitation System and PSS</em>&quot;.
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/ChangeClassToMachineWithTurbGovernorPSS.png" alt="ChangeClassToMachineWithTurbGovernorPSS" />
+    </p>
+    </li>
+    <li>Go to the Simulation view and close all the results by right-clicking any of the results from the Variable Browser and then selecting the <em>Close All Results</em> option.
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/CloseAllResults.png" alt="CloseAllResults" />
+    </p>
+    <p>We would like to automatically simulate the <font color="blue"><code>SMIB</code></font> and <font color="blue"><code>SMIBVarLoad</code></font> models and plot their results for comparative purposes. For this to be done we are going to create and call a Modelica function that includes the right sequence of steps. </p>
+    </li>
+    <li>Create a new Modelica function inside of the <font color="blue"><code>Experiments</code></font> package. For this to be done you can go to <em>File &gt; New &gt; Function</em> after selecting the package, or alternatively, you can right-click the package and then click on <em>New &gt; Function</em>. Name the function <em><font color="blue"><code>RunAndCompare</code></font></em>. The <font color="blue"><code>Experiments</code></font> package should now look like this:
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/RunAndCompareFunction.png" alt="RunAndCompareFunction" />
+    </p>
+    </li>
+    <li>Go to the Modelica text of the <font color="blue"><code>RunAndCompare</code></font> function and create 6 input variables as indicated below:
+    <blockquote><pre>
+<strong>function</strong> RunAndCompare
+  "Runs different instances of the SMIB model to compare their results"
+
+  // INPUTS TO THE FUNCTION
+  <strong>input</strong> <em>Modelica.Units.SI.Time</em> tsim=100 "Simulation time";
+  <strong>input</strong> <em>Integer</em> numberOfIntervalsin=10000 "No. of intervals";
+  <strong>input</strong> <em>String</em> methodin = "Dassl" "Solver";
+  <strong>input</strong> <em>Real</em> fixedstepsizein= 1e-3 "Time step - needed only for fixed time step solvers";
+
+  // MODELS TO SIMULATE
+  <strong>input</strong> <em>String</em> modelA="SMIB.Experiments.SMIB";
+  <strong>input</strong> <em>String</em> modelB="SMIB.Experiments.SMIBVarLoad";
+  ...
+    </pre></blockquote>
+    </li>
+    <li>Add the following code inside of the algorithm section of the function to define the simulation and plotting instructions:
+    <blockquote><pre>
+<strong>algorithm </strong>
+  simulateModel(
+    modelA,
+    stopTime=tsim,
+    numberOfIntervals=numberOfIntervalsin,
+    method = methodin,
+    fixedstepsize=fixedstepsizein,
+    resultFile="res_casea");
+  simulateModel(
+    modelB,
+    stopTime=tsim,
+    numberOfIntervals=numberOfIntervalsin,
+    method = methodin,
+    fixedstepsize=fixedstepsizein,
+    resultFile="res_caseb");
+
+  <em>removePlots</em>(true);
+  Advanced.FilesToKeep :=10;
+  <em>createPlot</em>(id=1, position={15, 15, 678, 703}, y={"B01.V"},
+    range={0.0, 10.0, 0.4, 1.4}, grid=true, filename="res_casea.mat",
+    colors={{28,108,200}}, displayUnits={"1"});
+  <em>createPlot</em>(id=1, position={15, 15, 678, 703}, y={"genunit.P"},
+    range={0.0, 10.0, -1.5, 2.0}, grid=true, subPlot=102,
+    colors={{28,108,200}}, displayUnits={"1"});
+  <em>createPlot</em>(id=1, position={15, 15, 678, 703}, y={"genunit.Q"},
+    range={0.0, 10.0, -0.5, 2.0}, grid=true, subPlot=103,
+    colors={{28,108,200}}, displayUnits={"1"});
+  <em>createPlot</em>(id=1, position={15, 15, 678, 703}, y={"B01.V"},
+    range={0.0, 10.0, 0.4, 1.4}, erase=false, grid=true,
+    filename="res_caseb.mat", colors={{238,46,47}}, displayUnits={"1"},
+    axes={2});
+  <em>createPlot</em>(id=1, position={15, 15, 678, 703}, y={"genunit.P"},
+    range={0.0, 10.0, -1.5, 2.0}, erase=false, grid=true, subPlot=102,
+    colors={{238,46,47}}, displayUnits={"1"},
+    axes={2});
+  <em>createPlot</em>(id=1, position={15, 15, 678, 703}, y={"genunit.Q"},
+    range={0.0, 10.0, -0.5, 2.0}, erase=false, grid=true, subPlot=103,
+    colors={{238,46,47}}, displayUnits={"1"},
+    axes={2});
+
+<strong>end</strong> RunAndCompare;
+  </pre></blockquote>
+    </li>
+    <li>Right-click the <font color="blue"><code>RunAndCompare</code></font> function, select the <em>Call Function...</em> option and then press OK. If everything goes well you will get the plots shown below.
+    <p>
+      <img src="../Resources/images/example_4/AutomatingAnalysis/GeneratedPowerAndBusVoltagePlots.png" alt="GeneratedPowerAndBusVoltagePlots" />
+    </p>
+        </li>
+  </ol>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Information (Icon for general information packages).</span></p>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:55:58 2026.
+</address>
+</body>
+</html>

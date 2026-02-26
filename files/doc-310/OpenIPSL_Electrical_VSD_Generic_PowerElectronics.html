@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Electrical.VSD.Generic.PowerElectronics</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Variable speed drive power electronics model&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PowerElectronics<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Electrical.VSD.Generic.PowerElectronics"></a><a href="OpenIPSL_Electrical_VSD_Generic.html#OpenIPSL.Electrical.VSD.Generic"
+>OpenIPSL.Electrical.VSD.Generic</a>.PowerElectronics</h2>
+<p>
+<span class="ModelicaDescription">Variable speed drive power electronics model</span>
+</p>
+<h3>Information</h3>
+
+<p>This package contains the power electronics component of the variable speed drive model.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.Package (Icon for standard packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Electrical.VSD.G5dd359f51285255dDC2ACS.png" alt="OpenIPSL.Electrical.VSD.Generic.PowerElectronics.AC2DCandDC2AC" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Electrical_VSD_Generic_PowerElectronics.html#OpenIPSL.Electrical.VSD.Generic.PowerElectronics.AC2DCandDC2AC"
+>AC2DCandDC2AC</a>
+</td>
+<td>Phasor based voltage source converter model.</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE AC2DCandDC2AC<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Electrical.VSD.G5dd359f51285255dDC2ACI.png" alt="OpenIPSL.Electrical.VSD.Generic.PowerElectronics.AC2DCandDC2AC" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Electrical.VSD.Generic.PowerElectronics.AC2DCandDC2AC"></a><a href="OpenIPSL_Electrical_VSD_Generic_PowerElectronics.html#OpenIPSL.Electrical.VSD.Generic.PowerElectronics"
+>OpenIPSL.Electrical.VSD.Generic.PowerElectronics</a>.AC2DCandDC2AC</h2>
+<p>
+<span class="ModelicaDescription">Phasor based voltage source converter model.</span>
+</p>
+<h3>Information</h3>
+
+<p>The AC2DCandDC2AC component represents the power electronics component of the variable speed drive.
+The model provides an interface between two terminals. Terminal pin p is related to the grid bus side and terminal pin n is related to the
+motor terminal bus. The model is an average representation of the switching components of a real variable speed drive, thus being ideal for long simulation durations on phasor dynamic simulations.</p>
+<p>The model has one input and one output connectors. The m_input input connector represents the pwn modulation index, while the Vc output connector represents the capacitor voltage value used in the controller logic block.</p>
+<p>The modelling of such devices is based, mainly, on the following reference:</p>
+<ul>
+<li>Panasetsky: Variable Speed Drive Modeling"
+<a href="OpenIPSL_UsersGuide.html#OpenIPSL.UsersGuide.References"
+>[Panasetsky2016]</a>,</li>
+</ul>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr class="ModelicaVariability::ParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaVariability::ParameterGroup"><td colspan="2">DC Link Parameters</td></tr>
+<tr><td>Rdc</td><td>DC link resistance [Ohm]</td></tr>
+<tr><td>Ldc</td><td>DC link inductance [H]</td></tr>
+<tr><td>Cdc</td><td>DC link capacitance [F]</td></tr>
+<tr><td>m0</td><td>Initial PWM modulation value</td></tr>
+<tr class="ModelicaVariability::ParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>p</td><td>Grid side pin</td></tr>
+<tr><td>n</td><td>Motor side pin</td></tr>
+<tr><td>m_input</td><td>PWM modulation index input</td></tr>
+<tr><td>Vc</td><td>Value of Real output</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:56:11 2026.
+</address>
+</body>
+</html>

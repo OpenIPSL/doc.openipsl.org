@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Data.PowerPlant.GenerationGroup</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Generation groups for the examples that illustrate the use of typical data sets&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE GenerationGroup<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Data.PowerPlant.GenerationGroup"></a><a href="OpenIPSL_Data_PowerPlant.html#OpenIPSL.Data.PowerPlant"
+>OpenIPSL.Data.PowerPlant</a>.GenerationGroup</h2>
+<p>
+<span class="ModelicaDescription">Generation groups for the examples that illustrate the use of typical data sets</span>
+</p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.df76b465c35ab84fator1S.png" alt="OpenIPSL.Data.PowerPlant.GenerationGroup.Generator1" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup.Generator1"
+>Generator1</a>
+</td>
+<td>Generation Group for example that uses the IEEE421.5-based data set</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Data.PowerPlant.df76b465c35ab84fator1S.png" alt="OpenIPSL.Data.PowerPlant.GenerationGroup.Generator2" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup.Generator2"
+>Generator2</a>
+</td>
+<td>Generation Group for the example that uses the Anderson-based data set</td>
+</tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Generator1<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Data.PowerPlant.df76b465c35ab84fator1I.png" alt="OpenIPSL.Data.PowerPlant.GenerationGroup.Generator1" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Data.PowerPlant.GenerationGroup.Generator1"></a><a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup"
+>OpenIPSL.Data.PowerPlant.GenerationGroup</a>.Generator1</h2>
+<p>
+<span class="ModelicaDescription">Generation Group for example that uses the IEEE421.5-based data set</span>
+</p>
+<h3>Information</h3>
+
+<p>Generation group for the example that uses the IEEE421.5-based data set.</p>
+<h5>Instructions</h5>
+<p>
+The steps for the correct use of the data sets are indicated below:
+</p>
+<ol>
+<li>Drag and Drop an instance of a <code>OpenIPSL.Data.PowerPlant.GUDynamics</code>
+    record to the diagram layer of your generation group model.</li>
+<li>Propagate the <code>GUnitDynamics</code> parameter of the <code>GUDynamics</code> record.</li>
+<li>Go to the upper-level model that contains an instance of this generation group
+    (e.g., <a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples.IEEE421"
+>IEEE421</a> example model).
+    Complete the local instructions and come back to continue with step 4.</li>
+<li>Insert component references inside the parameter fields of the Synchronous Machine,
+    Excitation System and Power System Stabilizer blocks.
+    For example, to specify the inertia constant of the GENSAE synchronous machine
+    (i.e., H), you must fill its field with this expression:
+    <code>gUDynamics.guDynamics.machine.H</code>.
+    To do this, you can either type the value or recreate the whole path,
+    by first clicking the <strong>Insert Component Reference</strong> option
+    and then navigating the references accordingly.</li>
+</ol>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>replaceable record GUnitDynamics</td><td>&nbsp;</td></tr>
+<tr class="ModelicaVariability::ParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaVariability::ParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pwPin</td><td>&nbsp;</td></tr>
+<tr><td>replaceable record GUnitDynamics</td><td>&nbsp;</td></tr>
+</table>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Generator2<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenIPSL.Data.PowerPlant.df76b465c35ab84fator1I.png" alt="OpenIPSL.Data.PowerPlant.GenerationGroup.Generator2" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenIPSL.Data.PowerPlant.GenerationGroup.Generator2"></a><a href="OpenIPSL_Data_PowerPlant_GenerationGroup.html#OpenIPSL.Data.PowerPlant.GenerationGroup"
+>OpenIPSL.Data.PowerPlant.GenerationGroup</a>.Generator2</h2>
+<p>
+<span class="ModelicaDescription">Generation Group for the example that uses the Anderson-based data set</span>
+</p>
+<h3>Information</h3>
+
+<p>Generation Group for the example that uses the Anderson-based data set.</p>
+<h5>Instructions</h5>
+<p>
+The steps for the correct use of the data sets are indicated below:
+</p>
+<ol>
+<li>Drag and Drop an instance of a <code>OpenIPSL.Data.PowerPlant.GUDynamics</code>
+    record to the diagram layer of your generation group model.</li>
+<li>Propagate the <code>GUnitDynamics</code> parameter of the <code>GUDynamics</code> record.</li>
+<li>Go to the upper-level model that contains an instance of this generation group
+    (e.g., <a href="OpenIPSL_Data_PowerPlant_Examples.html#OpenIPSL.Data.PowerPlant.Examples.Anderson"
+>Anderson</a> example model).
+    Complete the local instructions and come back to continue with step 4.</li>
+<li>Insert component references inside the parameter fields of the Synchronous Machine,
+    Excitation System, Power System Stabilizer and Turbine/Governor blocks.
+    For example, to specify the inertia constant of the GENROE synchronous machine
+    (i.e., H), you must fill its field with this expression:
+    <code>gUDynamics.guDynamics.machine.H</code>.
+    To do this, you can either type the value or recreate the whole path,
+    by first clicking the <strong>Insert Component Reference</strong> option and
+    then navigating the references accordingly.</li>
+</ol>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenIPSL_Electrical_Essentials.html#OpenIPSL.Electrical.Essentials.pfComponent"
+>OpenIPSL.Electrical.Essentials.pfComponent</a> (Partial model containing all the parameters for entering power flow data).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>replaceable record GUnitDynamics</td><td>&nbsp;</td></tr>
+<tr class="ModelicaVariability::ParameterGroup"><td colspan="2">Power flow data</td></tr>
+<tr><td>S_b</td><td>System base power [V.A]</td></tr>
+<tr><td>V_b</td><td>Base voltage of the bus [V]</td></tr>
+<tr><td>fn</td><td>System frequency [Hz]</td></tr>
+<tr><td>P_0</td><td>Initial active power [W]</td></tr>
+<tr><td>Q_0</td><td>Initial reactive power [var]</td></tr>
+<tr><td>v_0</td><td>Initial voltage magnitude [1]</td></tr>
+<tr><td>angle_0</td><td>Initial voltage angle [rad]</td></tr>
+<tr><td>displayPF</td><td>Display power flow:</td></tr>
+<tr class="ModelicaVariability::ParameterTab"><td colspan="2">Parameter mask</td></tr>
+<tr><td>enableS_b</td><td>Enable S_b in parameter list</td></tr>
+<tr><td>enableV_b</td><td>Enable V_b in parameter list</td></tr>
+<tr><td>enablefn</td><td>Enable fn in parameter list</td></tr>
+<tr><td>enableP_0</td><td>Enable P_0 in parameter list</td></tr>
+<tr><td>enableQ_0</td><td>Enable Q_0 in parameter list</td></tr>
+<tr><td>enablev_0</td><td>Enable v_0 in parameter list</td></tr>
+<tr><td>enableangle_0</td><td>Enable angle_0 in parameter list</td></tr>
+<tr><td>enabledisplayPF</td><td>Enable displayPF in parameter list</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>pwPin</td><td>&nbsp;</td></tr>
+<tr><td>replaceable record GUnitDynamics</td><td>&nbsp;</td></tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:56:12 2026.
+</address>
+</body>
+</html>

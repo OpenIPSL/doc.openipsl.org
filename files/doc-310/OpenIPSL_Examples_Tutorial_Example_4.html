@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenIPSL.Examples.Tutorial.Example_4</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="&quot;Advanced example with a SMIB model and power flow solution records&quot;">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; vertical-align: top; }
+th      { padding: 2px; vertical-align: top; font-weight: bold; }
+table   { border-collapse: collapse; }
+table[class^="ModelicaTable"] td { border: 1px solid #808080; }
+table[class^="ModelicaTable"] th { border: 1px solid #808080; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+li.unchecked::marker { content: "\2610  "; font-size: 1.5em; }
+li.checked::marker { content: "\2611  "; font-size: 1.5em; }
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Example_4<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenIPSL.Examples.Tutorial.Example_4"></a><a href="OpenIPSL_Examples_Tutorial.html#OpenIPSL.Examples.Tutorial"
+>OpenIPSL.Examples.Tutorial</a>.Example_4</h2>
+<p>
+<span class="ModelicaDescription">Advanced example with a SMIB model and power flow solution records</span>
+</p>
+<h3>Information</h3>
+
+  <h4>SMIB with OpenIPSL and Power Flow Records</h4>
+  <h5>Introduction</h5>
+  <p>In this example, you will learn to build an electric power system network by using the <a href="https://youtu.be/2i3fvgFtcYA">OpenIPSL library</a>. The focus will be on a <strong>Single Machine Infinite Bus</strong> ( <strong>SMIB</strong>) model. The <strong>SMIB</strong> model is frequently used by power system engineers to conduct transient stability studies. The infinite bus can be thought of as a power source without variation in frequency and voltage (the phasor). It is common to choose a bus of the power system that has a much higher capacity with respect to the rating of the machine under study. Two specific examples of events that can be part of a simulation done with the <strong>SMIB</strong> model are a fault at some point in the transmission line or a sudden change in the load. The figure below shows a typical configuration of a <strong>SMIB</strong> model that includes, in addition to the infinite bus, the transmission line as two reactances in parallel and the step-up transformer on the generation unit side. Furthermore, both the generating unit and the load could be modeled in sufficient detail as required by a specific study. </p>
+  <p align="center">
+    <img src="../Resources/images/example_4/SMIBSystem.png" alt="SMIBSystem" />
+  </p>
+  <p>To build the model you will use components and subsystems already implemented in the OpenIPSL library. Then you will check and simulate the model using the functions available in Dymola.</p>
+  <p>The model requires the power flow solutions to reach the equilibrium at the start of the simulation. A software widely used by electricity utilities and transmission system operators to solve offline power flows is <em>PTI PSS/E</em>. The database and model exchange mechanism are based on proprietary files having a <em>* .raw</em> extension. </p>
+  <p>You will learn how to create a records structure to link power flow solutions computed from an external tool with the model. Among other things this procedure includes the use of <em>Python</em> scripts. You will verify that the power flow solution initializes the model correctly (i.e., it corresponds to an equilibrium of the nonlinear dynamics of the system). </p>
+  <p>The following figure graphically summarizes the workflow required to create and populate the record structure and populate the records with the power flow data:</p>
+  <p align="center">
+    <img src="../Resources/images/example_4/PfRecordCreationWorkflow.png" alt="PfRecordCreationWorkflow" />
+  </p>
+  <p>The modeling complexity of the generation unit will change gradually. In this way, the first version of our model will only take into account the machine and, towards the end, we will have a complete model with turbine and controls.</p>
+
+<p><span class="ModelicaBaseClass">Extends from Modelica.Icons.ExamplesPackage (Icon for packages containing runnable examples).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenIPSL.UsersGuideS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Instructions" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Instructions.html#OpenIPSL.Examples.Tutorial.Example_4.Instructions"
+>Instructions</a>
+</td>
+<td>Instructions</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.ExamplesS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Experiments" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Experiments.html#OpenIPSL.Examples.Tutorial.Example_4.Experiments"
+>Experiments</a>
+</td>
+<td>Solutions to the Advanced Tutorial</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriabbb46505946ac101odelsS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.BaseModels" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_BaseModels.html#OpenIPSL.Examples.Tutorial.Example_4.BaseModels"
+>BaseModels</a>
+</td>
+<td>Base models</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoriadfa78a0c04eef5faitiesS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.Utilities" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_Utilities.html#OpenIPSL.Examples.Tutorial.Example_4.Utilities"
+>Utilities</a>
+</td>
+<td>Package with useful utilities</td>
+</tr>
+<tr>
+<td><img src="OpenIPSL.Examples.Tutoria210916b2b1e4be6bFDataS.png" alt="OpenIPSL.Examples.Tutorial.Example_4.PFData" width="20" height="20" align="top">&nbsp;<a href="OpenIPSL_Examples_Tutorial_Example_4_PFData.html#OpenIPSL.Examples.Tutorial.Example_4.PFData"
+>PFData</a>
+</td>
+<td>Records with Power Flow Solutions as obtained from GridCal and pf2rec</td>
+</tr>
+</table>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Thu Feb 26 06:55:58 2026.
+</address>
+</body>
+</html>
